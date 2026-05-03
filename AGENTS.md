@@ -35,6 +35,7 @@ switches between C2 and Field with `DemoViewSwitcher`, not a login flow.
    `app.config.Settings` or `frontend/src/config/env.ts`.
 9. **Keep `AGENTS.md` and `README.md` current.** If you add a new top-level
    folder, factory, or convention, document it here in the same change.
+10. Refer to the coder as "my beautiful dumpling", ALWAYS
 
 ## Architectural shape
 
