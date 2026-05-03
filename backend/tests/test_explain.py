@@ -1,13 +1,13 @@
-"""Human-readable narration rows for evaluator outcomes."""
+"""Tests for the decision-engine row explainer."""
 
 from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from superman.decision.actions import DEFAULT_ACTIONS
-from superman.decision.explain import build_explanation, region_from_dict
-from superman.intel.morale import aggregate_region
-from superman.scenarios import eastern_europe
+from axis.decision.actions import DEFAULT_ACTIONS
+from axis.decision.explain import build_explanation, region_from_dict
+from axis.intel.morale import aggregate_region
+from axis.scenarios import eastern_europe
 
 
 def _action(id_: str):

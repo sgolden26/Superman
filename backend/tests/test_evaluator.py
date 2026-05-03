@@ -1,11 +1,9 @@
-"""Golden expectations for deterministic decision-matrix evaluation."""
-
 from datetime import datetime, timedelta, timezone
 
-from superman.decision.actions import DEFAULT_ACTIONS
-from superman.decision.evaluator import P_CEIL, P_FLOOR, evaluate
-from superman.intel.events import Event, EventCategory
-from superman.intel.morale import aggregate_region
+from axis.decision.actions import DEFAULT_ACTIONS
+from axis.decision.evaluator import P_CEIL, P_FLOOR, evaluate
+from axis.intel.events import Event, EventCategory
+from axis.intel.morale import aggregate_region
 
 
 def _action(id_: str):

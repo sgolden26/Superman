@@ -5,36 +5,32 @@ export default {
   theme: {
     extend: {
       colors: {
-        mil: {
-          900: "#06080d",
-          800: "#0a0e13",
-          700: "#10151c",
-          600: "#161c25",
-          500: "#1e2530",
-          400: "#28313e",
-          300: "#384352",
-          200: "#6a7686",
-          100: "#a9b3c1",
-          50: "#dde2eb",
+        ink: {
+          900: "#070a0e",
+          800: "#0b0f14",
+          700: "#11161d",
+          600: "#171d26",
+          500: "#1f2730",
+          400: "#2a333f",
+          300: "#3a4554",
+          200: "#6b7787",
+          100: "#aab4c2",
+          50: "#dde3ec",
         },
         faction: {
-          nato: "#4DA1FF",
-          ru: "#FF5C4D",
-          neutral: "#D4A24F",
+          nato: "#5aa9ff",
+          ru: "#ff5a5a",
+          neutral: "#d6a45a",
         },
         accent: {
-          amber: "#D4A24F",
-          danger: "#FF5C4D",
-          ok: "#7CD891",
-          blue: "#4DA1FF",
+          amber: "#d6a45a",
+          danger: "#ff5a5a",
+          ok: "#7ad492",
         },
-      },
-      borderRadius: {
-        deck: "2px",
       },
       fontFamily: {
         sans: [
-          "IBM Plex Sans",
+          "Inter",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",
@@ -53,7 +49,7 @@ export default {
         wider2: "0.18em",
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(77,161,255,0.5), 0 0 16px rgba(77,161,255,0.25)",
+        glow: "0 0 0 1px rgba(90,169,255,0.5), 0 0 16px rgba(90,169,255,0.25)",
       },
       keyframes: {
         ticker: {

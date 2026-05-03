@@ -1,10 +1,8 @@
-"""Ensures exporters keep schema_version + structural invariants."""
-
 import json
 from pathlib import Path
 
-from superman import SCHEMA_VERSION, scenarios
-from superman.serialization.snapshot import SnapshotExporter
+from axis import SCHEMA_VERSION, scenarios
+from axis.serialization.snapshot import SnapshotExporter
 
 
 def test_eastern_europe_snapshot_shape(tmp_path: Path):

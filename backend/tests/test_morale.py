@@ -1,9 +1,7 @@
-"""Morale aggregator behaviour under synthetic event ladders."""
-
 from datetime import datetime, timedelta, timezone
 
-from superman.intel.events import Event, EventCategory
-from superman.intel.morale import (
+from axis.intel.events import Event, EventCategory
+from axis.intel.morale import (
     HISTORY_SAMPLES,
     aggregate_all,
     aggregate_region,

@@ -1,4 +1,14 @@
-"""Political bookkeeping after batches plus stub leader ingestion."""
+"""Phase 9 political-layer tests.
+
+Covers:
+
+- Domain dataclasses validate their numeric ranges.
+- Backend evaluator produces extra breakdown rows under pressure / credibility
+  context, and the probability shifts in the expected direction.
+- Sim hook records a `GapEvent` on the issuer's outgoing tracks and advances
+  pressure when a batch executes successfully.
+- Stub leader-statement adapter loads the seeded JSON.
+"""
 
 from __future__ import annotations
 
@@ -6,10 +16,10 @@ from datetime import datetime, timezone
 
 import pytest
 
-from superman.decision.actions import DEFAULT_ACTIONS
-from superman.decision.evaluator import PoliticalContext, evaluate
-from superman.domain.coordinates import Coordinate
-from superman.domain.political import (
+from axis.decision.actions import DEFAULT_ACTIONS
+from axis.decision.evaluator import PoliticalContext, evaluate
+from axis.domain.coordinates import Coordinate
+from axis.domain.political import (
     CredibilityTrack,
     FactionPressure,
     GapEvent,
@@ -18,12 +28,12 @@ from superman.domain.political import (
     PressureState,
     RegionPressure,
 )
-from superman.intel.credibility import CredibilityEngine, update_track
-from superman.intel.leader_statements import StubAdapter, cameo_to_signal_type
-from superman.intel.morale import aggregate_region
-from superman.scenarios import eastern_europe
-from superman.sim.orders import MoveOrder, OrderBatch
-from superman.sim.political_engine import advance_after_batch
+from axis.intel.credibility import CredibilityEngine, update_track
+from axis.intel.leader_statements import StubAdapter, cameo_to_signal_type
+from axis.intel.morale import aggregate_region
+from axis.scenarios import eastern_europe
+from axis.sim.orders import MoveOrder, OrderBatch
+from axis.sim.political_engine import advance_after_batch
 
 
 def _action(id_: str):
@@ -200,7 +210,7 @@ def test_apply_batch_advances_political_layer():
 
 def test_failed_batch_does_not_advance_turn():
     """Validation failure must leave the political clock untouched."""
-    from superman.server.state import TheaterStore
+    from axis.server.state import TheaterStore
 
     store = TheaterStore()
     initial = store.snapshot_dict()["current_turn"]

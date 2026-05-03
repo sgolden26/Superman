@@ -5,9 +5,9 @@ import path from "node:path";
 
 // In dev, serve `state.json` and `intel.json` directly off `../data/` so a
 // backend `intel tick` (which rewrites `data/intel.json`) is reflected on
-// the next FE poll without restarting `npm run dev`. The `predev` copy step
-// still seeds `frontend/public/` for production builds and as a fallback when
-// the live file is missing.
+// the next FE poll without having to restart `npm run dev`. The `predev`
+// copy step still seeds `frontend/public/` for production builds and as a
+// fallback when the live file is missing.
 function liveDataFiles(): Plugin {
   const dataDir = path.resolve(__dirname, "../data");
   const served: Record<string, string> = {
@@ -15,7 +15,7 @@ function liveDataFiles(): Plugin {
     "/intel.json": path.join(dataDir, "intel.json"),
   };
   return {
-    name: "sm-live-data-files",
+    name: "axis-live-data-files",
     apply: "serve",
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
@@ -29,7 +29,7 @@ function liveDataFiles(): Plugin {
           res.setHeader("Cache-Control", "no-store");
           res.end(body);
         } catch (err) {
-          console.warn(`[sm-live-data-files] failed to serve ${pathname}:`, err);
+          console.warn(`[axis-live-data-files] failed to serve ${pathname}:`, err);
           next();
         }
       });

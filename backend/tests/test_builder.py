@@ -1,8 +1,6 @@
-"""Smoke coverage for ScenarioBuilder assembly."""
-
-from superman.domain.faction import Allegiance
-from superman.factories.scenario_builder import ScenarioBuilder
-from superman.units.domain import UnitKind
+from axis.domain.faction import Allegiance
+from axis.factories.scenario_builder import ScenarioBuilder
+from axis.units.domain import UnitKind
 
 
 def test_builder_assembles_minimal_theater():

@@ -1,8 +1,7 @@
 {
-  "name": "superman-frontend",
+  "name": "axis-frontend",
   "private": true,
-  "version": "0.2.0",
-  "description": "Superman C2 console: theatre map, decision engine, political signals.",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "predev": "node scripts/copy-state.mjs",

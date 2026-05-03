@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "superman"
+name = "axis"
 version = "0.1.0"
-description = "Superman C2 backend: theatre snapshots, decision engine, political signals."
+description = "Axis wargame backend: domain models, scenario builder, snapshot exporter."
 requires-python = ">=3.11"
 dependencies = [
     "pydantic>=2.6",
@@ -25,7 +25,7 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["superman*"]
+include = ["axis*"]
 
 [tool.ruff]
 line-length = 100
