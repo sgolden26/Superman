@@ -5,15 +5,11 @@ import TopBar from '@/components/layout/TopBar';
 import SideNav, { type NavItem } from '@/components/layout/SideNav';
 
 const NAV: NavItem[] = [
-  { label: 'Dashboard', to: '/c2' },
-  { label: 'Map', to: '/c2/map' },
-  { label: 'Subjects', to: '/c2/subjects' },
-  { label: 'Alerts', to: '/c2/alerts' },
   { label: 'Sensors', to: '/c2/sensors' },
-  { label: 'Missions', to: '/c2/missions' },
+  { label: 'Subjects', to: '/c2/subjects' },
 ];
 
-/** Multi-operator command and control shell. Map-first, dense information. */
+/** Multi-operator command and control shell. */
 export default function C2Layout() {
   return (
     <AppShell

@@ -1,15 +1,28 @@
 # Backend
 
-FastAPI service. Stubs only at this stage.
-
-Persistence is a **JSON file** (default `data/demo.json` when you run from this
-directory). Override with `APP_DATA_JSON_PATH`. Use `app.api.deps.get_json_store`
-when wiring repositories.
+FastAPI service backed by SQLite (via SQLModel). Managed with [uv].
 
 ```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-uvicorn app.main:app --reload
+uv sync                                # install runtime + dev deps
+uv run uvicorn app.main:app --reload   # start the API
+uv run pytest                          # run the suite
 ```
 
-Layout and conventions live in the root `AGENTS.md`. Read it first.
+The database file defaults to `data/superman.db`. Override with `APP_DB_PATH`.
+Tables are created on app startup via `app.db.init_db`.
+
+## Layout
+
+```
+app/
+  main.py        FastAPI factory, wires startup
+  config.py      Settings (env-driven)
+  db.py          SQLite engine, session, init_db
+  models/        One SQLModel table per file (sensor, person, reading)
+  core/          Logging, AppError + handlers
+  utils/         Pure helpers (time)
+```
+
+Conventions live in the root `AGENTS.md`.
+
+[uv]: https://docs.astral.sh/uv/

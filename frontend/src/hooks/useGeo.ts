@@ -1,4 +1,4 @@
-import type { GeoPoint } from '@/types/common';
+import { GeoPoint } from '@/types/common';
 
 export interface GeoState {
   position: GeoPoint | null;

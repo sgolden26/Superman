@@ -27,10 +27,9 @@ Hackathon scaffold. Stubs only. No business logic implemented yet.
 ## Getting started
 
 ```bash
-# backend
-cd backend && python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-uvicorn app.main:app --reload
+# backend (managed with uv: https://docs.astral.sh/uv/)
+cd backend && uv sync
+uv run uvicorn app.main:app --reload
 
 # frontend
 cd frontend && npm install
@@ -40,10 +39,11 @@ npm run dev
 ## Conventions
 
 - Demo mode: **no auth** (use the C2 / Field switcher in the top bar). Backend
-  persists to **`backend/data/demo.json`** via `JsonDocumentStore`, not SQL.
+  persists to a local **SQLite** file at `backend/data/superman.db` via SQLModel.
 - Strict typing both sides (`mypy --strict`, `tsc --strict`).
-- Domain logic lives in `backend/app/domain` and `backend/app/services`.
-  Routes are thin.
+- Backend layout is intentionally minimal: `app/models/` (one SQLModel table
+  per file), `app/db.py`, `app/main.py`. Routes and services are added per
+  feature.
 - Frontend views are composed from `components/ui` (primitives) and
   `components/domain` (cross-cutting domain widgets). View-specific pieces
   stay inside `views/<view>/components`.

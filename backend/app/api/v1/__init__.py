@@ -1,1 +1,1 @@
-"""API version 1."""
+"""v1 API."""
