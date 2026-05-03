@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from datetime import datetime
-from enum import Enum
+from enum import StrEnum
 from typing import Any
 
 from sqlalchemy import JSON, Column
@@ -11,7 +11,7 @@ from sqlmodel import Field, SQLModel
 from app.utils.time import utcnow
 
 
-class Alignment(str, Enum):
+class Alignment(StrEnum):
     """Force/affiliation tag used to render the person in the UI."""
 
     BLUE = "blue"      # ally

@@ -5,7 +5,7 @@ from typing import Any
 
 from fastapi import APIRouter, Depends, status
 from pydantic import BaseModel
-from sqlmodel import Session, select
+from sqlmodel import Session, col, select
 
 from app.core.exceptions import ConflictError, NotFoundError
 from app.db import get_session
@@ -30,7 +30,7 @@ class PersonUpdate(BaseModel):
 @router.get("", response_model=list[Person])
 def list_people(session: Session = Depends(get_session)) -> list[Person]:
     """All known people, ordered by id."""
-    return list(session.exec(select(Person).order_by(Person.id)))
+    return list(session.exec(select(Person).order_by(col(Person.id))))
 
 
 @router.post("", response_model=Person, status_code=status.HTTP_201_CREATED)

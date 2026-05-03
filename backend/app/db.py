@@ -8,8 +8,8 @@ from __future__ import annotations
 from collections.abc import Iterator
 from functools import lru_cache
 
-from sqlmodel import Session, SQLModel, create_engine
 from sqlalchemy.engine import Engine
+from sqlmodel import Session, SQLModel, create_engine
 
 from app.config import get_settings
 

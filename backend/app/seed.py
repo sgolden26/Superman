@@ -34,9 +34,12 @@ _SENSORS: list[tuple[str, float, float]] = [
 # (name, fingerprint (32 hex chars), alignment, attributes, reading count)
 _PEOPLE: list[tuple[str, str, Alignment, dict[str, object], int]] = [
     # blue — friendly squads
-    ("Reaper 1-1", "a1" * 16, Alignment.BLUE, {"role": "squad_leader", "squad": "Reaper 1", "rank": "SSG"}, 22),
-    ("Reaper 1-2", "a2" * 16, Alignment.BLUE, {"role": "rifleman",     "squad": "Reaper 1", "rank": "SGT"}, 20),
-    ("Reaper 2-1", "a3" * 16, Alignment.BLUE, {"role": "squad_leader", "squad": "Reaper 2", "rank": "SSG"}, 18),
+    ("Reaper 1-1", "a1" * 16, Alignment.BLUE,
+     {"role": "squad_leader", "squad": "Reaper 1", "rank": "SSG"}, 22),
+    ("Reaper 1-2", "a2" * 16, Alignment.BLUE,
+     {"role": "rifleman", "squad": "Reaper 1", "rank": "SGT"}, 20),
+    ("Reaper 2-1", "a3" * 16, Alignment.BLUE,
+     {"role": "squad_leader", "squad": "Reaper 2", "rank": "SSG"}, 18),
     # green — partner force / non-combatants
     ("Partner Force Lead", "b1" * 16, Alignment.GREEN, {"role": "partner_force"}, 14),
     ("Interpreter Tango",  "b2" * 16, Alignment.GREEN, {"role": "interpreter"},   12),
@@ -51,6 +54,10 @@ _PEOPLE: list[tuple[str, str, Alignment, dict[str, object], int]] = [
     ("unknown-d3d3d3d3", "d3" * 16, Alignment.GREY, {}, 9),
     ("unknown-d4d4d4d4", "d4" * 16, Alignment.GREY, {}, 4),
 ]
+
+
+def _dist_sq(sensor: Sensor, lat: float, lon: float) -> float:
+    return (sensor.lat - lat) ** 2 + (sensor.lon - lon) ** 2
 
 
 def seed_demo_data(session: Session) -> bool:
@@ -88,10 +95,7 @@ def seed_demo_data(session: Session) -> bool:
             lat += rng.uniform(-8e-4, 8e-4)
             lon += rng.uniform(-8e-4, 8e-4)
             height = round(rng.uniform(1.55, 1.92), 2)
-            closest = min(
-                sensors,
-                key=lambda s, _lat=lat, _lon=lon: (s.lat - _lat) ** 2 + (s.lon - _lon) ** 2,
-            )
+            closest = min(sensors, key=lambda s: _dist_sq(s, lat, lon))
             assert closest.id is not None
             minutes_ago = (n_readings - i) * 2 + rng.uniform(0, 1.5)
             session.add(

@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, Depends, status
 from pydantic import BaseModel
-from sqlmodel import Session, select
+from sqlmodel import Session, col, select
 
 from app.core.exceptions import NotFoundError
 from app.db import get_session
@@ -21,7 +21,7 @@ class SensorCreate(BaseModel):
 @router.get("", response_model=list[Sensor])
 def list_sensors(session: Session = Depends(get_session)) -> list[Sensor]:
     """All registered sensors, ordered by id."""
-    return list(session.exec(select(Sensor).order_by(Sensor.id)))
+    return list(session.exec(select(Sensor).order_by(col(Sensor.id))))
 
 
 @router.post("", response_model=Sensor, status_code=status.HTTP_201_CREATED)
