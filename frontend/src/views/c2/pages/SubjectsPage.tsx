@@ -1,8 +1,8 @@
 import Card from '@/components/ui/Card';
 import { useSubjects } from '@/hooks/useSubjects';
-import type { Subject } from '@/types/subject';
+import type { Alignment, Subject } from '@/types/subject';
 
-/** Subject inventory: identity, name, location. */
+/** Subject inventory: identity, alignment, fingerprint. */
 export default function SubjectsPage() {
   const { data, error, isLoading } = useSubjects();
 
@@ -22,9 +22,7 @@ export default function SubjectsPage() {
       ) : null}
 
       {data && data.length === 0 ? (
-        <Card className="text-sm text-slate-400">
-          No subjects yet. Wire a data source in <code>SubjectRepository.list</code>.
-        </Card>
+        <Card className="text-sm text-slate-400">No subjects.</Card>
       ) : null}
 
       {data && data.length > 0 ? (
@@ -38,16 +36,30 @@ export default function SubjectsPage() {
   );
 }
 
+const ALIGNMENT_DOT: Record<Alignment, string> = {
+  blue: 'bg-sky-400',
+  green: 'bg-emerald-400',
+  red: 'bg-rose-500',
+  grey: 'bg-slate-500',
+};
+
 function SubjectRow({ subject }: { subject: Subject }) {
   return (
     <li>
       <Card className="flex items-center justify-between gap-4 text-sm">
-        <div>
-          <div className="font-medium text-slate-100">{subject.name}</div>
-          <div className="text-xs text-slate-500">{subject.id}</div>
-        </div>
-        <div className="font-mono text-xs text-slate-300">
-          {subject.location.lat.toFixed(4)}, {subject.location.lon.toFixed(4)}
+        <div className="flex items-center gap-3">
+          <span
+            className={`inline-block h-2.5 w-2.5 rounded-full ${ALIGNMENT_DOT[subject.alignment]}`}
+            aria-label={subject.alignment}
+          />
+          <div>
+            <div className="font-medium text-slate-100">{subject.name}</div>
+            <div className="text-xs text-slate-500">
+              <span className="uppercase tracking-wide">{subject.alignment}</span>
+              {' · '}
+              <span className="font-mono">{subject.fingerprint.slice(0, 12)}…</span>
+            </div>
+          </div>
         </div>
       </Card>
     </li>
