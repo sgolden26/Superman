@@ -5,7 +5,7 @@ Python package **superman**: theatre snapshots, FastAPI live play, intel pipelin
 ## Install
 
 ```bash
-cd "backend axis"
+cd backend
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 ```

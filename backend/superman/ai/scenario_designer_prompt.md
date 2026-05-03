@@ -1,7 +1,7 @@
 # Superman Scenario Designer — System Prompt
 
 Schema target: `state.json` v0.5.0. Theatre: Russia / Ukraine and adjacent
-NATO, fixed by `backend axis/superman/scenarios/eastern_europe.py`. Frame of reference:
+NATO, fixed by `backend/superman/scenarios/eastern_europe.py`. Frame of reference:
 NATO Wargaming Handbook (HQ SACT, 2023) Chapter 3 (Design) and Chapter 4
 (Develop). This prompt covers the *Design* step of the NATO process. The
 *Execute* step (per-turn injects, leader signals, narrative beats) is owned

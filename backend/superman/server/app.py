@@ -31,7 +31,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 def _load_dotenv_once() -> None:
-    """Tiny `KEY=VALUE` parser for `backend axis/.env` and the repo root `.env`.
+    """Tiny `KEY=VALUE` parser for `backend/.env` and the repo root `.env`.
 
     Runs at module import so `OPENAI_API_KEY` (and any sibling secrets) are
     visible to `superman.server.assistant` whether the server was started by
@@ -40,7 +40,7 @@ def _load_dotenv_once() -> None:
     """
     here = Path(__file__).resolve()
     candidates = [
-        here.parents[2] / ".env",          # backend axis/.env
+        here.parents[2] / ".env",          # backend/.env
         here.parents[3] / ".env",          # repo-root .env
         Path.cwd() / ".env",               # whatever cwd the user launched from
     ]

@@ -129,7 +129,7 @@ def serve(
     while `npm run dev` is running. State is held in RAM; each order batch
     updates that copy.
 
-    Dotenv loading covers `backend axis/.env` plus any `.env` discovered upward
+    Dotenv loading covers `backend/.env` plus any `.env` discovered upward
     from cwd, so `OPENAI_API_KEY` need not be exported by hand.
     """
     _load_dotenv_for_serve()
@@ -146,7 +146,7 @@ def serve(
 
 
 def _load_dotenv_for_serve() -> None:
-    """Load `.env` from cwd and from `backend axis/.env` next to the package.
+    """Load `.env` from cwd and from `backend/.env` next to the package.
 
     Idempotent and silent. Existing OS env vars win over file values so
     operators can still override per-shell.

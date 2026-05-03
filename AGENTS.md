@@ -12,9 +12,7 @@ Code must be **trivially readable**, **predictable to extend** and
 dependency injection. No clever tricks.
 
 This repo is the **Superman** fork: a C2 wargame console (not the old
-heartbeat-sensor demo). The active product paths are `axis/` and `backend axis/`.
-The legacy `frontend/` and `backend/` trees are deprecated and kept only until
-removal; new work targets the Superman paths above.
+heartbeat-sensor demo). The active product paths are `frontend/` and `backend/`.
 
 ## Hard rules
 
@@ -42,7 +40,7 @@ removal; new work targets the Superman paths above.
 
 ## Architectural shape
 
-### Frontend (`axis/src`)
+### Frontend (`frontend/src`)
 
 - **`api/`** fetch helpers for FastAPI (`/api/state`, orders, assistant, etc.).
 - **`map/`** MapLibre layers, geodesy, **layer ids prefixed with `sm-`** so
@@ -57,7 +55,7 @@ part of the public contract. Extend with optional fields; avoid silent
 renames without a coordinated backend and FE bump.
 
 **Presentation tokens:** military palette and spacing use **`--mil-*` CSS
-custom properties** in `axis/src/styles/` (and friends). Do not introduce ad
+custom properties** in `frontend/src/styles/` (and friends). Do not introduce ad
 hoc hex colours for C2 chrome.
 
 **Unit glyphs:** map unit icons use **NATO-style short codes** where the
@@ -66,7 +64,7 @@ spritesheet and layer agree on the same vocabulary.
 Dependency direction: UI imports from `state`, `api`, `map`, `types`, `decision`;
 avoid circular pulls from low-level map code back into React trees.
 
-### Backend (`backend axis/superman`)
+### Backend (`backend/superman`)
 
 - **`server/`** FastAPI app, in-memory theatre store, assistant endpoint.
 - **`sim/`** orders, combat resolution, political knock-ons.
@@ -74,7 +72,7 @@ avoid circular pulls from low-level map code back into React trees.
 - **`serialization/`** snapshot export to `data/state.json` shape.
 - **`cli.py`** Typer entrypoint: `serve`, `export`, `intel`, `settings`.
 
-Install from `backend axis` with an editable install (see `backend axis/README.md`).
+Install from `backend/` with an editable install (see `backend/README.md`).
 Run with `python -m superman …` so imports resolve consistently.
 
 ### Data (`data/`)

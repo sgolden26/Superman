@@ -15,8 +15,8 @@ simulator the backend runs.
 
 | Path | Role |
 |------|------|
-| `axis/` | Vite + React + TypeScript frontend (MapLibre map, HUD, decision UI). |
-| `backend axis/` | Python package `superman`: CLI, FastAPI server, intel pipeline, sim. |
+| `frontend/` | Vite + React + TypeScript frontend (MapLibre map, HUD, decision UI). |
+| `backend/` | Python package `superman`: CLI, FastAPI server, intel pipeline, sim. |
 | `data/` | Generated `state.json` / `intel.json` and backend runtime settings JSON. |
 
 The legacy trees `frontend/` and `backend/` belong to an older heartbeat-sensor
@@ -25,20 +25,20 @@ them for the C2 console.
 
 ## Quick start
 
-From the repo root (quotes matter because `backend axis` contains a space):
+From the repo root:
 
 ```bash
-cd "backend axis" && python -m superman serve
+cd backend && python -m superman serve
 ```
 
 In another shell:
 
 ```bash
-cd axis && npm install && npm run dev
+cd frontend && npm install && npm run dev
 ```
 
 `npm run dev` runs `predev`, which copies `data/state.json` (and optional
-`data/intel.json`) into `axis/public/` for static bootstrapping. Regenerate
+`data/intel.json`) into `frontend/public/` for static bootstrapping. Regenerate
 snapshots with `python -m superman export` (see `data/README.md`).
 
 ## Conventions

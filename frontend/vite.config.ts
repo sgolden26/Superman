@@ -6,7 +6,7 @@ import path from "node:path";
 // In dev, serve `state.json` and `intel.json` directly off `../data/` so a
 // backend `intel tick` (which rewrites `data/intel.json`) is reflected on
 // the next FE poll without restarting `npm run dev`. The `predev` copy step
-// still seeds `axis/public/` for production builds and as a fallback when
+// still seeds `frontend/public/` for production builds and as a fallback when
 // the live file is missing.
 function liveDataFiles(): Plugin {
   const dataDir = path.resolve(__dirname, "../data");

@@ -1,5 +1,5 @@
 /**
- * Superman dev helper: copy snapshot JSON from ../data into axis/public so Vite
+ * Superman dev helper: copy snapshot JSON from ../data into frontend/public so Vite
  * can serve a cold-start theatre without a running API.
  */
 
@@ -23,7 +23,7 @@ for (const { src, dst, required } of targets) {
   if (!existsSync(src)) {
     const msg =
       `[copy-state] ${src} does not exist. Run the backend exporter first:\n` +
-      `  cd "backend axis" && python -m superman export --scenario eastern_europe --out ../data/state.json`;
+      `  cd backend && python -m superman export --scenario eastern_europe --out ../data/state.json`;
     if (required) {
       missingRequired = true;
       console.warn(msg);

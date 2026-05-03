@@ -104,7 +104,7 @@ class StubAdapter(LeaderStatementAdapter):
 
 def _default_stub_path() -> Path:
     # Default: <repo>/data/leader_statements.json climbing out of
-    # `backend axis/superman/intel/`.
+    # `backend/superman/intel/`.
     here = Path(__file__).resolve()
     return here.parents[3] / "data" / "leader_statements.json"
 
