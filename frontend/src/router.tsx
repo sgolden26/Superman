@@ -3,6 +3,7 @@ import C2Layout from '@/views/c2/C2Layout';
 import SensorsPage from '@/views/c2/pages/SensorsPage';
 import SubjectsPage from '@/views/c2/pages/SubjectsPage';
 import FieldLayout from '@/views/field/FieldLayout';
+import HeadsUpPage from '@/views/field/pages/HeadsUpPage';
 
 export const router = createBrowserRouter([
   { path: '/', element: <Navigate to="/c2/sensors" replace /> },
@@ -18,8 +19,6 @@ export const router = createBrowserRouter([
   {
     path: '/field',
     element: <FieldLayout />,
-    children: [
-      { index: true, element: <SubjectsPage /> },
-    ],
+    children: [{ index: true, element: <HeadsUpPage /> }],
   },
 ]);
