@@ -12,7 +12,7 @@ export function Table({
 }: HTMLAttributes<HTMLTableElement>) {
   return (
     <table
-      className={cn('w-full border-collapse text-sm', className)}
+      className={cn('w-full border-collapse text-sm text-mil-100', className)}
       {...rest}
     >
       {children}
@@ -35,7 +35,7 @@ export function Th({
     <th
       scope="col"
       className={cn(
-        'sticky top-0 border-b border-zinc-800 bg-zinc-950 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-500',
+        'sticky top-0 border-b border-mil-800 bg-mil-950 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-mil-400',
         align === 'right' ? 'text-right' : 'text-left',
         className,
       )}
@@ -56,9 +56,9 @@ export function Td({
   return (
     <td
       className={cn(
-        'border-b border-zinc-900 px-4 py-2.5',
+        'border-b border-mil-800 px-4 py-2.5',
         align === 'right' ? 'text-right' : 'text-left',
-        mono ? 'font-mono tabular-nums text-[13px] text-zinc-300' : 'text-zinc-100',
+        mono ? 'font-mono tabular-nums text-[13px] text-mil-200' : 'text-mil-100',
         className,
       )}
       {...rest}

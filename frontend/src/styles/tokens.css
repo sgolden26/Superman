@@ -1,0 +1,22 @@
+/**
+ * Military C2 chrome tokens. Pair with Tailwind `mil.*` in tailwind.config.ts.
+ * Prefer these CSS variables in hand-written styles and MapLibre paint when
+ * Tailwind cannot reach into canvases.
+ */
+:root {
+  --mil-950: #06080d;
+  --mil-900: #0a0e13;
+  --mil-800: #10151c;
+  --mil-700: #161c25;
+  --mil-600: #1e2530;
+  --mil-500: #28313e;
+  --mil-400: #384352;
+  --mil-300: #6a7686;
+  --mil-200: #a9b3c1;
+  --mil-100: #dde2eb;
+  --faction-nato: #4da1ff;
+  --faction-ru: #ff5c4d;
+  --faction-neutral: #d4a24f;
+  --accent-ok: #7cd891;
+  --accent-danger: #ff5c4d;
+}
