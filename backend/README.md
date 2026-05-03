@@ -1,11 +1,11 @@
 # Backend
 
-FastAPI service backed by SQLite (via SQLModel).
+FastAPI service backed by SQLite (via SQLModel). Managed with [uv].
 
 ```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-uvicorn app.main:app --reload
+uv sync                                # install runtime + dev deps
+uv run uvicorn app.main:app --reload   # start the API
+uv run pytest                          # run the suite
 ```
 
 The database file defaults to `data/superman.db`. Override with `APP_DB_PATH`.
@@ -24,3 +24,5 @@ app/
 ```
 
 Conventions live in the root `AGENTS.md`.
+
+[uv]: https://docs.astral.sh/uv/

@@ -55,6 +55,12 @@ When they do: routes call services, services use `Session` from `app.db`, and
 request/response Pydantic models live next to their route module. Keep one
 table per file under `models/` so parallel work does not collide.
 
+The backend is managed with **[uv]**. Use `uv sync` to install, `uv run` to
+exec (`uv run uvicorn ...`, `uv run pytest`, `uv run mypy app`). Do not use
+`pip install` or hand-rolled venvs. Commit `uv.lock`.
+
+[uv]: https://docs.astral.sh/uv/
+
 ### Frontend (`frontend/src`)
 
 ```
