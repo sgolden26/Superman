@@ -11,8 +11,12 @@ import TopBar from '@/components/layout/TopBar';
 export default function FieldLayout() {
   return (
     <AppShell topBar={<TopBar title="Field" right={<DemoViewSwitcher />} />}>
-      <Outlet />
-      <FieldTabs />
+      <div className="flex h-full flex-col">
+        <div className="min-h-0 flex-1">
+          <Outlet />
+        </div>
+        <FieldTabs />
+      </div>
     </AppShell>
   );
 }
