@@ -1,1 +1,0 @@
-"""Superman backend application package."""

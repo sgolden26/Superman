@@ -1,50 +1,48 @@
 # Superman
 
-Heartbeat-fused situational awareness platform.
+Superman is a battlespace command and control console for a theatre-scale
+wargame demo. It brings together a live map, a structured decision engine,
+and political layer signals so operators can reason about force posture,
+intent, and second-order effects in one place.
 
-Combines long-range cardiac detection ("ghost murmur") with satellite imagery,
-drone footage and historical activity to classify human signatures as civilian
-or combatant in near real-time. Two consumer surfaces:
+The stack ingests a theatre snapshot (units, assets, territory, fronts),
+curated or live-derived intel, leader statements, and morale factors. The
+UI surfaces a unit and asset map, a decision flow with explicit political
+effects, and natural-language order suggestions validated against the same
+simulator the backend runs.
 
-- **Command and Control (C2)**: map-first multi-operator console.
-- **Field**: lean, glance-able view for frontline personnel.
+## Repo layout
 
-## Layout
+| Path | Role |
+|------|------|
+| `axis/` | Vite + React + TypeScript frontend (MapLibre map, HUD, decision UI). |
+| `backend axis/` | Python package `superman`: CLI, FastAPI server, intel pipeline, sim. |
+| `data/` | Generated `state.json` / `intel.json` and backend runtime settings JSON. |
 
-```
-.
-├── AGENTS.md          # Instructions for AI collaborators (read first)
-├── backend/           # Python / FastAPI
-└── frontend/          # React + TypeScript + Tailwind (Vite)
-```
+The legacy trees `frontend/` and `backend/` belong to an older heartbeat-sensor
+demo scaffold. They are deprecated here and scheduled for removal; do not use
+them for the C2 console.
 
-See `backend/README.md` and `frontend/README.md` for stack-specific notes.
+## Quick start
 
-## Status
-
-Hackathon scaffold. Stubs only. No business logic implemented yet.
-
-## Getting started
+From the repo root (quotes matter because `backend axis` contains a space):
 
 ```bash
-# backend (managed with uv: https://docs.astral.sh/uv/)
-cd backend && uv sync
-uv run uvicorn app.main:app --reload
-
-# frontend
-cd frontend && npm install
-npm run dev
+cd "backend axis" && python -m superman serve
 ```
+
+In another shell:
+
+```bash
+cd axis && npm install && npm run dev
+```
+
+`npm run dev` runs `predev`, which copies `data/state.json` (and optional
+`data/intel.json`) into `axis/public/` for static bootstrapping. Regenerate
+snapshots with `python -m superman export` (see `data/README.md`).
 
 ## Conventions
 
-- Demo mode: **no auth** (use the C2 / Field switcher in the top bar). Backend
-  persists to a local **SQLite** file at `backend/data/superman.db` via SQLModel.
-- Strict typing both sides (`mypy --strict`, `tsc --strict`).
-- Backend layout is intentionally minimal: `app/models/` (one SQLModel table
-  per file), `app/db.py`, `app/main.py`. Routes and services are added per
-  feature.
-- Frontend views are composed from `components/ui` (primitives) and
-  `components/domain` (cross-cutting domain widgets). View-specific pieces
-  stay inside `views/<view>/components`.
-- Read `AGENTS.md` before touching anything.
+- Demo posture: no real authentication; permissive CORS for local dev.
+- Strict typing: TypeScript `strict`, Python type annotations throughout.
+- Read `AGENTS.md` before you change code or docs.

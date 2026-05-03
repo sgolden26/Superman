@@ -1,0 +1,8309 @@
+{
+  "schema_version": "0.4.0",
+  "scenario": {
+    "id": "eastern_europe",
+    "name": "Russia-Ukraine Theatre",
+    "classification": "UNCLASSIFIED // EXERCISE",
+    "clock": "2026-04-25T11:00:00+00:00",
+    "bbox": [
+      20.0,
+      43.5,
+      50.0,
+      56.5
+    ]
+  },
+  "factions": [
+    {
+      "id": "ua",
+      "name": "Armed Forces of Ukraine",
+      "allegiance": "blue",
+      "color": "#5aa9ff"
+    },
+    {
+      "id": "ru",
+      "name": "Russian Federation",
+      "allegiance": "red",
+      "color": "#ff5a5a"
+    },
+    {
+      "id": "nato",
+      "name": "NATO",
+      "allegiance": "blue",
+      "color": "#7cc4ff"
+    },
+    {
+      "id": "neutral",
+      "name": "Neutral",
+      "allegiance": "neutral",
+      "color": "#d6a45a"
+    }
+  ],
+  "countries": [
+    {
+      "id": "ru",
+      "iso_a2": "RU",
+      "iso_a3": "RUS",
+      "name": "Russia",
+      "official_name": "Russian Federation",
+      "faction_id": "ru",
+      "flag_emoji": "\ud83c\uddf7\ud83c\uddfa",
+      "capital_city_id": "city.moscow",
+      "government": {
+        "regime_type": "authoritarian",
+        "head_of_state": "Vladimir Putin",
+        "head_of_government": "Mikhail Mishustin",
+        "cabinet": [
+          {
+            "title": "Defence Minister",
+            "name": "Andrei Belousov"
+          },
+          {
+            "title": "Foreign Minister",
+            "name": "Sergey Lavrov"
+          },
+          {
+            "title": "Interior Minister",
+            "name": "Vladimir Kolokoltsev"
+          },
+          {
+            "title": "FSB Director",
+            "name": "Alexander Bortnikov"
+          },
+          {
+            "title": "Chief of General Staff",
+            "name": "Valery Gerasimov"
+          },
+          {
+            "title": "Security Council Secretary",
+            "name": "Sergei Shoigu"
+          }
+        ],
+        "approval_rating": 0.78,
+        "stability_index": 0.62,
+        "last_election": "2024-03-17",
+        "next_election": "2030-03"
+      },
+      "military": {
+        "active_personnel": 1320000,
+        "reserve_personnel": 2000000,
+        "paramilitary": 554000,
+        "branches": [
+          {
+            "name": "Russian Ground Forces",
+            "personnel": 550000,
+            "inventory": [
+              {
+                "category": "mbt",
+                "label": "T-72B3M / T-80BVM / T-90M",
+                "count": 2800,
+                "status": "operational"
+              },
+              {
+                "category": "mbt",
+                "label": "T-62 (recovered)",
+                "count": 800,
+                "status": "legacy"
+              },
+              {
+                "category": "ifv",
+                "label": "BMP-2 / BMP-3",
+                "count": 4500,
+                "status": "operational"
+              },
+              {
+                "category": "apc",
+                "label": "BTR-82A",
+                "count": 2400,
+                "status": "operational"
+              },
+              {
+                "category": "spg",
+                "label": "2S19 Msta-S / 2S35 Koalitsiya",
+                "count": 720,
+                "status": "operational"
+              },
+              {
+                "category": "mlrs",
+                "label": "BM-21 / Tornado-S / TOS-1A",
+                "count": 920,
+                "status": "operational"
+              },
+              {
+                "category": "ssm",
+                "label": "Iskander-M",
+                "count": 80,
+                "status": "operational"
+              }
+            ]
+          },
+          {
+            "name": "Russian Aerospace Forces (VKS)",
+            "personnel": 165000,
+            "inventory": [
+              {
+                "category": "fighter",
+                "label": "Su-35S",
+                "count": 110,
+                "status": "operational"
+              },
+              {
+                "category": "fighter",
+                "label": "Su-30SM/SM2",
+                "count": 130,
+                "status": "operational"
+              },
+              {
+                "category": "multirole",
+                "label": "Su-34",
+                "count": 130,
+                "status": "operational"
+              },
+              {
+                "category": "attack",
+                "label": "Su-25SM3",
+                "count": 190,
+                "status": "operational"
+              },
+              {
+                "category": "interceptor",
+                "label": "MiG-31BM/K",
+                "count": 90,
+                "status": "operational"
+              },
+              {
+                "category": "bomber_strategic",
+                "label": "Tu-95MS / Tu-160 / Tu-22M3",
+                "count": 130,
+                "status": "operational"
+              },
+              {
+                "category": "helo_attack",
+                "label": "Ka-52 / Mi-28N / Mi-35M",
+                "count": 360,
+                "status": "operational"
+              },
+              {
+                "category": "uav",
+                "label": "Orlan-10 / Lancet / Geran-2",
+                "count": 4000,
+                "status": "operational"
+              },
+              {
+                "category": "sam_long",
+                "label": "S-400 Triumf",
+                "count": 56,
+                "status": "operational"
+              },
+              {
+                "category": "sam_strategic",
+                "label": "S-500 Prometey",
+                "count": 2,
+                "status": "limited"
+              }
+            ]
+          },
+          {
+            "name": "Russian Navy",
+            "personnel": 150000,
+            "inventory": [
+              {
+                "category": "ssbn",
+                "label": "Project 667BDRM / 955 Borei",
+                "count": 11,
+                "status": "operational"
+              },
+              {
+                "category": "ssn",
+                "label": "Project 949A / 885M Yasen-M",
+                "count": 17,
+                "status": "operational"
+              },
+              {
+                "category": "ssk",
+                "label": "Kilo / Improved Kilo",
+                "count": 22,
+                "status": "operational"
+              },
+              {
+                "category": "cruiser",
+                "label": "Project 1144 / 1164",
+                "count": 4,
+                "status": "operational"
+              },
+              {
+                "category": "destroyer",
+                "label": "Project 956 / 1155",
+                "count": 12,
+                "status": "operational"
+              },
+              {
+                "category": "frigate",
+                "label": "Admiral Gorshkov / Grigorovich",
+                "count": 9,
+                "status": "operational"
+              },
+              {
+                "category": "corvette",
+                "label": "Steregushchiy / Karakurt / Buyan-M",
+                "count": 38,
+                "status": "operational"
+              }
+            ]
+          },
+          {
+            "name": "Strategic Rocket Forces",
+            "personnel": 50000,
+            "inventory": [
+              {
+                "category": "icbm",
+                "label": "RS-24 Yars (mobile/silo)",
+                "count": 180,
+                "status": "operational"
+              },
+              {
+                "category": "icbm",
+                "label": "RS-28 Sarmat",
+                "count": 4,
+                "status": "limited"
+              },
+              {
+                "category": "icbm",
+                "label": "UR-100N / R-36M (legacy)",
+                "count": 60,
+                "status": "legacy"
+              }
+            ]
+          },
+          {
+            "name": "Airborne Forces (VDV)",
+            "personnel": 45000,
+            "inventory": [
+              {
+                "category": "ifv_airborne",
+                "label": "BMD-4M",
+                "count": 380,
+                "status": "operational"
+              },
+              {
+                "category": "apc_airborne",
+                "label": "BTR-MD Rakushka",
+                "count": 220,
+                "status": "operational"
+              }
+            ]
+          },
+          {
+            "name": "Rosgvardiya (National Guard)",
+            "personnel": 340000,
+            "inventory": []
+          }
+        ],
+        "doctrine": "Strategic deterrence; escalate-to-de-escalate; combined-arms attrition; non-contact precision strike; nuclear umbrella for sub-conventional revisionism.",
+        "posture": "offensive",
+        "alert_level": 4,
+        "c2_nodes": [
+          "National Defence Management Centre (Moscow)",
+          "Western MD HQ (St. Petersburg)",
+          "Southern MD HQ (Rostov-on-Don)",
+          "Joint Group of Forces HQ (Rostov)"
+        ]
+      },
+      "nuclear": {
+        "status": "nws",
+        "warheads": 4380,
+        "delivery_systems": [
+          "RS-24 Yars",
+          "RS-28 Sarmat",
+          "Bulava (Borei SSBN)",
+          "Iskander-M / Kinzhal",
+          "Tu-160 / Tu-95MS (Kh-101/102)"
+        ],
+        "declared_posture": "Reserves the right to use nuclear weapons in response to nuclear or conventional attack threatening the existence of the state.",
+        "nfu": false
+      },
+      "demographics": {
+        "population": 143400000,
+        "median_age": 40.3,
+        "urbanisation": 0.75,
+        "ethnic_groups": [
+          {
+            "label": "Russian",
+            "share": 0.8
+          },
+          {
+            "label": "Tatar",
+            "share": 0.04
+          },
+          {
+            "label": "Ukrainian",
+            "share": 0.01
+          },
+          {
+            "label": "Bashkir",
+            "share": 0.01
+          },
+          {
+            "label": "Chuvash",
+            "share": 0.01
+          },
+          {
+            "label": "Other",
+            "share": 0.13
+          }
+        ],
+        "languages": [
+          {
+            "label": "Russian",
+            "share": 0.85
+          },
+          {
+            "label": "Tatar",
+            "share": 0.03
+          },
+          {
+            "label": "Other",
+            "share": 0.12
+          }
+        ],
+        "religions": [
+          {
+            "label": "Orthodox",
+            "share": 0.63
+          },
+          {
+            "label": "Muslim",
+            "share": 0.07
+          },
+          {
+            "label": "None / unspecified",
+            "share": 0.27
+          },
+          {
+            "label": "Other",
+            "share": 0.03
+          }
+        ]
+      },
+      "diplomacy": {
+        "alliance_memberships": [
+          "CSTO",
+          "CIS",
+          "EAEU",
+          "BRICS",
+          "SCO",
+          "UNSC P5"
+        ],
+        "treaties": [
+          {
+            "name": "CSTO Charter",
+            "kind": "collective_defence",
+            "parties": [
+              "CSTO members"
+            ],
+            "in_force": true
+          },
+          {
+            "name": "New START",
+            "kind": "arms_control",
+            "parties": [
+              "ru",
+              "us"
+            ],
+            "in_force": false
+          },
+          {
+            "name": "INF",
+            "kind": "arms_control",
+            "parties": [
+              "ru",
+              "us"
+            ],
+            "in_force": false
+          },
+          {
+            "name": "Union State Treaty",
+            "kind": "political_military",
+            "parties": [
+              "ru",
+              "by"
+            ],
+            "in_force": true
+          }
+        ],
+        "relations": [
+          {
+            "other_country_id": "ua",
+            "status": "at_war",
+            "score": -1.0
+          },
+          {
+            "other_country_id": "by",
+            "status": "allied",
+            "score": 0.95
+          },
+          {
+            "other_country_id": "us",
+            "status": "hostile",
+            "score": -0.9
+          },
+          {
+            "other_country_id": "pl",
+            "status": "hostile",
+            "score": -0.85
+          },
+          {
+            "other_country_id": "ge",
+            "status": "strained",
+            "score": -0.6
+          },
+          {
+            "other_country_id": "md",
+            "status": "strained",
+            "score": -0.55
+          },
+          {
+            "other_country_id": "ro",
+            "status": "hostile",
+            "score": -0.8
+          },
+          {
+            "other_country_id": "de",
+            "status": "strained",
+            "score": -0.7
+          },
+          {
+            "other_country_id": "cn",
+            "status": "friendly",
+            "score": 0.75
+          },
+          {
+            "other_country_id": "ir",
+            "status": "friendly",
+            "score": 0.7
+          },
+          {
+            "other_country_id": "kp",
+            "status": "friendly",
+            "score": 0.75
+          }
+        ]
+      },
+      "energy": {
+        "oil_dependence": 0.0,
+        "gas_dependence": 0.0,
+        "top_gas_supplier": "domestic (Gazprom)",
+        "pipelines": [
+          "Druzhba (oil)",
+          "ESPO (oil, Pacific)",
+          "Power of Siberia (gas, China)",
+          "TurkStream (gas)",
+          "Yamal-Europe (gas, suspended)"
+        ],
+        "key_ports": [
+          "Novorossiysk",
+          "St. Petersburg / Ust-Luga",
+          "Murmansk",
+          "Vladivostok",
+          "Sevastopol (occupied)"
+        ],
+        "rail_gauge_mm": 1520,
+        "strategic_reserves_days": 180
+      },
+      "public_opinion": {
+        "war_support": 0.55,
+        "institutional_trust": 0.4,
+        "censorship_index": 0.92,
+        "protest_intensity": 0.1,
+        "top_outlets": [
+          "Channel One (state)",
+          "Rossiya 1 (state)",
+          "RIA Novosti (state)",
+          "TASS (state)",
+          "Meduza (exile)"
+        ]
+      },
+      "geography": {
+        "area_km2": 17098000,
+        "land_borders": [
+          {
+            "other": "ua",
+            "length_km": 1944
+          },
+          {
+            "other": "by",
+            "length_km": 1312
+          },
+          {
+            "other": "kz",
+            "length_km": 7644
+          },
+          {
+            "other": "ge",
+            "length_km": 894
+          },
+          {
+            "other": "fi",
+            "length_km": 1309
+          },
+          {
+            "other": "ee",
+            "length_km": 324
+          },
+          {
+            "other": "lv",
+            "length_km": 332
+          },
+          {
+            "other": "lt",
+            "length_km": 273
+          },
+          {
+            "other": "pl",
+            "length_km": 210
+          },
+          {
+            "other": "no",
+            "length_km": 196
+          },
+          {
+            "other": "cn",
+            "length_km": 4209
+          },
+          {
+            "other": "mn",
+            "length_km": 3485
+          },
+          {
+            "other": "kp",
+            "length_km": 18
+          },
+          {
+            "other": "az",
+            "length_km": 338
+          }
+        ],
+        "key_bases": [
+          {
+            "name": "Khmeimim Air Base (Syria)",
+            "kind": "air_base",
+            "lon": 35.9486,
+            "lat": 35.4108,
+            "owner_country_id": "ru"
+          },
+          {
+            "name": "Severomorsk (Northern Fleet)",
+            "kind": "naval_base",
+            "lon": 33.417,
+            "lat": 69.07,
+            "owner_country_id": "ru"
+          },
+          {
+            "name": "Sevastopol (Black Sea Fleet)",
+            "kind": "naval_base",
+            "lon": 33.5283,
+            "lat": 44.6166,
+            "owner_country_id": "ru"
+          },
+          {
+            "name": "Vladivostok (Pacific Fleet)",
+            "kind": "naval_base",
+            "lon": 131.8869,
+            "lat": 43.1155,
+            "owner_country_id": "ru"
+          },
+          {
+            "name": "Engels-2 Strategic Air Base",
+            "kind": "air_base",
+            "lon": 46.2106,
+            "lat": 51.4783,
+            "owner_country_id": "ru"
+          },
+          {
+            "name": "Plesetsk Cosmodrome",
+            "kind": "command_node",
+            "lon": 40.5772,
+            "lat": 62.9272,
+            "owner_country_id": "ru"
+          },
+          {
+            "name": "Yelnya Garrison (1st Tank Army)",
+            "kind": "training_ground",
+            "lon": 33.175,
+            "lat": 54.5783,
+            "owner_country_id": "ru"
+          },
+          {
+            "name": "Voronezh Garrison (20th CAA)",
+            "kind": "training_ground",
+            "lon": 39.2003,
+            "lat": 51.672,
+            "owner_country_id": "ru"
+          },
+          {
+            "name": "Belgorod Air Base",
+            "kind": "air_base",
+            "lon": 36.59,
+            "lat": 50.6442,
+            "owner_country_id": "ru"
+          },
+          {
+            "name": "Rostov-on-Don JFC HQ",
+            "kind": "command_node",
+            "lon": 39.7233,
+            "lat": 47.2357,
+            "owner_country_id": "ru"
+          }
+        ]
+      },
+      "available_actions": [
+        "raise_alert_level",
+        "mobilise_reserves",
+        "declare_martial_law",
+        "close_borders",
+        "issue_public_statement",
+        "expel_diplomats",
+        "sever_diplomatic_ties",
+        "host_allied_forces",
+        "authorise_strategic_strike",
+        "censor_independent_media"
+      ]
+    },
+    {
+      "id": "ua",
+      "iso_a2": "UA",
+      "iso_a3": "UKR",
+      "name": "Ukraine",
+      "official_name": "Ukraine",
+      "faction_id": "ua",
+      "flag_emoji": "\ud83c\uddfa\ud83c\udde6",
+      "capital_city_id": "city.kyiv",
+      "government": {
+        "regime_type": "liberal_democracy",
+        "head_of_state": "Volodymyr Zelenskyy",
+        "head_of_government": "Denys Shmyhal",
+        "cabinet": [
+          {
+            "title": "Defence Minister",
+            "name": "Rustem Umerov"
+          },
+          {
+            "title": "Foreign Minister",
+            "name": "Andrii Sybiha"
+          },
+          {
+            "title": "Interior Minister",
+            "name": "Ihor Klymenko"
+          },
+          {
+            "title": "Commander-in-Chief",
+            "name": "Oleksandr Syrskyi"
+          },
+          {
+            "title": "SBU Head",
+            "name": "Vasyl Maliuk"
+          },
+          {
+            "title": "GUR (Military Intelligence)",
+            "name": "Kyrylo Budanov"
+          }
+        ],
+        "approval_rating": 0.62,
+        "stability_index": 0.55,
+        "last_election": "2019-04-21",
+        "next_election": "postponed (martial law)"
+      },
+      "military": {
+        "active_personnel": 900000,
+        "reserve_personnel": 1200000,
+        "paramilitary": 120000,
+        "branches": [
+          {
+            "name": "Ground Forces (ZSU)",
+            "personnel": 350000,
+            "inventory": [
+              {
+                "category": "mbt",
+                "label": "T-64BV / T-72 family",
+                "count": 1300,
+                "status": "operational"
+              },
+              {
+                "category": "mbt",
+                "label": "Leopard 2A4/2A6 (DE/PL/CA)",
+                "count": 90,
+                "status": "operational"
+              },
+              {
+                "category": "mbt",
+                "label": "Challenger 2 (UK)",
+                "count": 14,
+                "status": "limited"
+              },
+              {
+                "category": "mbt",
+                "label": "M1A1 Abrams (US)",
+                "count": 31,
+                "status": "limited"
+              },
+              {
+                "category": "ifv",
+                "label": "BMP-1/BMP-2 (legacy + captured)",
+                "count": 1400,
+                "status": "operational"
+              },
+              {
+                "category": "ifv",
+                "label": "Bradley (US)",
+                "count": 200,
+                "status": "operational"
+              },
+              {
+                "category": "ifv",
+                "label": "Marder 1A3 (DE)",
+                "count": 80,
+                "status": "operational"
+              },
+              {
+                "category": "ifv",
+                "label": "CV90 (SE)",
+                "count": 50,
+                "status": "operational"
+              },
+              {
+                "category": "apc",
+                "label": "Stryker / M113 / YPR-765",
+                "count": 1100,
+                "status": "operational"
+              },
+              {
+                "category": "spg",
+                "label": "M109A6 Paladin",
+                "count": 100,
+                "status": "operational"
+              },
+              {
+                "category": "spg",
+                "label": "Caesar / AHS Krab / Archer / PzH 2000",
+                "count": 200,
+                "status": "operational"
+              },
+              {
+                "category": "mlrs",
+                "label": "HIMARS M142",
+                "count": 39,
+                "status": "operational"
+              },
+              {
+                "category": "mlrs",
+                "label": "BM-27 / BM-30 Smerch",
+                "count": 90,
+                "status": "operational"
+              },
+              {
+                "category": "atgm",
+                "label": "Javelin / NLAW / Stugna-P",
+                "count": 25000,
+                "status": "operational"
+              }
+            ]
+          },
+          {
+            "name": "Air Force (PSU)",
+            "personnel": 45000,
+            "inventory": [
+              {
+                "category": "fighter",
+                "label": "MiG-29",
+                "count": 35,
+                "status": "limited"
+              },
+              {
+                "category": "fighter",
+                "label": "Su-27",
+                "count": 18,
+                "status": "limited"
+              },
+              {
+                "category": "fighter",
+                "label": "F-16AM/BM (NL/DK/NO/BE)",
+                "count": 20,
+                "status": "operational"
+              },
+              {
+                "category": "attack",
+                "label": "Su-25",
+                "count": 24,
+                "status": "limited"
+              },
+              {
+                "category": "strike",
+                "label": "Su-24M",
+                "count": 12,
+                "status": "limited"
+              },
+              {
+                "category": "sam_long",
+                "label": "Patriot PAC-3 (US/DE/NL)",
+                "count": 5,
+                "status": "operational"
+              },
+              {
+                "category": "sam_med",
+                "label": "IRIS-T SLM (DE)",
+                "count": 8,
+                "status": "operational"
+              },
+              {
+                "category": "sam_med",
+                "label": "NASAMS",
+                "count": 6,
+                "status": "operational"
+              },
+              {
+                "category": "sam_med",
+                "label": "S-300P (legacy)",
+                "count": 30,
+                "status": "limited"
+              }
+            ]
+          },
+          {
+            "name": "Navy",
+            "personnel": 11000,
+            "inventory": [
+              {
+                "category": "opv",
+                "label": "Island-class (US transfer)",
+                "count": 5,
+                "status": "operational"
+              },
+              {
+                "category": "usv",
+                "label": "Magura V5 / Sea Baby",
+                "count": 60,
+                "status": "operational"
+              },
+              {
+                "category": "missile",
+                "label": "Neptune RBS-15 (anti-ship)",
+                "count": 12,
+                "status": "operational"
+              }
+            ]
+          },
+          {
+            "name": "Air Assault Forces (DShV)",
+            "personnel": 25000,
+            "inventory": [
+              {
+                "category": "ifv_airborne",
+                "label": "BMD-1/2 (legacy)",
+                "count": 80,
+                "status": "legacy"
+              }
+            ]
+          },
+          {
+            "name": "Special Operations Forces (SSO)",
+            "personnel": 4000,
+            "inventory": []
+          },
+          {
+            "name": "Territorial Defence Forces (TrO)",
+            "personnel": 120000,
+            "inventory": []
+          },
+          {
+            "name": "National Guard / Border Guard",
+            "personnel": 80000,
+            "inventory": []
+          }
+        ],
+        "doctrine": "Active defence-in-depth; deep precision strike; ISR-LRT kill chains; drone-saturated tactical level; partner-equipped manoeuvre brigades.",
+        "posture": "defensive",
+        "alert_level": 5,
+        "c2_nodes": [
+          "General Staff (Kyiv)",
+          "OK 'Pivnich' (North)",
+          "OK 'Skhid' (East)",
+          "OK 'Pivden' (South)",
+          "OK 'Zakhid' (West)"
+        ]
+      },
+      "nuclear": {
+        "status": "none",
+        "warheads": 0,
+        "delivery_systems": [],
+        "declared_posture": "Non-nuclear under the 1994 Budapest Memorandum; relies on Western deterrence and conventional precision strike.",
+        "nfu": null
+      },
+      "demographics": {
+        "population": 33200000,
+        "median_age": 42.3,
+        "urbanisation": 0.7,
+        "ethnic_groups": [
+          {
+            "label": "Ukrainian",
+            "share": 0.78
+          },
+          {
+            "label": "Russian",
+            "share": 0.17
+          },
+          {
+            "label": "Belarusian",
+            "share": 0.01
+          },
+          {
+            "label": "Crimean Tatar",
+            "share": 0.01
+          },
+          {
+            "label": "Other",
+            "share": 0.03
+          }
+        ],
+        "languages": [
+          {
+            "label": "Ukrainian",
+            "share": 0.72
+          },
+          {
+            "label": "Russian",
+            "share": 0.25
+          },
+          {
+            "label": "Other",
+            "share": 0.03
+          }
+        ],
+        "religions": [
+          {
+            "label": "Orthodox (OCU/UOC)",
+            "share": 0.65
+          },
+          {
+            "label": "Greek Catholic",
+            "share": 0.1
+          },
+          {
+            "label": "Roman Catholic",
+            "share": 0.02
+          },
+          {
+            "label": "None / unspecified",
+            "share": 0.2
+          },
+          {
+            "label": "Other",
+            "share": 0.03
+          }
+        ]
+      },
+      "diplomacy": {
+        "alliance_memberships": [
+          "UN",
+          "EU candidate",
+          "OSCE",
+          "Council of Europe"
+        ],
+        "treaties": [
+          {
+            "name": "Budapest Memorandum",
+            "kind": "security_assurance",
+            "parties": [
+              "us",
+              "uk",
+              "ru",
+              "ua"
+            ],
+            "in_force": false
+          },
+          {
+            "name": "EU Association Agreement",
+            "kind": "political_economic",
+            "parties": [
+              "eu",
+              "ua"
+            ],
+            "in_force": true
+          },
+          {
+            "name": "UK-Ukraine 100-Year Partnership",
+            "kind": "bilateral",
+            "parties": [
+              "uk",
+              "ua"
+            ],
+            "in_force": true
+          },
+          {
+            "name": "US-Ukraine Bilateral Security Agreement",
+            "kind": "bilateral",
+            "parties": [
+              "us",
+              "ua"
+            ],
+            "in_force": true
+          }
+        ],
+        "relations": [
+          {
+            "other_country_id": "ru",
+            "status": "at_war",
+            "score": -1.0
+          },
+          {
+            "other_country_id": "by",
+            "status": "hostile",
+            "score": -0.9
+          },
+          {
+            "other_country_id": "pl",
+            "status": "allied",
+            "score": 0.85
+          },
+          {
+            "other_country_id": "md",
+            "status": "allied",
+            "score": 0.75
+          },
+          {
+            "other_country_id": "ro",
+            "status": "allied",
+            "score": 0.8
+          },
+          {
+            "other_country_id": "us",
+            "status": "allied",
+            "score": 0.85
+          },
+          {
+            "other_country_id": "uk",
+            "status": "allied",
+            "score": 0.9
+          },
+          {
+            "other_country_id": "de",
+            "status": "allied",
+            "score": 0.8
+          },
+          {
+            "other_country_id": "ge",
+            "status": "friendly",
+            "score": 0.7
+          },
+          {
+            "other_country_id": "tr",
+            "status": "friendly",
+            "score": 0.55
+          }
+        ]
+      },
+      "energy": {
+        "oil_dependence": 0.6,
+        "gas_dependence": 0.3,
+        "top_gas_supplier": "EU reverse-flow (SK, HU, PL)",
+        "pipelines": [
+          "Druzhba (oil, partial)",
+          "Trans-Balkan (gas, reverse)",
+          "Brotherhood (transit, halted Jan 2025)"
+        ],
+        "key_ports": [
+          "Odesa",
+          "Pivdennyi",
+          "Chornomorsk",
+          "Reni",
+          "Izmail"
+        ],
+        "rail_gauge_mm": 1520,
+        "strategic_reserves_days": 45
+      },
+      "public_opinion": {
+        "war_support": 0.85,
+        "institutional_trust": 0.65,
+        "censorship_index": 0.32,
+        "protest_intensity": 0.12,
+        "top_outlets": [
+          "Suspilne (public)",
+          "Ukrainska Pravda",
+          "Kyiv Independent",
+          "Hromadske",
+          "ICTV"
+        ]
+      },
+      "geography": {
+        "area_km2": 603500,
+        "land_borders": [
+          {
+            "other": "ru",
+            "length_km": 1944
+          },
+          {
+            "other": "by",
+            "length_km": 1111
+          },
+          {
+            "other": "pl",
+            "length_km": 535
+          },
+          {
+            "other": "sk",
+            "length_km": 90
+          },
+          {
+            "other": "hu",
+            "length_km": 103
+          },
+          {
+            "other": "ro",
+            "length_km": 601
+          },
+          {
+            "other": "md",
+            "length_km": 1202
+          }
+        ],
+        "key_bases": [
+          {
+            "name": "Bankova / OP HQ (Kyiv)",
+            "kind": "command_node",
+            "lon": 30.5234,
+            "lat": 50.4501,
+            "owner_country_id": "ua"
+          },
+          {
+            "name": "General Staff (Kyiv)",
+            "kind": "command_node",
+            "lon": 30.49,
+            "lat": 50.449,
+            "owner_country_id": "ua"
+          },
+          {
+            "name": "Vasylkiv Air Base",
+            "kind": "air_base",
+            "lon": 30.3155,
+            "lat": 50.235,
+            "owner_country_id": "ua"
+          },
+          {
+            "name": "Starokostiantyniv Air Base",
+            "kind": "air_base",
+            "lon": 27.2433,
+            "lat": 49.76,
+            "owner_country_id": "ua"
+          },
+          {
+            "name": "Mykolaiv Naval HQ",
+            "kind": "naval_base",
+            "lon": 31.9946,
+            "lat": 46.975,
+            "owner_country_id": "ua"
+          },
+          {
+            "name": "Yavoriv Combined Arms Centre",
+            "kind": "training_ground",
+            "lon": 23.4,
+            "lat": 49.9333,
+            "owner_country_id": "ua"
+          },
+          {
+            "name": "Desna Training Centre",
+            "kind": "training_ground",
+            "lon": 31.2667,
+            "lat": 51.0167,
+            "owner_country_id": "ua"
+          },
+          {
+            "name": "Kharkiv OK 'Skhid' HQ",
+            "kind": "command_node",
+            "lon": 36.2304,
+            "lat": 49.9935,
+            "owner_country_id": "ua"
+          },
+          {
+            "name": "Dnipro Logistics Hub",
+            "kind": "command_node",
+            "lon": 35.0,
+            "lat": 48.45,
+            "owner_country_id": "ua"
+          }
+        ]
+      },
+      "available_actions": [
+        "raise_alert_level",
+        "general_mobilisation",
+        "request_lethal_aid",
+        "declare_martial_law",
+        "close_airspace",
+        "issue_public_statement",
+        "request_emergency_session",
+        "authorise_strategic_strike",
+        "expel_diplomats",
+        "sever_diplomatic_ties"
+      ]
+    },
+    {
+      "id": "by",
+      "iso_a2": "BY",
+      "iso_a3": "BLR",
+      "name": "Belarus",
+      "official_name": "Republic of Belarus",
+      "faction_id": "ru",
+      "flag_emoji": "\ud83c\udde7\ud83c\uddfe",
+      "capital_city_id": "city.minsk",
+      "government": {
+        "regime_type": "authoritarian",
+        "head_of_state": "Alexander Lukashenko",
+        "head_of_government": "Roman Golovchenko",
+        "cabinet": [
+          {
+            "title": "Defence Minister",
+            "name": "Viktor Khrenin"
+          },
+          {
+            "title": "Foreign Minister",
+            "name": "Maxim Ryzhenkov"
+          },
+          {
+            "title": "Interior Minister",
+            "name": "Ivan Kubrakov"
+          },
+          {
+            "title": "KGB Chairman",
+            "name": "Ivan Tertel"
+          }
+        ],
+        "approval_rating": 0.32,
+        "stability_index": 0.45,
+        "last_election": "2025-01-26",
+        "next_election": "2030-01"
+      },
+      "military": {
+        "active_personnel": 48000,
+        "reserve_personnel": 290000,
+        "paramilitary": 110000,
+        "branches": [
+          {
+            "name": "Belarusian Ground Forces",
+            "personnel": 29000,
+            "inventory": [
+              {
+                "category": "mbt",
+                "label": "T-72B / T-72B3 (RU-supplied)",
+                "count": 580,
+                "status": "operational"
+              },
+              {
+                "category": "ifv",
+                "label": "BMP-2",
+                "count": 1165,
+                "status": "limited"
+              },
+              {
+                "category": "apc",
+                "label": "BTR-80 / BTR-82A",
+                "count": 188,
+                "status": "operational"
+              },
+              {
+                "category": "spg",
+                "label": "2S19 Msta-S",
+                "count": 130,
+                "status": "operational"
+              },
+              {
+                "category": "mlrs",
+                "label": "BM-21 / Polonez",
+                "count": 192,
+                "status": "operational"
+              },
+              {
+                "category": "ssm",
+                "label": "Iskander-M (RU-host)",
+                "count": 12,
+                "status": "operational"
+              }
+            ]
+          },
+          {
+            "name": "Air Force & Air Defence",
+            "personnel": 11500,
+            "inventory": [
+              {
+                "category": "fighter",
+                "label": "Su-30SM (RU)",
+                "count": 12,
+                "status": "operational"
+              },
+              {
+                "category": "fighter",
+                "label": "MiG-29",
+                "count": 32,
+                "status": "limited"
+              },
+              {
+                "category": "attack",
+                "label": "Su-25",
+                "count": 56,
+                "status": "legacy"
+              },
+              {
+                "category": "helo_attack",
+                "label": "Mi-24",
+                "count": 12,
+                "status": "legacy"
+              },
+              {
+                "category": "sam_long",
+                "label": "S-400 (RU-detached)",
+                "count": 4,
+                "status": "operational"
+              },
+              {
+                "category": "sam_med",
+                "label": "S-300PS",
+                "count": 16,
+                "status": "limited"
+              }
+            ]
+          },
+          {
+            "name": "Special Operations Forces",
+            "personnel": 6000,
+            "inventory": [
+              {
+                "category": "sf_brigade",
+                "label": "Brigades",
+                "count": 4,
+                "status": "operational"
+              }
+            ]
+          },
+          {
+            "name": "Internal Troops (MVD)",
+            "personnel": 11000,
+            "inventory": []
+          }
+        ],
+        "doctrine": "Union State integration; forward host for Russian strategic assets.",
+        "posture": "deterrent",
+        "alert_level": 3,
+        "c2_nodes": [
+          "Minsk MOD",
+          "Asipovichy Storage Site",
+          "Baranavichy Air Base C2"
+        ]
+      },
+      "nuclear": {
+        "status": "umbrella_host",
+        "warheads": 0,
+        "delivery_systems": [
+          "Iskander-M (RU)",
+          "Su-25 nuclear-capable retrofit"
+        ],
+        "declared_posture": "Hosts Russian non-strategic nuclear weapons under Union State arrangements.",
+        "nfu": null
+      },
+      "demographics": {
+        "population": 9150000,
+        "median_age": 41.5,
+        "urbanisation": 0.8,
+        "ethnic_groups": [
+          {
+            "label": "Belarusian",
+            "share": 0.84
+          },
+          {
+            "label": "Russian",
+            "share": 0.08
+          },
+          {
+            "label": "Polish",
+            "share": 0.03
+          },
+          {
+            "label": "Ukrainian",
+            "share": 0.02
+          },
+          {
+            "label": "Other",
+            "share": 0.03
+          }
+        ],
+        "languages": [
+          {
+            "label": "Russian",
+            "share": 0.71
+          },
+          {
+            "label": "Belarusian",
+            "share": 0.26
+          },
+          {
+            "label": "Other",
+            "share": 0.03
+          }
+        ],
+        "religions": [
+          {
+            "label": "Orthodox",
+            "share": 0.48
+          },
+          {
+            "label": "Roman Catholic",
+            "share": 0.07
+          },
+          {
+            "label": "None / unspecified",
+            "share": 0.41
+          },
+          {
+            "label": "Other",
+            "share": 0.04
+          }
+        ]
+      },
+      "diplomacy": {
+        "alliance_memberships": [
+          "CSTO",
+          "Union State",
+          "CIS",
+          "EAEU",
+          "SCO observer"
+        ],
+        "treaties": [
+          {
+            "name": "Union State Treaty",
+            "kind": "political_military",
+            "parties": [
+              "ru",
+              "by"
+            ],
+            "in_force": true
+          },
+          {
+            "name": "CSTO Charter",
+            "kind": "collective_defence",
+            "parties": [
+              "CSTO members"
+            ],
+            "in_force": true
+          },
+          {
+            "name": "EU Sanctions Regime",
+            "kind": "sanctions_target",
+            "parties": [
+              "EU"
+            ],
+            "in_force": true
+          }
+        ],
+        "relations": [
+          {
+            "other_country_id": "ru",
+            "status": "allied",
+            "score": 0.95
+          },
+          {
+            "other_country_id": "ua",
+            "status": "hostile",
+            "score": -0.9
+          },
+          {
+            "other_country_id": "pl",
+            "status": "hostile",
+            "score": -0.8
+          },
+          {
+            "other_country_id": "lt",
+            "status": "hostile",
+            "score": -0.75
+          },
+          {
+            "other_country_id": "lv",
+            "status": "hostile",
+            "score": -0.65
+          },
+          {
+            "other_country_id": "us",
+            "status": "hostile",
+            "score": -0.85
+          },
+          {
+            "other_country_id": "de",
+            "status": "strained",
+            "score": -0.55
+          }
+        ]
+      },
+      "energy": {
+        "oil_dependence": 0.85,
+        "gas_dependence": 1.0,
+        "top_gas_supplier": "Russia (Gazprom)",
+        "pipelines": [
+          "Druzhba (oil)",
+          "Yamal-Europe (gas)",
+          "Northern Lights (gas)"
+        ],
+        "key_ports": [],
+        "rail_gauge_mm": 1520,
+        "strategic_reserves_days": 60
+      },
+      "public_opinion": {
+        "war_support": 0.28,
+        "institutional_trust": 0.3,
+        "censorship_index": 0.85,
+        "protest_intensity": 0.18,
+        "top_outlets": [
+          "Belta (state)",
+          "ONT (state)",
+          "Nasha Niva (exile)",
+          "Zerkalo (exile)"
+        ]
+      },
+      "geography": {
+        "area_km2": 207600,
+        "land_borders": [
+          {
+            "other": "ru",
+            "length_km": 1312
+          },
+          {
+            "other": "ua",
+            "length_km": 1111
+          },
+          {
+            "other": "pl",
+            "length_km": 418
+          },
+          {
+            "other": "lt",
+            "length_km": 678
+          },
+          {
+            "other": "lv",
+            "length_km": 173
+          }
+        ],
+        "key_bases": [
+          {
+            "name": "Baranavichy Air Base",
+            "kind": "air_base",
+            "lon": 26.05,
+            "lat": 53.1,
+            "owner_country_id": "by"
+          },
+          {
+            "name": "Lida Air Base",
+            "kind": "air_base",
+            "lon": 25.3733,
+            "lat": 53.8867,
+            "owner_country_id": "by"
+          },
+          {
+            "name": "Asipovichy 1405 Storage",
+            "kind": "command_node",
+            "lon": 28.64,
+            "lat": 53.3,
+            "owner_country_id": "by"
+          },
+          {
+            "name": "Brest Garrison",
+            "kind": "training_ground",
+            "lon": 23.7,
+            "lat": 52.0833,
+            "owner_country_id": "by"
+          },
+          {
+            "name": "Hantsavichy EW Radar (RU)",
+            "kind": "command_node",
+            "lon": 26.5333,
+            "lat": 52.85,
+            "owner_country_id": "by"
+          }
+        ]
+      },
+      "available_actions": [
+        "raise_alert_level",
+        "mobilise_reserves",
+        "declare_martial_law",
+        "close_borders",
+        "issue_public_statement",
+        "expel_diplomats",
+        "sever_diplomatic_ties",
+        "host_allied_forces",
+        "authorise_strategic_strike",
+        "censor_independent_media"
+      ]
+    }
+  ],
+  "cities": [
+    {
+      "id": "city.kyiv",
+      "name": "Kyiv",
+      "faction_id": "ua",
+      "position": [
+        30.5234,
+        50.4501
+      ],
+      "population": 2950000,
+      "importance": "capital",
+      "infrastructure": [
+        "rail_hub",
+        "air_base",
+        "command_node"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.kharkiv",
+      "name": "Kharkiv",
+      "faction_id": "ua",
+      "position": [
+        36.2304,
+        49.9935
+      ],
+      "population": 1430000,
+      "importance": "major",
+      "infrastructure": [
+        "rail_hub",
+        "command_node"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.dnipro",
+      "name": "Dnipro",
+      "faction_id": "ua",
+      "position": [
+        35.0462,
+        48.4647
+      ],
+      "population": 980000,
+      "importance": "major",
+      "infrastructure": [
+        "rail_hub",
+        "air_base",
+        "command_node"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.odesa",
+      "name": "Odesa",
+      "faction_id": "ua",
+      "position": [
+        30.7233,
+        46.4825
+      ],
+      "population": 1010000,
+      "importance": "major",
+      "infrastructure": [
+        "naval_base",
+        "rail_hub"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.lviv",
+      "name": "Lviv",
+      "faction_id": "ua",
+      "position": [
+        24.0297,
+        49.8397
+      ],
+      "population": 720000,
+      "importance": "major",
+      "infrastructure": [
+        "rail_hub",
+        "command_node"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.zaporizhzhia",
+      "name": "Zaporizhzhia",
+      "faction_id": "ua",
+      "position": [
+        35.1396,
+        47.8388
+      ],
+      "population": 720000,
+      "importance": "major",
+      "infrastructure": [
+        "rail_hub",
+        "command_node"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.kryvyi-rih",
+      "name": "Kryvyi Rih",
+      "faction_id": "ua",
+      "position": [
+        33.392,
+        47.9105
+      ],
+      "population": 600000,
+      "importance": "major",
+      "infrastructure": [
+        "rail_hub"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.mykolaiv",
+      "name": "Mykolaiv",
+      "faction_id": "ua",
+      "position": [
+        31.9946,
+        46.975
+      ],
+      "population": 470000,
+      "importance": "major",
+      "infrastructure": [
+        "naval_base",
+        "rail_hub"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.vinnytsia",
+      "name": "Vinnytsia",
+      "faction_id": "ua",
+      "position": [
+        28.4682,
+        49.2331
+      ],
+      "population": 370000,
+      "importance": "minor",
+      "infrastructure": [
+        "air_base",
+        "command_node"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.poltava",
+      "name": "Poltava",
+      "faction_id": "ua",
+      "position": [
+        34.5514,
+        49.5883
+      ],
+      "population": 280000,
+      "importance": "minor",
+      "infrastructure": [
+        "rail_hub"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.cherkasy",
+      "name": "Cherkasy",
+      "faction_id": "ua",
+      "position": [
+        32.0621,
+        49.4444
+      ],
+      "population": 270000,
+      "importance": "minor",
+      "infrastructure": [],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.chernihiv",
+      "name": "Chernihiv",
+      "faction_id": "ua",
+      "position": [
+        31.2893,
+        51.4982
+      ],
+      "population": 280000,
+      "importance": "minor",
+      "infrastructure": [
+        "rail_hub"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.sumy",
+      "name": "Sumy",
+      "faction_id": "ua",
+      "position": [
+        34.7981,
+        50.9077
+      ],
+      "population": 260000,
+      "importance": "minor",
+      "infrastructure": [],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.zhytomyr",
+      "name": "Zhytomyr",
+      "faction_id": "ua",
+      "position": [
+        28.6587,
+        50.2547
+      ],
+      "population": 260000,
+      "importance": "minor",
+      "infrastructure": [
+        "air_base"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.rivne",
+      "name": "Rivne",
+      "faction_id": "ua",
+      "position": [
+        26.2516,
+        50.6199
+      ],
+      "population": 246000,
+      "importance": "minor",
+      "infrastructure": [],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.lutsk",
+      "name": "Lutsk",
+      "faction_id": "ua",
+      "position": [
+        25.3424,
+        50.7472
+      ],
+      "population": 213000,
+      "importance": "minor",
+      "infrastructure": [],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.ternopil",
+      "name": "Ternopil",
+      "faction_id": "ua",
+      "position": [
+        25.5947,
+        49.5535
+      ],
+      "population": 220000,
+      "importance": "minor",
+      "infrastructure": [],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.ivano-frankivsk",
+      "name": "Ivano-Frankivsk",
+      "faction_id": "ua",
+      "position": [
+        24.7111,
+        48.9226
+      ],
+      "population": 230000,
+      "importance": "minor",
+      "infrastructure": [],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.uzhhorod",
+      "name": "Uzhhorod",
+      "faction_id": "ua",
+      "position": [
+        22.2879,
+        48.6208
+      ],
+      "population": 115000,
+      "importance": "minor",
+      "infrastructure": [],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.chernivtsi",
+      "name": "Chernivtsi",
+      "faction_id": "ua",
+      "position": [
+        25.9404,
+        48.2916
+      ],
+      "population": 264000,
+      "importance": "minor",
+      "infrastructure": [],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.khmelnytskyi",
+      "name": "Khmelnytskyi",
+      "faction_id": "ua",
+      "position": [
+        26.9871,
+        49.4229
+      ],
+      "population": 274000,
+      "importance": "minor",
+      "infrastructure": [],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.kropyvnytskyi",
+      "name": "Kropyvnytskyi",
+      "faction_id": "ua",
+      "position": [
+        32.2597,
+        48.5079
+      ],
+      "population": 222000,
+      "importance": "minor",
+      "infrastructure": [],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.kherson",
+      "name": "Kherson",
+      "faction_id": "ua",
+      "position": [
+        32.6178,
+        46.6354
+      ],
+      "population": 290000,
+      "importance": "minor",
+      "infrastructure": [
+        "rail_hub"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.donetsk",
+      "name": "Donetsk",
+      "faction_id": "ru",
+      "position": [
+        37.8028,
+        48.0159
+      ],
+      "population": 905000,
+      "importance": "major",
+      "infrastructure": [
+        "rail_hub",
+        "command_node"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.luhansk",
+      "name": "Luhansk",
+      "faction_id": "ru",
+      "position": [
+        39.3078,
+        48.574
+      ],
+      "population": 410000,
+      "importance": "minor",
+      "infrastructure": [
+        "rail_hub"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.simferopol",
+      "name": "Simferopol",
+      "faction_id": "ru",
+      "position": [
+        34.0931,
+        44.952
+      ],
+      "population": 340000,
+      "importance": "minor",
+      "infrastructure": [
+        "air_base"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.sevastopol",
+      "name": "Sevastopol",
+      "faction_id": "ru",
+      "position": [
+        33.5283,
+        44.6166
+      ],
+      "population": 510000,
+      "importance": "major",
+      "infrastructure": [
+        "naval_base",
+        "command_node"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.mariupol",
+      "name": "Mariupol",
+      "faction_id": "ru",
+      "position": [
+        37.5414,
+        47.0954
+      ],
+      "population": 425000,
+      "importance": "minor",
+      "infrastructure": [
+        "naval_base",
+        "rail_hub"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "city.moscow",
+      "name": "Moscow",
+      "faction_id": "ru",
+      "position": [
+        37.6173,
+        55.7558
+      ],
+      "population": 12700000,
+      "importance": "capital",
+      "infrastructure": [
+        "rail_hub",
+        "air_base",
+        "command_node"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "city.belgorod",
+      "name": "Belgorod",
+      "faction_id": "ru",
+      "position": [
+        36.5853,
+        50.5957
+      ],
+      "population": 391000,
+      "importance": "minor",
+      "infrastructure": [
+        "rail_hub",
+        "air_base"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "city.kursk",
+      "name": "Kursk",
+      "faction_id": "ru",
+      "position": [
+        36.1873,
+        51.7373
+      ],
+      "population": 440000,
+      "importance": "minor",
+      "infrastructure": [
+        "rail_hub",
+        "air_base"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "city.voronezh",
+      "name": "Voronezh",
+      "faction_id": "ru",
+      "position": [
+        39.2003,
+        51.672
+      ],
+      "population": 1050000,
+      "importance": "major",
+      "infrastructure": [
+        "rail_hub",
+        "air_base",
+        "command_node"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "city.bryansk",
+      "name": "Bryansk",
+      "faction_id": "ru",
+      "position": [
+        34.3653,
+        53.2521
+      ],
+      "population": 405000,
+      "importance": "minor",
+      "infrastructure": [
+        "rail_hub"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "city.rostov-on-don",
+      "name": "Rostov-on-Don",
+      "faction_id": "ru",
+      "position": [
+        39.7233,
+        47.2357
+      ],
+      "population": 1140000,
+      "importance": "major",
+      "infrastructure": [
+        "rail_hub",
+        "command_node"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "city.krasnodar",
+      "name": "Krasnodar",
+      "faction_id": "ru",
+      "position": [
+        38.976,
+        45.0355
+      ],
+      "population": 970000,
+      "importance": "minor",
+      "infrastructure": [
+        "rail_hub",
+        "air_base"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "city.smolensk",
+      "name": "Smolensk",
+      "faction_id": "ru",
+      "position": [
+        32.0411,
+        54.7826
+      ],
+      "population": 320000,
+      "importance": "minor",
+      "infrastructure": [
+        "rail_hub"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "city.taganrog",
+      "name": "Taganrog",
+      "faction_id": "ru",
+      "position": [
+        38.9163,
+        47.2362
+      ],
+      "population": 245000,
+      "importance": "minor",
+      "infrastructure": [],
+      "country_id": "ru"
+    },
+    {
+      "id": "city.minsk",
+      "name": "Minsk",
+      "faction_id": "ru",
+      "position": [
+        27.5615,
+        53.9045
+      ],
+      "population": 2010000,
+      "importance": "capital",
+      "infrastructure": [
+        "rail_hub",
+        "air_base",
+        "command_node"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "city.gomel",
+      "name": "Gomel",
+      "faction_id": "ru",
+      "position": [
+        30.9754,
+        52.4242
+      ],
+      "population": 510000,
+      "importance": "minor",
+      "infrastructure": [
+        "rail_hub"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "city.brest",
+      "name": "Brest",
+      "faction_id": "ru",
+      "position": [
+        23.734,
+        52.0976
+      ],
+      "population": 339000,
+      "importance": "minor",
+      "infrastructure": [
+        "rail_hub"
+      ],
+      "country_id": "by"
+    }
+  ],
+  "territories": [
+    {
+      "id": "terr.donbas-occ",
+      "name": "Donbas (occupied)",
+      "faction_id": "ru",
+      "polygon": [
+        [
+          [
+            37.1,
+            49.3
+          ],
+          [
+            39.5,
+            49.4
+          ],
+          [
+            40.1,
+            48.4
+          ],
+          [
+            39.2,
+            47.3
+          ],
+          [
+            37.5,
+            47.1
+          ],
+          [
+            36.4,
+            47.65
+          ],
+          [
+            36.8,
+            48.4
+          ],
+          [
+            37.1,
+            49.3
+          ]
+        ]
+      ],
+      "control": 0.92,
+      "country_id": "ua"
+    },
+    {
+      "id": "terr.crimea-occ",
+      "name": "Crimea (occupied)",
+      "faction_id": "ru",
+      "polygon": [
+        [
+          [
+            32.5,
+            46.0
+          ],
+          [
+            35.95,
+            45.95
+          ],
+          [
+            36.65,
+            45.3
+          ],
+          [
+            35.3,
+            44.4
+          ],
+          [
+            33.2,
+            44.4
+          ],
+          [
+            32.5,
+            45.4
+          ],
+          [
+            32.5,
+            46.0
+          ]
+        ]
+      ],
+      "control": 1.0,
+      "country_id": "ua"
+    },
+    {
+      "id": "terr.south-occ",
+      "name": "Southern axis (occupied)",
+      "faction_id": "ru",
+      "polygon": [
+        [
+          [
+            33.1,
+            47.2
+          ],
+          [
+            35.6,
+            47.3
+          ],
+          [
+            36.8,
+            47.05
+          ],
+          [
+            36.95,
+            46.3
+          ],
+          [
+            35.2,
+            46.2
+          ],
+          [
+            33.3,
+            46.4
+          ],
+          [
+            33.1,
+            47.2
+          ]
+        ]
+      ],
+      "control": 0.85,
+      "country_id": "ua"
+    },
+    {
+      "id": "terr.ukraine-free",
+      "name": "Ukraine (rump)",
+      "faction_id": "ua",
+      "polygon": [
+        [
+          [
+            22.2,
+            52.3
+          ],
+          [
+            32.2,
+            52.3
+          ],
+          [
+            37.0,
+            49.9
+          ],
+          [
+            33.5,
+            47.4
+          ],
+          [
+            30.2,
+            46.2
+          ],
+          [
+            22.2,
+            48.2
+          ],
+          [
+            22.2,
+            52.3
+          ]
+        ]
+      ],
+      "control": 1.0,
+      "country_id": "ua"
+    }
+  ],
+  "oblasts": [
+    {
+      "id": "obl.30",
+      "iso_3166_2": "UA-30",
+      "name": "Kyiv City",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 2950000,
+      "area_km2": 839,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.78,
+      "civil_unrest": 0.1,
+      "refugees_outflow": 80000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.kyiv"
+    },
+    {
+      "id": "obl.32",
+      "iso_3166_2": "UA-32",
+      "name": "Kyiv Oblast",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1780000,
+      "area_km2": 28131,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.74,
+      "civil_unrest": 0.12,
+      "refugees_outflow": 120000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ]
+    },
+    {
+      "id": "obl.63",
+      "iso_3166_2": "UA-63",
+      "name": "Kharkiv",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 2590000,
+      "area_km2": 31415,
+      "control": 0.78,
+      "contested": true,
+      "morale": 0.62,
+      "civil_unrest": 0.3,
+      "refugees_outflow": 380000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.kharkiv"
+    },
+    {
+      "id": "obl.12",
+      "iso_3166_2": "UA-12",
+      "name": "Dnipropetrovsk",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 3100000,
+      "area_km2": 31923,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.72,
+      "civil_unrest": 0.16,
+      "refugees_outflow": 95000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.dnipro"
+    },
+    {
+      "id": "obl.14",
+      "iso_3166_2": "UA-14",
+      "name": "Donetsk",
+      "country_id": "ua",
+      "faction_id": "ru",
+      "population": 3900000,
+      "area_km2": 26517,
+      "control": 0.18,
+      "contested": true,
+      "morale": 0.45,
+      "civil_unrest": 0.55,
+      "refugees_outflow": 1400000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ]
+    },
+    {
+      "id": "obl.09",
+      "iso_3166_2": "UA-09",
+      "name": "Luhansk",
+      "country_id": "ua",
+      "faction_id": "ru",
+      "population": 2080000,
+      "area_km2": 26684,
+      "control": 0.05,
+      "contested": true,
+      "morale": 0.4,
+      "civil_unrest": 0.6,
+      "refugees_outflow": 980000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ]
+    },
+    {
+      "id": "obl.23",
+      "iso_3166_2": "UA-23",
+      "name": "Zaporizhzhia",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1580000,
+      "area_km2": 27180,
+      "control": 0.55,
+      "contested": true,
+      "morale": 0.58,
+      "civil_unrest": 0.36,
+      "refugees_outflow": 410000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.zaporizhzhia"
+    },
+    {
+      "id": "obl.65",
+      "iso_3166_2": "UA-65",
+      "name": "Kherson",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 970000,
+      "area_km2": 28461,
+      "control": 0.62,
+      "contested": true,
+      "morale": 0.55,
+      "civil_unrest": 0.4,
+      "refugees_outflow": 320000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.kherson"
+    },
+    {
+      "id": "obl.43",
+      "iso_3166_2": "UA-43",
+      "name": "AR Crimea",
+      "country_id": "ua",
+      "faction_id": "ru",
+      "population": 1950000,
+      "area_km2": 26081,
+      "control": 0.0,
+      "contested": true,
+      "morale": 0.35,
+      "civil_unrest": 0.42,
+      "refugees_outflow": 60000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.simferopol"
+    },
+    {
+      "id": "obl.40",
+      "iso_3166_2": "UA-40",
+      "name": "Sevastopol City",
+      "country_id": "ua",
+      "faction_id": "ru",
+      "population": 510000,
+      "area_km2": 864,
+      "control": 0.0,
+      "contested": true,
+      "morale": 0.3,
+      "civil_unrest": 0.3,
+      "refugees_outflow": 18000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.sevastopol"
+    },
+    {
+      "id": "obl.48",
+      "iso_3166_2": "UA-48",
+      "name": "Mykolaiv",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1080000,
+      "area_km2": 24598,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.66,
+      "civil_unrest": 0.22,
+      "refugees_outflow": 140000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.mykolaiv"
+    },
+    {
+      "id": "obl.51",
+      "iso_3166_2": "UA-51",
+      "name": "Odesa",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 2350000,
+      "area_km2": 33310,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.7,
+      "civil_unrest": 0.18,
+      "refugees_outflow": 110000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.odesa"
+    },
+    {
+      "id": "obl.46",
+      "iso_3166_2": "UA-46",
+      "name": "Lviv",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 2460000,
+      "area_km2": 21833,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.81,
+      "civil_unrest": 0.08,
+      "refugees_outflow": 0,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.lviv"
+    },
+    {
+      "id": "obl.26",
+      "iso_3166_2": "UA-26",
+      "name": "Ivano-Frankivsk",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1350000,
+      "area_km2": 13900,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.78,
+      "civil_unrest": 0.1,
+      "refugees_outflow": 0,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.ivano-frankivsk"
+    },
+    {
+      "id": "obl.21",
+      "iso_3166_2": "UA-21",
+      "name": "Zakarpattia",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1240000,
+      "area_km2": 12800,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.74,
+      "civil_unrest": 0.1,
+      "refugees_outflow": 0,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.uzhhorod"
+    },
+    {
+      "id": "obl.77",
+      "iso_3166_2": "UA-77",
+      "name": "Chernivtsi",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 890000,
+      "area_km2": 8100,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.72,
+      "civil_unrest": 0.11,
+      "refugees_outflow": 0,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.chernivtsi"
+    },
+    {
+      "id": "obl.61",
+      "iso_3166_2": "UA-61",
+      "name": "Ternopil",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1030000,
+      "area_km2": 13823,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.78,
+      "civil_unrest": 0.09,
+      "refugees_outflow": 0,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.ternopil"
+    },
+    {
+      "id": "obl.68",
+      "iso_3166_2": "UA-68",
+      "name": "Khmelnytskyi",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1240000,
+      "area_km2": 20645,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.76,
+      "civil_unrest": 0.11,
+      "refugees_outflow": 0,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.khmelnytskyi"
+    },
+    {
+      "id": "obl.56",
+      "iso_3166_2": "UA-56",
+      "name": "Rivne",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1140000,
+      "area_km2": 20047,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.77,
+      "civil_unrest": 0.1,
+      "refugees_outflow": 0,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.rivne"
+    },
+    {
+      "id": "obl.07",
+      "iso_3166_2": "UA-07",
+      "name": "Volyn",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1030000,
+      "area_km2": 20144,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.76,
+      "civil_unrest": 0.11,
+      "refugees_outflow": 0,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.lutsk"
+    },
+    {
+      "id": "obl.18",
+      "iso_3166_2": "UA-18",
+      "name": "Zhytomyr",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1180000,
+      "area_km2": 29832,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.74,
+      "civil_unrest": 0.13,
+      "refugees_outflow": 25000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.zhytomyr"
+    },
+    {
+      "id": "obl.74",
+      "iso_3166_2": "UA-74",
+      "name": "Chernihiv",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 970000,
+      "area_km2": 31865,
+      "control": 0.96,
+      "contested": true,
+      "morale": 0.66,
+      "civil_unrest": 0.2,
+      "refugees_outflow": 90000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.chernihiv"
+    },
+    {
+      "id": "obl.59",
+      "iso_3166_2": "UA-59",
+      "name": "Sumy",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1050000,
+      "area_km2": 23834,
+      "control": 0.92,
+      "contested": true,
+      "morale": 0.64,
+      "civil_unrest": 0.22,
+      "refugees_outflow": 110000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.sumy"
+    },
+    {
+      "id": "obl.53",
+      "iso_3166_2": "UA-53",
+      "name": "Poltava",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1360000,
+      "area_km2": 28748,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.72,
+      "civil_unrest": 0.14,
+      "refugees_outflow": 35000,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.poltava"
+    },
+    {
+      "id": "obl.71",
+      "iso_3166_2": "UA-71",
+      "name": "Cherkasy",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1180000,
+      "area_km2": 20900,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.74,
+      "civil_unrest": 0.12,
+      "refugees_outflow": 0,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.cherkasy"
+    },
+    {
+      "id": "obl.35",
+      "iso_3166_2": "UA-35",
+      "name": "Kirovohrad",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 920000,
+      "area_km2": 24588,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.73,
+      "civil_unrest": 0.13,
+      "refugees_outflow": 0,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.kropyvnytskyi"
+    },
+    {
+      "id": "obl.05",
+      "iso_3166_2": "UA-05",
+      "name": "Vinnytsia",
+      "country_id": "ua",
+      "faction_id": "ua",
+      "population": 1510000,
+      "area_km2": 26513,
+      "control": 1.0,
+      "contested": false,
+      "morale": 0.76,
+      "civil_unrest": 0.1,
+      "refugees_outflow": 0,
+      "available_actions": [
+        "raise_curfew",
+        "evacuate_civilians",
+        "deploy_local_defence",
+        "issue_air_raid_alert",
+        "open_humanitarian_corridor"
+      ],
+      "capital_city_id": "city.vinnytsia"
+    }
+  ],
+  "units": [
+    {
+      "id": "unit.ua.gnd.1tank",
+      "name": "1st Sieverskyi Tank Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "armoured_brigade",
+      "position": [
+        32.1,
+        51.4
+      ],
+      "strength": 0.78,
+      "readiness": 0.74,
+      "morale": 0.82,
+      "echelon": "brigade",
+      "callsign": "VIKING-1",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.61jaeg",
+      "name": "61st Stepova Jaeger Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        33.95,
+        51.3
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.78,
+      "echelon": "brigade",
+      "callsign": "STEPPE",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.41mech",
+      "name": "41st Mechanised Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        34.2,
+        50.95
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.8,
+      "echelon": "brigade",
+      "callsign": "BUG",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.116ter",
+      "name": "116th TerDef Brigade (Sumy)",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        34.8,
+        50.92
+      ],
+      "strength": 0.66,
+      "readiness": 0.62,
+      "morale": 0.74,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.119ter",
+      "name": "119th TerDef Brigade (Chernihiv)",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        31.3,
+        51.5
+      ],
+      "strength": 0.65,
+      "readiness": 0.6,
+      "morale": 0.72,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.92mech",
+      "name": "92nd Mechanised Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.55,
+        49.7
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.76,
+      "echelon": "brigade",
+      "callsign": "ZAPORIZH-92",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.93mech",
+      "name": "93rd 'Kholodnyi Yar' Mech",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.2,
+        48.6
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.82,
+      "echelon": "brigade",
+      "callsign": "YAR",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.5tank",
+      "name": "5th Separate Tank Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "armoured_brigade",
+      "position": [
+        37.75,
+        48.85
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.78,
+      "echelon": "brigade",
+      "callsign": "TIGR",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.17tank",
+      "name": "17th Tank Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "armoured_brigade",
+      "position": [
+        36.1,
+        48.45
+      ],
+      "strength": 0.76,
+      "readiness": 0.74,
+      "morale": 0.8,
+      "echelon": "brigade",
+      "callsign": "KRYV",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.4tank",
+      "name": "4th Tank Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "armoured_brigade",
+      "position": [
+        35.95,
+        48.5
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.78,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.30mech",
+      "name": "30th 'Konstantyn Ostrozkyi' Mech",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.85,
+        48.85
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.76,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.24mech",
+      "name": "24th 'Berdychivska' Mech",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.95,
+        48.55
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.8,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.10mtn",
+      "name": "10th Mountain Assault Bde 'Edelweiss'",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.95,
+        48.2
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.84,
+      "echelon": "brigade",
+      "callsign": "EDEL",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.110mech",
+      "name": "110th Mechanised Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.74,
+        48.13
+      ],
+      "strength": 0.62,
+      "readiness": 0.6,
+      "morale": 0.7,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.53mech",
+      "name": "53rd Mech 'Volynska Sich'",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.7,
+        47.85
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.74,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.54mech",
+      "name": "54th 'Pokrovskyi' Mech",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.2,
+        49.15
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.76,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.66mech",
+      "name": "66th Mechanised Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.45,
+        49.1
+      ],
+      "strength": 0.68,
+      "readiness": 0.66,
+      "morale": 0.74,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.115mech",
+      "name": "115th Mechanised Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        38.1,
+        49.0
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.72,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.25aslt",
+      "name": "25th Airborne Brigade 'Sicheslav'",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.5,
+        48.65
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.86,
+      "echelon": "brigade",
+      "callsign": "SICH",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.79aslt",
+      "name": "79th Air Assault Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.2,
+        48.1
+      ],
+      "strength": 0.8,
+      "readiness": 0.78,
+      "morale": 0.86,
+      "echelon": "brigade",
+      "callsign": "MARTLET",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.80aslt",
+      "name": "80th Air Assault Brigade 'Lviv'",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.55,
+        48.5
+      ],
+      "strength": 0.82,
+      "readiness": 0.8,
+      "morale": 0.88,
+      "echelon": "brigade",
+      "callsign": "LVIV",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.81aslt",
+      "name": "81st Airmobile Brigade 'Sloboda'",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.4,
+        48.95
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.84,
+      "echelon": "brigade",
+      "callsign": "SLOBODA",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.82aslt",
+      "name": "82nd Air Assault Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.4,
+        47.55
+      ],
+      "strength": 0.8,
+      "readiness": 0.78,
+      "morale": 0.84,
+      "echelon": "brigade",
+      "callsign": "BUFFALO",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.95aslt",
+      "name": "95th 'Polissia' Air Assault",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.3,
+        48.3
+      ],
+      "strength": 0.8,
+      "readiness": 0.78,
+      "morale": 0.86,
+      "echelon": "brigade",
+      "callsign": "POLISSIA",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.65mech",
+      "name": "65th Mechanised Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.9,
+        47.45
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.78,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.118mech",
+      "name": "118th Mechanised Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.55,
+        47.3
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.72,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.128mtn",
+      "name": "128th Mountain Assault Bde",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.4,
+        47.4
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.8,
+      "echelon": "brigade",
+      "callsign": "TRANS",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.33mech",
+      "name": "33rd Mechanised Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.7,
+        47.5
+      ],
+      "strength": 0.68,
+      "readiness": 0.66,
+      "morale": 0.74,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.46aslt",
+      "name": "46th Airmobile Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.35,
+        47.65
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.8,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.47mech",
+      "name": "47th 'Magura' Mech (M2 Bradleys)",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.85,
+        47.4
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.82,
+      "echelon": "brigade",
+      "callsign": "MAGURA",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.59motor",
+      "name": "59th Motorised Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        32.5,
+        46.85
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.72,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.60inf",
+      "name": "60th Infantry Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        32.85,
+        46.95
+      ],
+      "strength": 0.62,
+      "readiness": 0.6,
+      "morale": 0.7,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.36mar",
+      "name": "36th Marine Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        32.2,
+        46.75
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.78,
+      "echelon": "brigade",
+      "callsign": "ALBATROS",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.35mar",
+      "name": "35th Marine Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        32.0,
+        46.95
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.76,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.37mar",
+      "name": "37th Marine Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        31.8,
+        46.85
+      ],
+      "strength": 0.68,
+      "readiness": 0.66,
+      "morale": 0.74,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.38mar",
+      "name": "38th Marine Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        31.5,
+        46.7
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.72,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.14mech",
+      "name": "14th 'Prince Roman the Great' Mech",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        26.3,
+        50.1
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.84,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.100ter",
+      "name": "100th TerDef Brigade (Lviv)",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        24.05,
+        49.8
+      ],
+      "strength": 0.68,
+      "readiness": 0.62,
+      "morale": 0.78,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.101ter",
+      "name": "101st TerDef Brigade (Vol)",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        25.34,
+        50.74
+      ],
+      "strength": 0.66,
+      "readiness": 0.6,
+      "morale": 0.76,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.102ter",
+      "name": "102nd TerDef Brigade (IF)",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        24.71,
+        48.92
+      ],
+      "strength": 0.66,
+      "readiness": 0.6,
+      "morale": 0.76,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.1ngu",
+      "name": "1st 'Bureviy' Operational Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        36.0,
+        50.4
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.78,
+      "echelon": "brigade",
+      "callsign": "BUREVIY",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.4ngu",
+      "name": "4th 'Rubizh' Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        30.55,
+        50.45
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.78,
+      "echelon": "brigade",
+      "callsign": "RUBIZH",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.azov",
+      "name": "12th 'Azov' Brigade",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.4,
+        49.4
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.86,
+      "echelon": "brigade",
+      "callsign": "AZOV",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.140sso",
+      "name": "140th SOF Centre",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        24.05,
+        49.85
+      ],
+      "strength": 0.82,
+      "readiness": 0.8,
+      "morale": 0.88,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.3sso",
+      "name": "3rd SOF Regiment",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        30.55,
+        50.4
+      ],
+      "strength": 0.84,
+      "readiness": 0.82,
+      "morale": 0.88,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.8sso",
+      "name": "8th SOF Regiment",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        28.45,
+        49.2
+      ],
+      "strength": 0.82,
+      "readiness": 0.8,
+      "morale": 0.86,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.dpsu-n",
+      "name": "DPSU North BG",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        31.3,
+        51.6
+      ],
+      "strength": 0.62,
+      "readiness": 0.58,
+      "morale": 0.7,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.gnd.dpsu-e",
+      "name": "DPSU East BG",
+      "faction_id": "ua",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        36.5,
+        49.95
+      ],
+      "strength": 0.62,
+      "readiness": 0.58,
+      "morale": 0.7,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "hold",
+        "counter-attack",
+        "withdraw",
+        "request_fires",
+        "rotate_to_rear"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.air.40bav",
+      "name": "40th Tactical Aviation Brigade (MiG-29)",
+      "faction_id": "ua",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        30.32,
+        50.24
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.78,
+      "echelon": "wing",
+      "callsign": "VITER",
+      "available_actions": [
+        "scramble_qra",
+        "strike_package",
+        "sead_mission",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.air.831bav",
+      "name": "831st Tactical Aviation Bde (Su-27)",
+      "faction_id": "ua",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        28.51,
+        49.2
+      ],
+      "strength": 0.68,
+      "readiness": 0.66,
+      "morale": 0.76,
+      "echelon": "wing",
+      "callsign": "MYRNYI",
+      "available_actions": [
+        "scramble_qra",
+        "strike_package",
+        "sead_mission",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.air.299bav",
+      "name": "299th Tactical Aviation Bde (Su-25)",
+      "faction_id": "ua",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        30.32,
+        50.2
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.72,
+      "echelon": "wing",
+      "callsign": "GRACH-UA",
+      "available_actions": [
+        "scramble_qra",
+        "strike_package",
+        "sead_mission",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.air.f16-1",
+      "name": "F-16 Detachment Alpha",
+      "faction_id": "ua",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        27.24,
+        49.76
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.84,
+      "echelon": "wing",
+      "callsign": "FALCON",
+      "available_actions": [
+        "scramble_qra",
+        "strike_package",
+        "sead_mission",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.air.7tab",
+      "name": "7th Tactical Aviation Bde (Su-24M)",
+      "faction_id": "ua",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        27.24,
+        49.76
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.7,
+      "echelon": "wing",
+      "callsign": "FENCER",
+      "available_actions": [
+        "scramble_qra",
+        "strike_package",
+        "sead_mission",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.air.96sam",
+      "name": "96th SAM Bde (S-300)",
+      "faction_id": "ua",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        30.5,
+        50.45
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.78,
+      "echelon": "wing",
+      "callsign": "BARYER",
+      "available_actions": [
+        "scramble_qra",
+        "strike_package",
+        "sead_mission",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.air.156sam",
+      "name": "156th SAM Bde (Patriot)",
+      "faction_id": "ua",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        30.5,
+        50.4
+      ],
+      "strength": 0.84,
+      "readiness": 0.82,
+      "morale": 0.88,
+      "echelon": "wing",
+      "callsign": "PATRIOT-1",
+      "available_actions": [
+        "scramble_qra",
+        "strike_package",
+        "sead_mission",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.air.540sam",
+      "name": "540th SAM Regt (NASAMS)",
+      "faction_id": "ua",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        36.2,
+        49.95
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.82,
+      "echelon": "wing",
+      "callsign": "",
+      "available_actions": [
+        "scramble_qra",
+        "strike_package",
+        "sead_mission",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.air.uav-1",
+      "name": "Achilles UAV Strike Battalion",
+      "faction_id": "ua",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        37.4,
+        48.4
+      ],
+      "strength": 0.84,
+      "readiness": 0.82,
+      "morale": 0.88,
+      "echelon": "wing",
+      "callsign": "ACHILLES",
+      "available_actions": [
+        "scramble_qra",
+        "strike_package",
+        "sead_mission",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.nav.gur-13",
+      "name": "GUR Group 13 (USV)",
+      "faction_id": "ua",
+      "domain": "naval",
+      "kind": "naval_task_group",
+      "position": [
+        30.72,
+        46.4
+      ],
+      "strength": 0.86,
+      "readiness": 0.84,
+      "morale": 0.9,
+      "echelon": "task_group",
+      "callsign": "MAGURA",
+      "available_actions": [
+        "usv_strike",
+        "convoy_escort",
+        "port_defence"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.nav.odesa",
+      "name": "Odesa Naval Defence Group",
+      "faction_id": "ua",
+      "domain": "naval",
+      "kind": "naval_task_group",
+      "position": [
+        30.75,
+        46.4
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.78,
+      "echelon": "task_group",
+      "callsign": "ANCHOR-UA",
+      "available_actions": [
+        "usv_strike",
+        "convoy_escort",
+        "port_defence"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ua.nav.danube",
+      "name": "Danube Flotilla",
+      "faction_id": "ua",
+      "domain": "naval",
+      "kind": "naval_task_group",
+      "position": [
+        28.85,
+        45.45
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.72,
+      "echelon": "task_group",
+      "callsign": "",
+      "available_actions": [
+        "usv_strike",
+        "convoy_escort",
+        "port_defence"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "unit.ru.gnd.1ta",
+      "name": "1st Guards Tank Army HQ Det",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "armoured_brigade",
+      "position": [
+        36.6,
+        50.6
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.66,
+      "echelon": "brigade",
+      "callsign": "ZAPAD",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.4tank",
+      "name": "4th Guards Tank Division (Kantemirovskaya)",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "armoured_brigade",
+      "position": [
+        36.2,
+        50.95
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.64,
+      "echelon": "brigade",
+      "callsign": "KANT",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.2tamd",
+      "name": "2nd Guards Motor Rifle Div (Tamanskaya)",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        36.85,
+        51.1
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.62,
+      "echelon": "brigade",
+      "callsign": "TAMAN",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.144gmrd",
+      "name": "144th Guards Motor Rifle Div",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        34.4,
+        53.2
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.64,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.448mrb",
+      "name": "448th Missile Brigade (Iskander)",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "armoured_brigade",
+      "position": [
+        34.4,
+        52.95
+      ],
+      "strength": 0.84,
+      "readiness": 0.82,
+      "morale": 0.74,
+      "echelon": "brigade",
+      "callsign": "ISKANDER-N",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.155marm",
+      "name": "155th Naval Infantry (PF, attached)",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        36.5,
+        50.6
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.58,
+      "echelon": "brigade",
+      "callsign": "POLAR",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.27mrb",
+      "name": "27th Sep Guards Motor Rifle Bde",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        36.6,
+        50.85
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.62,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.18mrb",
+      "name": "18th Motor Rifle Brigade",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.8,
+        51.5
+      ],
+      "strength": 0.68,
+      "readiness": 0.66,
+      "morale": 0.6,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.20cad",
+      "name": "20th CAA HQ Det",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        39.2,
+        51.65
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.62,
+      "echelon": "brigade",
+      "callsign": "VORONEZH",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.6cad",
+      "name": "6th CAA HQ Det",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        30.3,
+        59.95
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.64,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.25cad",
+      "name": "25th CAA HQ Det",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        38.7,
+        49.5
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.62,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.20mrb",
+      "name": "20th Guards Motor Rifle Div",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        38.2,
+        49.3
+      ],
+      "strength": 0.68,
+      "readiness": 0.66,
+      "morale": 0.6,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.41cad",
+      "name": "41st CAA HQ Det",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.75,
+        49.1
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.62,
+      "echelon": "brigade",
+      "callsign": "URAL",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.74mrb",
+      "name": "74th Sep Motor Rifle Bde",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        38.05,
+        49.4
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.58,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.35mrb",
+      "name": "35th Sep Guards Motor Rifle Bde",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.5,
+        49.1
+      ],
+      "strength": 0.68,
+      "readiness": 0.66,
+      "morale": 0.6,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.8cad",
+      "name": "8th CAA HQ Det",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        38.5,
+        47.85
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.66,
+      "echelon": "brigade",
+      "callsign": "DON",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.150mrd",
+      "name": "150th Motor Rifle Division",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.85,
+        47.95
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.62,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.20mrd",
+      "name": "20th Guards Motor Rifle Division",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.95,
+        48.1
+      ],
+      "strength": 0.68,
+      "readiness": 0.66,
+      "morale": 0.6,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.5tnkdn",
+      "name": "5th Sep Tank Brigade (DPR-int)",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "armoured_brigade",
+      "position": [
+        37.8,
+        48.0
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.58,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.1afk",
+      "name": "1st AFK 'DNR' (consolidated)",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.85,
+        48.1
+      ],
+      "strength": 0.62,
+      "readiness": 0.6,
+      "morale": 0.56,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.2afk",
+      "name": "2nd AFK 'LNR' (consolidated)",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        39.05,
+        48.55
+      ],
+      "strength": 0.62,
+      "readiness": 0.6,
+      "morale": 0.56,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.58cad",
+      "name": "58th CAA HQ Det",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.9,
+        47.1
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.64,
+      "echelon": "brigade",
+      "callsign": "TAVRIDA",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.42mrd",
+      "name": "42nd Guards Motor Rifle Division",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        36.5,
+        47.3
+      ],
+      "strength": 0.68,
+      "readiness": 0.66,
+      "morale": 0.6,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.19mrd",
+      "name": "19th Motor Rifle Division",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.5,
+        47.2
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.58,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.291mrr",
+      "name": "291st Motor Rifle Regiment",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        36.1,
+        47.2
+      ],
+      "strength": 0.64,
+      "readiness": 0.62,
+      "morale": 0.56,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.503mrr",
+      "name": "503rd Motor Rifle Regiment",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.8,
+        46.95
+      ],
+      "strength": 0.64,
+      "readiness": 0.62,
+      "morale": 0.56,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.247vdv",
+      "name": "247th Guards Air Assault Regiment",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.6,
+        47.6
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.66,
+      "echelon": "brigade",
+      "callsign": "BLUE",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.7vdv",
+      "name": "7th Guards Mountain Air Assault Div",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.5,
+        46.95
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.68,
+      "echelon": "brigade",
+      "callsign": "DESANT",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.76vdv",
+      "name": "76th Guards Air Assault Division",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        38.2,
+        49.2
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.68,
+      "echelon": "brigade",
+      "callsign": "PSKOV",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.106vdv",
+      "name": "106th Guards Airborne Division",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.2,
+        48.15
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.68,
+      "echelon": "brigade",
+      "callsign": "TULA",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.98vdv",
+      "name": "98th Guards Airborne Division",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        36.0,
+        47.3
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.66,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.49cad",
+      "name": "49th CAA HQ Det",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        38.97,
+        45.04
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.66,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.34mrb",
+      "name": "34th Mountain Motor Rifle Bde",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        39.1,
+        45.05
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.62,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.22ac",
+      "name": "22nd Army Corps HQ Det",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        34.1,
+        45.05
+      ],
+      "strength": 0.72,
+      "readiness": 0.7,
+      "morale": 0.66,
+      "echelon": "brigade",
+      "callsign": "CRIMEA",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.126cdb",
+      "name": "126th Coastal Def Bde",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        33.55,
+        44.62
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.64,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.810nim",
+      "name": "810th Naval Infantry Brigade",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        33.55,
+        44.62
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.68,
+      "echelon": "brigade",
+      "callsign": "BLACK-NI",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.40nim",
+      "name": "40th Naval Infantry Brigade (Pacific, det)",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        35.2,
+        47.1
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.58,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.1gtb",
+      "name": "1st Gds Tank Bde (Wagner-successor)",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "armoured_brigade",
+      "position": [
+        38.1,
+        48.85
+      ],
+      "strength": 0.62,
+      "readiness": 0.6,
+      "morale": 0.54,
+      "echelon": "brigade",
+      "callsign": "ORK-1",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.gnd.afrika",
+      "name": "Africa Corps reserve detachment",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        37.9,
+        47.1
+      ],
+      "strength": 0.58,
+      "readiness": 0.56,
+      "morale": 0.52,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.air.4pvo",
+      "name": "4th Air & Air Defence Army HQ",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        39.2,
+        51.65
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.7,
+      "echelon": "wing",
+      "callsign": "VKS-S",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.air.6pvo",
+      "name": "6th Air & Air Defence Army (Western MD)",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        30.3,
+        59.85
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.72,
+      "echelon": "wing",
+      "callsign": "",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.air.105gs",
+      "name": "105th Mixed Aviation Division",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        36.2,
+        51.7
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.66,
+      "echelon": "wing",
+      "callsign": "",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.air.4apib",
+      "name": "4th Bomber Aviation Regiment (Su-34)",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        39.2,
+        51.55
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.66,
+      "echelon": "wing",
+      "callsign": "FENCER-RU",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.air.morozovsk",
+      "name": "559th Bomber Air Regt 'Morozovsk'",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        41.85,
+        48.35
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.62,
+      "echelon": "wing",
+      "callsign": "",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.air.engels",
+      "name": "121st Heavy Bomber Regiment (Tu-160)",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        46.21,
+        51.48
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.68,
+      "echelon": "wing",
+      "callsign": "ENGELS",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.air.31giap",
+      "name": "31st GIAP (Su-35S, Millerovo)",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        40.4,
+        48.95
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.66,
+      "echelon": "wing",
+      "callsign": "",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.air.s400-w",
+      "name": "S-400 Regiment (Western MD)",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        36.5,
+        50.55
+      ],
+      "strength": 0.84,
+      "readiness": 0.82,
+      "morale": 0.76,
+      "echelon": "wing",
+      "callsign": "TRIUMF-W",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.air.s400-s",
+      "name": "S-400 Regiment (Crimea)",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        33.95,
+        44.9
+      ],
+      "strength": 0.82,
+      "readiness": 0.8,
+      "morale": 0.74,
+      "echelon": "wing",
+      "callsign": "TRIUMF-S",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.air.s500",
+      "name": "S-500 Regiment (Moscow)",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        37.6,
+        55.75
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.7,
+      "echelon": "wing",
+      "callsign": "PROMETEY",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.air.uav-r",
+      "name": "Forpost / Lancet UAV Group",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        38.5,
+        47.85
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.66,
+      "echelon": "wing",
+      "callsign": "",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.nav.bsf-sag",
+      "name": "Black Sea Fleet SAG",
+      "faction_id": "ru",
+      "domain": "naval",
+      "kind": "naval_task_group",
+      "position": [
+        37.1,
+        44.1
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.62,
+      "echelon": "task_group",
+      "callsign": "BSF-SAG",
+      "available_actions": [
+        "missile_strike",
+        "patrol",
+        "withdraw_eastward"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.nav.bsf-ssk",
+      "name": "Improved Kilo SSK Group",
+      "faction_id": "ru",
+      "domain": "naval",
+      "kind": "naval_task_group",
+      "position": [
+        37.5,
+        43.85
+      ],
+      "strength": 0.74,
+      "readiness": 0.72,
+      "morale": 0.66,
+      "echelon": "task_group",
+      "callsign": "",
+      "available_actions": [
+        "missile_strike",
+        "patrol",
+        "withdraw_eastward"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.nav.bsf-cor",
+      "name": "Buyan-M / Karakurt Strike Group",
+      "faction_id": "ru",
+      "domain": "naval",
+      "kind": "naval_task_group",
+      "position": [
+        37.2,
+        44.3
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.72,
+      "echelon": "task_group",
+      "callsign": "KALIBR-BSF",
+      "available_actions": [
+        "missile_strike",
+        "patrol",
+        "withdraw_eastward"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.ru.nav.cas-cor",
+      "name": "Caspian Flotilla Strike Group",
+      "faction_id": "ru",
+      "domain": "naval",
+      "kind": "naval_task_group",
+      "position": [
+        47.95,
+        42.97
+      ],
+      "strength": 0.7,
+      "readiness": 0.68,
+      "morale": 0.64,
+      "echelon": "task_group",
+      "callsign": "KASPIAN",
+      "available_actions": [
+        "missile_strike",
+        "patrol",
+        "withdraw_eastward"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "unit.by.gnd.6mrb",
+      "name": "6th Sep Guards Mech Bde",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        27.45,
+        53.85
+      ],
+      "strength": 0.62,
+      "readiness": 0.6,
+      "morale": 0.62,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "unit.by.gnd.11mrb",
+      "name": "11th Sep Guards Mech Bde",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        23.85,
+        53.65
+      ],
+      "strength": 0.6,
+      "readiness": 0.58,
+      "morale": 0.6,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "unit.by.gnd.103aslt",
+      "name": "103rd Vitebsk Airmobile Bde",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        30.2,
+        55.2
+      ],
+      "strength": 0.66,
+      "readiness": 0.64,
+      "morale": 0.66,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "unit.by.gnd.38aslt",
+      "name": "38th Brest Airmobile Bde",
+      "faction_id": "ru",
+      "domain": "ground",
+      "kind": "infantry_brigade",
+      "position": [
+        23.73,
+        52.1
+      ],
+      "strength": 0.64,
+      "readiness": 0.62,
+      "morale": 0.64,
+      "echelon": "brigade",
+      "callsign": "",
+      "available_actions": [
+        "attack",
+        "consolidate",
+        "displace",
+        "request_fires",
+        "fix_in_place"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "unit.by.air.61atb",
+      "name": "61st Fighter Air Base (Su-30SM)",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        26.05,
+        53.1
+      ],
+      "strength": 0.68,
+      "readiness": 0.66,
+      "morale": 0.66,
+      "echelon": "wing",
+      "callsign": "",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "unit.by.air.116ab",
+      "name": "116th Bomber Air Base (Lida)",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        25.37,
+        53.89
+      ],
+      "strength": 0.62,
+      "readiness": 0.6,
+      "morale": 0.62,
+      "echelon": "wing",
+      "callsign": "",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "unit.by.air.s400",
+      "name": "S-400 Detachment (RU-detached)",
+      "faction_id": "ru",
+      "domain": "air",
+      "kind": "air_wing",
+      "position": [
+        28.64,
+        53.3
+      ],
+      "strength": 0.78,
+      "readiness": 0.76,
+      "morale": 0.7,
+      "echelon": "wing",
+      "callsign": "",
+      "available_actions": [
+        "strike_package",
+        "cap_mission",
+        "kab_glide_strike",
+        "stand_down"
+      ],
+      "country_id": "by"
+    }
+  ],
+  "depots": [
+    {
+      "id": "dep.ua.lviv",
+      "name": "Lviv Logistics Hub",
+      "faction_id": "ua",
+      "position": [
+        24.05,
+        49.85
+      ],
+      "capacity": 0.85,
+      "fill": 0.78,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "dep.ua.dnipro",
+      "name": "Dnipro Sustainment Node",
+      "faction_id": "ua",
+      "position": [
+        35.05,
+        48.46
+      ],
+      "capacity": 0.78,
+      "fill": 0.62,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "dep.ua.poltava",
+      "name": "Poltava Forward Depot",
+      "faction_id": "ua",
+      "position": [
+        34.55,
+        49.59
+      ],
+      "capacity": 0.7,
+      "fill": 0.55,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "dep.ua.kharkiv",
+      "name": "Kharkiv Forward Stockpile",
+      "faction_id": "ua",
+      "position": [
+        36.2,
+        49.95
+      ],
+      "capacity": 0.65,
+      "fill": 0.42,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "dep.ua.zaporizhzhia",
+      "name": "Zaporizhzhia Field Depot",
+      "faction_id": "ua",
+      "position": [
+        35.14,
+        47.84
+      ],
+      "capacity": 0.6,
+      "fill": 0.48,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "dep.ua.mykolaiv",
+      "name": "Mykolaiv Naval Sustainment",
+      "faction_id": "ua",
+      "position": [
+        31.99,
+        46.97
+      ],
+      "capacity": 0.55,
+      "fill": 0.4,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "dep.ua.zhytomyr",
+      "name": "Zhytomyr Reserve Depot",
+      "faction_id": "ua",
+      "position": [
+        28.66,
+        50.25
+      ],
+      "capacity": 0.72,
+      "fill": 0.65,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "dep.ua.vinnytsia",
+      "name": "Vinnytsia Air Logistics",
+      "faction_id": "ua",
+      "position": [
+        28.46,
+        49.23
+      ],
+      "capacity": 0.7,
+      "fill": 0.62,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "dep.ru.belgorod",
+      "name": "Belgorod Forward Stockpile",
+      "faction_id": "ru",
+      "position": [
+        36.55,
+        50.55
+      ],
+      "capacity": 0.8,
+      "fill": 0.7,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "dep.ru.voronezh",
+      "name": "Voronezh Strategic Depot",
+      "faction_id": "ru",
+      "position": [
+        39.2,
+        51.65
+      ],
+      "capacity": 0.9,
+      "fill": 0.8,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "dep.ru.rostov",
+      "name": "Rostov Sustainment Hub",
+      "faction_id": "ru",
+      "position": [
+        39.72,
+        47.24
+      ],
+      "capacity": 0.92,
+      "fill": 0.78,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "dep.ru.kursk",
+      "name": "Kursk Field Depot",
+      "faction_id": "ru",
+      "position": [
+        36.18,
+        51.7
+      ],
+      "capacity": 0.78,
+      "fill": 0.66,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "dep.ru.mariupol",
+      "name": "Mariupol Forward Depot",
+      "faction_id": "ru",
+      "position": [
+        37.55,
+        47.1
+      ],
+      "capacity": 0.7,
+      "fill": 0.62,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "dep.ru.dzhankoi",
+      "name": "Dzhankoi Rail Depot (Crimea)",
+      "faction_id": "ru",
+      "position": [
+        34.4,
+        45.71
+      ],
+      "capacity": 0.8,
+      "fill": 0.65,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "dep.ru.taganrog",
+      "name": "Taganrog POL Hub",
+      "faction_id": "ru",
+      "position": [
+        38.92,
+        47.24
+      ],
+      "capacity": 0.74,
+      "fill": 0.62,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "dep.by.asipovichy",
+      "name": "Asipovichy 1405 Storage",
+      "faction_id": "ru",
+      "position": [
+        28.64,
+        53.3
+      ],
+      "capacity": 0.78,
+      "fill": 0.7,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "dep.by.gomel",
+      "name": "Gomel Logistics Node",
+      "faction_id": "ru",
+      "position": [
+        30.98,
+        52.42
+      ],
+      "capacity": 0.65,
+      "fill": 0.58,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "resupply"
+      ],
+      "country_id": "by"
+    }
+  ],
+  "airfields": [
+    {
+      "id": "af.ua.vasylkiv",
+      "name": "Vasylkiv AB",
+      "faction_id": "ua",
+      "position": [
+        30.32,
+        50.24
+      ],
+      "runway_m": 3000,
+      "role": "tactical",
+      "based_aircraft": 18,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ua.starokost",
+      "name": "Starokostiantyniv AB",
+      "faction_id": "ua",
+      "position": [
+        27.24,
+        49.76
+      ],
+      "runway_m": 3500,
+      "role": "tactical",
+      "based_aircraft": 22,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ua.kulbakino",
+      "name": "Kulbakino AB (Mykolaiv)",
+      "faction_id": "ua",
+      "position": [
+        32.05,
+        46.92
+      ],
+      "runway_m": 2500,
+      "role": "tactical",
+      "based_aircraft": 8,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ua.dolgintsevo",
+      "name": "Dolgintsevo AB (Kryvyi Rih)",
+      "faction_id": "ua",
+      "position": [
+        33.46,
+        47.91
+      ],
+      "runway_m": 2700,
+      "role": "tactical",
+      "based_aircraft": 10,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ua.zhytomyr",
+      "name": "Ozerne AB (Zhytomyr)",
+      "faction_id": "ua",
+      "position": [
+        28.74,
+        50.16
+      ],
+      "runway_m": 3000,
+      "role": "tactical",
+      "based_aircraft": 12,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ua.kolomyia",
+      "name": "Kolomyia AB",
+      "faction_id": "ua",
+      "position": [
+        25.06,
+        48.51
+      ],
+      "runway_m": 2500,
+      "role": "dispersal",
+      "based_aircraft": 4,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ua.lvivAB",
+      "name": "Lviv International (mil-civ)",
+      "faction_id": "ua",
+      "position": [
+        23.96,
+        49.81
+      ],
+      "runway_m": 3300,
+      "role": "civilian",
+      "based_aircraft": 6,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ua.boryspil",
+      "name": "Boryspil (mil-civ)",
+      "faction_id": "ua",
+      "position": [
+        30.89,
+        50.34
+      ],
+      "runway_m": 4000,
+      "role": "civilian",
+      "based_aircraft": 0,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ru.belbek",
+      "name": "Belbek AB (Crimea)",
+      "faction_id": "ru",
+      "position": [
+        33.57,
+        44.69
+      ],
+      "runway_m": 3500,
+      "role": "tactical",
+      "based_aircraft": 24,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ru.saki",
+      "name": "Saki / Novofedorivka AB (Crimea)",
+      "faction_id": "ru",
+      "position": [
+        33.58,
+        45.09
+      ],
+      "runway_m": 3300,
+      "role": "tactical",
+      "based_aircraft": 18,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ru.gvardeyskoye",
+      "name": "Gvardeyskoye AB (Crimea)",
+      "faction_id": "ru",
+      "position": [
+        34.03,
+        45.1
+      ],
+      "runway_m": 3500,
+      "role": "tactical",
+      "based_aircraft": 16,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ru.dzhankoi",
+      "name": "Dzhankoi AB (Crimea)",
+      "faction_id": "ru",
+      "position": [
+        34.39,
+        45.69
+      ],
+      "runway_m": 3500,
+      "role": "tactical",
+      "based_aircraft": 10,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ru.kacha",
+      "name": "Kacha NA Air Base (Crimea)",
+      "faction_id": "ru",
+      "position": [
+        33.55,
+        44.79
+      ],
+      "runway_m": 3000,
+      "role": "tactical",
+      "based_aircraft": 12,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ru.berdyansk",
+      "name": "Berdyansk AB",
+      "faction_id": "ru",
+      "position": [
+        36.74,
+        46.81
+      ],
+      "runway_m": 2800,
+      "role": "tactical",
+      "based_aircraft": 8,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "af.ru.taganrog",
+      "name": "Taganrog Beriev (mil-civ)",
+      "faction_id": "ru",
+      "position": [
+        38.85,
+        47.2
+      ],
+      "runway_m": 3500,
+      "role": "strategic",
+      "based_aircraft": 6,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "af.ru.morozovsk",
+      "name": "Morozovsk AB (Su-34)",
+      "faction_id": "ru",
+      "position": [
+        41.79,
+        48.32
+      ],
+      "runway_m": 3500,
+      "role": "tactical",
+      "based_aircraft": 24,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "af.ru.engels2",
+      "name": "Engels-2 Strategic AB",
+      "faction_id": "ru",
+      "position": [
+        46.21,
+        51.48
+      ],
+      "runway_m": 3500,
+      "role": "strategic",
+      "based_aircraft": 22,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "af.ru.kursk",
+      "name": "Khalino AB (Kursk)",
+      "faction_id": "ru",
+      "position": [
+        36.3,
+        51.75
+      ],
+      "runway_m": 3500,
+      "role": "tactical",
+      "based_aircraft": 18,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "af.ru.belgorod",
+      "name": "Belgorod AB",
+      "faction_id": "ru",
+      "position": [
+        36.59,
+        50.64
+      ],
+      "runway_m": 2800,
+      "role": "tactical",
+      "based_aircraft": 10,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "af.ru.voronezh",
+      "name": "Voronezh-Baltimor AB",
+      "faction_id": "ru",
+      "position": [
+        39.13,
+        51.62
+      ],
+      "runway_m": 3500,
+      "role": "tactical",
+      "based_aircraft": 22,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "af.ru.shaykovka",
+      "name": "Shaykovka AB (Tu-22M3)",
+      "faction_id": "ru",
+      "position": [
+        33.95,
+        54.27
+      ],
+      "runway_m": 3500,
+      "role": "strategic",
+      "based_aircraft": 14,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "af.ru.olenya",
+      "name": "Olenya Strategic AB",
+      "faction_id": "ru",
+      "position": [
+        33.46,
+        68.15
+      ],
+      "runway_m": 3500,
+      "role": "strategic",
+      "based_aircraft": 16,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "af.by.baranavichy",
+      "name": "Baranavichy AB",
+      "faction_id": "ru",
+      "position": [
+        26.05,
+        53.1
+      ],
+      "runway_m": 3500,
+      "role": "tactical",
+      "based_aircraft": 18,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "af.by.lida",
+      "name": "Lida AB",
+      "faction_id": "ru",
+      "position": [
+        25.37,
+        53.89
+      ],
+      "runway_m": 3000,
+      "role": "tactical",
+      "based_aircraft": 12,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "af.by.machulishchy",
+      "name": "Machulishchy AB",
+      "faction_id": "ru",
+      "position": [
+        27.51,
+        53.78
+      ],
+      "runway_m": 3300,
+      "role": "strategic",
+      "based_aircraft": 6,
+      "available_actions": [
+        "strike",
+        "interdict",
+        "scramble"
+      ],
+      "country_id": "by"
+    }
+  ],
+  "naval_bases": [
+    {
+      "id": "nb.ua.odesa",
+      "name": "Odesa Naval Base",
+      "faction_id": "ua",
+      "position": [
+        30.74,
+        46.5
+      ],
+      "pier_count": 6,
+      "home_port_for": [
+        "unit.ua.nav.odesa"
+      ],
+      "available_actions": [
+        "strike",
+        "blockade",
+        "patrol"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "nb.ua.izmail",
+      "name": "Izmail / Danube Flotilla Base",
+      "faction_id": "ua",
+      "position": [
+        28.85,
+        45.34
+      ],
+      "pier_count": 4,
+      "home_port_for": [
+        "unit.ua.nav.danube"
+      ],
+      "available_actions": [
+        "strike",
+        "blockade",
+        "patrol"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "nb.ru.sevastopol",
+      "name": "Sevastopol Main Base",
+      "faction_id": "ru",
+      "position": [
+        33.53,
+        44.62
+      ],
+      "pier_count": 14,
+      "home_port_for": [
+        "unit.ru.nav.bsf-sag",
+        "unit.ru.nav.bsf-ssk"
+      ],
+      "available_actions": [
+        "strike",
+        "blockade",
+        "patrol"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "nb.ru.novorossiysk",
+      "name": "Novorossiysk Naval Base",
+      "faction_id": "ru",
+      "position": [
+        37.78,
+        44.72
+      ],
+      "pier_count": 8,
+      "home_port_for": [
+        "unit.ru.nav.bsf-cor"
+      ],
+      "available_actions": [
+        "strike",
+        "blockade",
+        "patrol"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "nb.ru.feodosia",
+      "name": "Feodosia Naval Sub-Base",
+      "faction_id": "ru",
+      "position": [
+        35.39,
+        45.04
+      ],
+      "pier_count": 4,
+      "home_port_for": [],
+      "available_actions": [
+        "strike",
+        "blockade",
+        "patrol"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "nb.ru.kaspiysk",
+      "name": "Kaspiysk (Caspian Flotilla)",
+      "faction_id": "ru",
+      "position": [
+        47.65,
+        42.88
+      ],
+      "pier_count": 6,
+      "home_port_for": [
+        "unit.ru.nav.cas-cor"
+      ],
+      "available_actions": [
+        "strike",
+        "blockade",
+        "patrol"
+      ],
+      "country_id": "ru"
+    }
+  ],
+  "border_crossings": [
+    {
+      "id": "bc.medyka",
+      "name": "Medyka / Shehyni (PL-UA)",
+      "faction_id": "ua",
+      "position": [
+        22.92,
+        49.81
+      ],
+      "countries": [
+        "ua",
+        "ua"
+      ],
+      "mode": "open",
+      "rail": true,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    },
+    {
+      "id": "bc.korczowa",
+      "name": "Korczowa / Krakovets",
+      "faction_id": "ua",
+      "position": [
+        23.13,
+        49.95
+      ],
+      "countries": [
+        "ua",
+        "ua"
+      ],
+      "mode": "open",
+      "rail": false,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    },
+    {
+      "id": "bc.uzhhorod",
+      "name": "Uzhhorod / Vysne Nemecke (SK-UA)",
+      "faction_id": "ua",
+      "position": [
+        22.3,
+        48.62
+      ],
+      "countries": [
+        "ua",
+        "ua"
+      ],
+      "mode": "open",
+      "rail": true,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    },
+    {
+      "id": "bc.dorohusk",
+      "name": "Dorohusk / Yahodyn (PL-UA)",
+      "faction_id": "ua",
+      "position": [
+        23.83,
+        51.16
+      ],
+      "countries": [
+        "ua",
+        "ua"
+      ],
+      "mode": "open",
+      "rail": true,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    },
+    {
+      "id": "bc.palanca",
+      "name": "Palanca (UA-MD)",
+      "faction_id": "ua",
+      "position": [
+        30.13,
+        46.05
+      ],
+      "countries": [
+        "ua",
+        "ua"
+      ],
+      "mode": "open",
+      "rail": false,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    },
+    {
+      "id": "bc.mohyliv",
+      "name": "Mohyliv-Podilskyi (UA-MD)",
+      "faction_id": "ua",
+      "position": [
+        27.79,
+        48.45
+      ],
+      "countries": [
+        "ua",
+        "ua"
+      ],
+      "mode": "open",
+      "rail": true,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    },
+    {
+      "id": "bc.brest-tere",
+      "name": "Terespol / Brest (PL-BY)",
+      "faction_id": "ru",
+      "position": [
+        23.65,
+        52.07
+      ],
+      "countries": [
+        "by",
+        "by"
+      ],
+      "mode": "restricted",
+      "rail": true,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    },
+    {
+      "id": "bc.benyakoni",
+      "name": "Benyakoni (BY-LT)",
+      "faction_id": "ru",
+      "position": [
+        25.5,
+        54.3
+      ],
+      "countries": [
+        "by",
+        "by"
+      ],
+      "mode": "restricted",
+      "rail": false,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    },
+    {
+      "id": "bc.kotlovka",
+      "name": "Kotlovka (BY-LT)",
+      "faction_id": "ru",
+      "position": [
+        26.42,
+        54.4
+      ],
+      "countries": [
+        "by",
+        "by"
+      ],
+      "mode": "closed",
+      "rail": false,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    },
+    {
+      "id": "bc.bachevsk",
+      "name": "Bachevsk (UA-RU, North)",
+      "faction_id": "ua",
+      "position": [
+        34.44,
+        52.3
+      ],
+      "countries": [
+        "ua",
+        "ru"
+      ],
+      "mode": "closed",
+      "rail": false,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    },
+    {
+      "id": "bc.hoptivka",
+      "name": "Hoptivka / Nekhoteevka (UA-RU, Kharkiv)",
+      "faction_id": "ru",
+      "position": [
+        36.34,
+        50.37
+      ],
+      "countries": [
+        "ua",
+        "ru"
+      ],
+      "mode": "closed",
+      "rail": false,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    },
+    {
+      "id": "bc.izvarino",
+      "name": "Izvarino (UA-RU, Luhansk)",
+      "faction_id": "ru",
+      "position": [
+        39.92,
+        48.63
+      ],
+      "countries": [
+        "ua",
+        "ru"
+      ],
+      "mode": "closed",
+      "rail": false,
+      "road": true,
+      "available_actions": [
+        "close",
+        "reinforce",
+        "demine"
+      ]
+    }
+  ],
+  "supply_lines": [
+    {
+      "id": "sl.ua.west-east-1",
+      "name": "Lviv \u2192 Kyiv \u2192 Dnipro Trunk",
+      "faction_id": "ua",
+      "path": [
+        [
+          24.05,
+          49.85
+        ],
+        [
+          28.45,
+          49.2
+        ],
+        [
+          30.55,
+          50.45
+        ],
+        [
+          32.05,
+          49.45
+        ],
+        [
+          35.05,
+          48.46
+        ]
+      ],
+      "health": 0.78,
+      "mode": "rail",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ua.dnipro-east",
+      "name": "Dnipro \u2192 Pokrovsk Forward",
+      "faction_id": "ua",
+      "path": [
+        [
+          35.05,
+          48.46
+        ],
+        [
+          36.1,
+          48.55
+        ],
+        [
+          37.2,
+          48.55
+        ]
+      ],
+      "health": 0.62,
+      "mode": "road",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ua.kharkiv",
+      "name": "Poltava \u2192 Kharkiv Forward",
+      "faction_id": "ua",
+      "path": [
+        [
+          34.55,
+          49.59
+        ],
+        [
+          35.5,
+          49.85
+        ],
+        [
+          36.2,
+          49.95
+        ]
+      ],
+      "health": 0.55,
+      "mode": "road",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ua.south",
+      "name": "Mykolaiv \u2192 Kherson Coastal",
+      "faction_id": "ua",
+      "path": [
+        [
+          31.99,
+          46.97
+        ],
+        [
+          32.4,
+          46.85
+        ],
+        [
+          32.62,
+          46.64
+        ]
+      ],
+      "health": 0.5,
+      "mode": "road",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ua.zap-front",
+      "name": "Zaporizhzhia \u2192 Robotyne Forward",
+      "faction_id": "ua",
+      "path": [
+        [
+          35.14,
+          47.84
+        ],
+        [
+          35.65,
+          47.5
+        ],
+        [
+          35.85,
+          47.4
+        ]
+      ],
+      "health": 0.45,
+      "mode": "road",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ua.import-pl",
+      "name": "PL Border \u2192 Lviv Logistics",
+      "faction_id": "ua",
+      "path": [
+        [
+          22.92,
+          49.81
+        ],
+        [
+          23.5,
+          49.83
+        ],
+        [
+          24.05,
+          49.85
+        ]
+      ],
+      "health": 0.85,
+      "mode": "road",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ua.import-ro",
+      "name": "RO Border \u2192 Odesa",
+      "faction_id": "ua",
+      "path": [
+        [
+          28.85,
+          45.45
+        ],
+        [
+          30.2,
+          46.1
+        ],
+        [
+          30.74,
+          46.5
+        ]
+      ],
+      "health": 0.74,
+      "mode": "road",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ru.belgorod-fwd",
+      "name": "Belgorod \u2192 Volchansk Forward",
+      "faction_id": "ru",
+      "path": [
+        [
+          36.55,
+          50.55
+        ],
+        [
+          37.1,
+          50.3
+        ],
+        [
+          37.45,
+          50.3
+        ]
+      ],
+      "health": 0.72,
+      "mode": "road",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ru.rostov-mariupol",
+      "name": "Rostov \u2192 Mariupol Coastal",
+      "faction_id": "ru",
+      "path": [
+        [
+          39.72,
+          47.24
+        ],
+        [
+          38.95,
+          47.1
+        ],
+        [
+          37.55,
+          47.1
+        ]
+      ],
+      "health": 0.78,
+      "mode": "rail",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ru.kerch-bridge",
+      "name": "Kerch Strait Bridge",
+      "faction_id": "ru",
+      "path": [
+        [
+          36.62,
+          45.3
+        ],
+        [
+          36.4,
+          45.15
+        ],
+        [
+          35.95,
+          45.1
+        ]
+      ],
+      "health": 0.68,
+      "mode": "road",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ru.dzhankoi-zap",
+      "name": "Dzhankoi \u2192 Tokmak (Zaporizhzhia)",
+      "faction_id": "ru",
+      "path": [
+        [
+          34.4,
+          45.71
+        ],
+        [
+          34.8,
+          46.5
+        ],
+        [
+          35.65,
+          47.1
+        ]
+      ],
+      "health": 0.66,
+      "mode": "rail",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ru.bryansk-front",
+      "name": "Bryansk \u2192 Kursk Lateral",
+      "faction_id": "ru",
+      "path": [
+        [
+          34.37,
+          53.25
+        ],
+        [
+          35.0,
+          52.6
+        ],
+        [
+          36.18,
+          51.7
+        ]
+      ],
+      "health": 0.84,
+      "mode": "rail",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.ru.voronezh-rostov",
+      "name": "Voronezh \u2192 Rostov Trunk",
+      "faction_id": "ru",
+      "path": [
+        [
+          39.2,
+          51.65
+        ],
+        [
+          40.0,
+          49.9
+        ],
+        [
+          39.72,
+          47.24
+        ]
+      ],
+      "health": 0.88,
+      "mode": "rail",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.by.minsk-mozyr",
+      "name": "Minsk \u2192 Mozyr Southern Spur",
+      "faction_id": "ru",
+      "path": [
+        [
+          27.56,
+          53.9
+        ],
+        [
+          28.5,
+          52.8
+        ],
+        [
+          29.25,
+          52.05
+        ]
+      ],
+      "health": 0.72,
+      "mode": "rail",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    },
+    {
+      "id": "sl.by.brest-minsk",
+      "name": "Brest \u2192 Minsk",
+      "faction_id": "ru",
+      "path": [
+        [
+          23.73,
+          52.1
+        ],
+        [
+          25.3,
+          53.2
+        ],
+        [
+          27.56,
+          53.9
+        ]
+      ],
+      "health": 0.78,
+      "mode": "rail",
+      "available_actions": [
+        "interdict",
+        "convoy",
+        "harden"
+      ]
+    }
+  ],
+  "isr_coverages": [
+    {
+      "id": "isr.ua.bayraktar-1",
+      "name": "Bayraktar TB2 Patrol Sector A",
+      "faction_id": "ua",
+      "origin": [
+        36.2,
+        49.95
+      ],
+      "range_km": 320,
+      "heading_deg": 90,
+      "beam_deg": 80,
+      "platform": "uav",
+      "confidence": 0.7,
+      "available_actions": [
+        "retask",
+        "extend_orbit",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "isr.ua.bayraktar-2",
+      "name": "Bayraktar TB2 Patrol Sector B",
+      "faction_id": "ua",
+      "origin": [
+        35.14,
+        47.84
+      ],
+      "range_km": 320,
+      "heading_deg": 130,
+      "beam_deg": 80,
+      "platform": "uav",
+      "confidence": 0.7,
+      "available_actions": [
+        "retask",
+        "extend_orbit",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "isr.ua.gur-recce",
+      "name": "GUR Strategic Recce",
+      "faction_id": "ua",
+      "origin": [
+        30.55,
+        50.45
+      ],
+      "range_km": 1500,
+      "heading_deg": 90,
+      "beam_deg": 60,
+      "platform": "satellite",
+      "confidence": 0.6,
+      "available_actions": [
+        "retask",
+        "extend_orbit",
+        "stand_down"
+      ],
+      "country_id": "ua"
+    },
+    {
+      "id": "isr.nato.gh-ro",
+      "name": "RQ-4 Global Hawk (RO orbit)",
+      "faction_id": "ua",
+      "origin": [
+        25.5,
+        44.5
+      ],
+      "range_km": 600,
+      "heading_deg": 60,
+      "beam_deg": 90,
+      "platform": "uav",
+      "confidence": 0.85,
+      "available_actions": [
+        "retask",
+        "extend_orbit",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "isr.nato.rivet",
+      "name": "RC-135 Rivet Joint (BSEA orbit)",
+      "faction_id": "ua",
+      "origin": [
+        28.5,
+        43.8
+      ],
+      "range_km": 500,
+      "heading_deg": 90,
+      "beam_deg": 100,
+      "platform": "uav",
+      "confidence": 0.85,
+      "available_actions": [
+        "retask",
+        "extend_orbit",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "isr.nato.sat-1",
+      "name": "Allied SAR Constellation Pass",
+      "faction_id": "ua",
+      "origin": [
+        33.0,
+        48.5
+      ],
+      "range_km": 800,
+      "heading_deg": 0,
+      "beam_deg": 360,
+      "platform": "satellite",
+      "confidence": 0.8,
+      "available_actions": [
+        "retask",
+        "extend_orbit",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "isr.ru.orlan-1",
+      "name": "Orlan-10 Patrol N",
+      "faction_id": "ru",
+      "origin": [
+        36.55,
+        50.55
+      ],
+      "range_km": 120,
+      "heading_deg": 200,
+      "beam_deg": 70,
+      "platform": "uav",
+      "confidence": 0.65,
+      "available_actions": [
+        "retask",
+        "extend_orbit",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "isr.ru.orlan-2",
+      "name": "Orlan-10 Patrol S",
+      "faction_id": "ru",
+      "origin": [
+        36.0,
+        47.3
+      ],
+      "range_km": 120,
+      "heading_deg": 290,
+      "beam_deg": 70,
+      "platform": "uav",
+      "confidence": 0.65,
+      "available_actions": [
+        "retask",
+        "extend_orbit",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "isr.ru.zala",
+      "name": "ZALA Lancet Recce",
+      "faction_id": "ru",
+      "origin": [
+        38.0,
+        48.1
+      ],
+      "range_km": 80,
+      "heading_deg": 270,
+      "beam_deg": 60,
+      "platform": "uav",
+      "confidence": 0.6,
+      "available_actions": [
+        "retask",
+        "extend_orbit",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    },
+    {
+      "id": "isr.ru.a50",
+      "name": "A-50 AWACS (Belarus)",
+      "faction_id": "ru",
+      "origin": [
+        27.51,
+        53.78
+      ],
+      "range_km": 400,
+      "heading_deg": 0,
+      "beam_deg": 360,
+      "platform": "awacs",
+      "confidence": 0.78,
+      "available_actions": [
+        "retask",
+        "extend_orbit",
+        "stand_down"
+      ],
+      "country_id": "by"
+    },
+    {
+      "id": "isr.ru.kondor",
+      "name": "Kondor-FKA SAR Pass",
+      "faction_id": "ru",
+      "origin": [
+        35.0,
+        47.5
+      ],
+      "range_km": 700,
+      "heading_deg": 0,
+      "beam_deg": 360,
+      "platform": "satellite",
+      "confidence": 0.7,
+      "available_actions": [
+        "retask",
+        "extend_orbit",
+        "stand_down"
+      ],
+      "country_id": "ru"
+    }
+  ],
+  "missile_ranges": [
+    {
+      "id": "mr.ua.atacms-1",
+      "name": "ATACMS Battery (Donbas axis)",
+      "faction_id": "ua",
+      "origin": [
+        35.05,
+        48.46
+      ],
+      "range_km": 300.0,
+      "weapon": "ATACMS",
+      "category": "ballistic",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ua.storm-1",
+      "name": "Storm Shadow / SCALP (Su-24)",
+      "faction_id": "ua",
+      "origin": [
+        27.24,
+        49.76
+      ],
+      "range_km": 250.0,
+      "weapon": "Storm Shadow",
+      "category": "cruise",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ua.himars-1",
+      "name": "HIMARS Field Battery East",
+      "faction_id": "ua",
+      "origin": [
+        36.1,
+        49.55
+      ],
+      "range_km": 80.0,
+      "weapon": "GMLRS",
+      "category": "mlrs",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ua.himars-2",
+      "name": "HIMARS Field Battery South",
+      "faction_id": "ua",
+      "origin": [
+        35.4,
+        47.55
+      ],
+      "range_km": 80.0,
+      "weapon": "GMLRS",
+      "category": "mlrs",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ua.neptune",
+      "name": "Neptune Coastal Battery",
+      "faction_id": "ua",
+      "origin": [
+        30.74,
+        46.5
+      ],
+      "range_km": 280.0,
+      "weapon": "R-360 Neptune",
+      "category": "cruise",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ua.patriot-kyiv",
+      "name": "Patriot PAC-3 (Kyiv)",
+      "faction_id": "ua",
+      "origin": [
+        30.55,
+        50.45
+      ],
+      "range_km": 160.0,
+      "weapon": "PAC-3",
+      "category": "sam",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ua.iris-t",
+      "name": "IRIS-T SLM (Kharkiv)",
+      "faction_id": "ua",
+      "origin": [
+        36.2,
+        49.95
+      ],
+      "range_km": 40.0,
+      "weapon": "IRIS-T",
+      "category": "sam",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ru.iskander-bel",
+      "name": "Iskander-M (Belgorod)",
+      "faction_id": "ru",
+      "origin": [
+        36.55,
+        50.55
+      ],
+      "range_km": 480.0,
+      "weapon": "Iskander-M",
+      "category": "ballistic",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ru.iskander-vor",
+      "name": "Iskander-M (Voronezh)",
+      "faction_id": "ru",
+      "origin": [
+        39.2,
+        51.65
+      ],
+      "range_km": 480.0,
+      "weapon": "Iskander-M",
+      "category": "ballistic",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ru.iskander-cri",
+      "name": "Iskander-M (Dzhankoi)",
+      "faction_id": "ru",
+      "origin": [
+        34.4,
+        45.71
+      ],
+      "range_km": 480.0,
+      "weapon": "Iskander-M",
+      "category": "ballistic",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ru.kalibr-bsf",
+      "name": "Kalibr (Black Sea Fleet)",
+      "faction_id": "ru",
+      "origin": [
+        37.1,
+        44.1
+      ],
+      "range_km": 1500.0,
+      "weapon": "3M-14 Kalibr",
+      "category": "cruise",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ru.kalibr-cas",
+      "name": "Kalibr (Caspian Flotilla)",
+      "faction_id": "ru",
+      "origin": [
+        47.65,
+        42.88
+      ],
+      "range_km": 1500.0,
+      "weapon": "3M-14 Kalibr",
+      "category": "cruise",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ru.kinzhal",
+      "name": "Kinzhal (MiG-31K, Engels)",
+      "faction_id": "ru",
+      "origin": [
+        46.21,
+        51.48
+      ],
+      "range_km": 2000.0,
+      "weapon": "Kh-47M2 Kinzhal",
+      "category": "ballistic",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ru.s400-cri",
+      "name": "S-400 (Crimea)",
+      "faction_id": "ru",
+      "origin": [
+        33.95,
+        44.9
+      ],
+      "range_km": 400.0,
+      "weapon": "S-400 / 40N6",
+      "category": "sam",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ru.s400-bel",
+      "name": "S-400 (Belgorod)",
+      "faction_id": "ru",
+      "origin": [
+        36.55,
+        50.55
+      ],
+      "range_km": 400.0,
+      "weapon": "S-400 / 40N6",
+      "category": "sam",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    },
+    {
+      "id": "mr.ru.s400-by",
+      "name": "S-400 (Belarus)",
+      "faction_id": "ru",
+      "origin": [
+        28.64,
+        53.3
+      ],
+      "range_km": 400.0,
+      "weapon": "S-400 / 40N6",
+      "category": "sam",
+      "heading_deg": 0.0,
+      "beam_deg": 360.0,
+      "available_actions": [
+        "strike",
+        "displace",
+        "stand_down"
+      ]
+    }
+  ],
+  "aors": [
+    {
+      "id": "aor.ua.skhid",
+      "name": "OK 'Skhid' AOR",
+      "faction_id": "ua",
+      "polygon": [
+        [
+          [
+            36.0,
+            49.7
+          ],
+          [
+            40.5,
+            49.5
+          ],
+          [
+            40.5,
+            47.5
+          ],
+          [
+            36.5,
+            47.0
+          ],
+          [
+            36.0,
+            49.7
+          ]
+        ]
+      ],
+      "available_actions": [
+        "re-task",
+        "split",
+        "merge"
+      ]
+    },
+    {
+      "id": "aor.ua.pivden",
+      "name": "OK 'Pivden' AOR",
+      "faction_id": "ua",
+      "polygon": [
+        [
+          [
+            30.5,
+            47.5
+          ],
+          [
+            36.5,
+            47.5
+          ],
+          [
+            36.5,
+            45.8
+          ],
+          [
+            30.5,
+            45.8
+          ],
+          [
+            30.5,
+            47.5
+          ]
+        ]
+      ],
+      "available_actions": [
+        "re-task",
+        "split",
+        "merge"
+      ]
+    },
+    {
+      "id": "aor.ua.pivnich",
+      "name": "OK 'Pivnich' AOR",
+      "faction_id": "ua",
+      "polygon": [
+        [
+          [
+            28.5,
+            52.4
+          ],
+          [
+            35.0,
+            52.4
+          ],
+          [
+            35.0,
+            50.0
+          ],
+          [
+            28.5,
+            50.0
+          ],
+          [
+            28.5,
+            52.4
+          ]
+        ]
+      ],
+      "available_actions": [
+        "re-task",
+        "split",
+        "merge"
+      ]
+    },
+    {
+      "id": "aor.ua.zakhid",
+      "name": "OK 'Zakhid' AOR",
+      "faction_id": "ua",
+      "polygon": [
+        [
+          [
+            22.0,
+            51.0
+          ],
+          [
+            28.0,
+            51.0
+          ],
+          [
+            28.0,
+            47.5
+          ],
+          [
+            22.0,
+            47.5
+          ],
+          [
+            22.0,
+            51.0
+          ]
+        ]
+      ],
+      "available_actions": [
+        "re-task",
+        "split",
+        "merge"
+      ]
+    },
+    {
+      "id": "aor.ru.gof-north",
+      "name": "GoF North AOR",
+      "faction_id": "ru",
+      "polygon": [
+        [
+          [
+            34.0,
+            52.5
+          ],
+          [
+            40.0,
+            52.5
+          ],
+          [
+            40.0,
+            49.5
+          ],
+          [
+            34.0,
+            49.5
+          ],
+          [
+            34.0,
+            52.5
+          ]
+        ]
+      ],
+      "available_actions": [
+        "re-task",
+        "split",
+        "merge"
+      ]
+    },
+    {
+      "id": "aor.ru.gof-centre",
+      "name": "GoF Centre AOR",
+      "faction_id": "ru",
+      "polygon": [
+        [
+          [
+            36.0,
+            50.0
+          ],
+          [
+            40.0,
+            50.0
+          ],
+          [
+            40.0,
+            48.5
+          ],
+          [
+            36.0,
+            48.5
+          ],
+          [
+            36.0,
+            50.0
+          ]
+        ]
+      ],
+      "available_actions": [
+        "re-task",
+        "split",
+        "merge"
+      ]
+    },
+    {
+      "id": "aor.ru.gof-south",
+      "name": "GoF South AOR",
+      "faction_id": "ru",
+      "polygon": [
+        [
+          [
+            36.0,
+            48.5
+          ],
+          [
+            40.5,
+            48.5
+          ],
+          [
+            40.5,
+            46.7
+          ],
+          [
+            36.0,
+            46.7
+          ],
+          [
+            36.0,
+            48.5
+          ]
+        ]
+      ],
+      "available_actions": [
+        "re-task",
+        "split",
+        "merge"
+      ]
+    },
+    {
+      "id": "aor.ru.gof-tavria",
+      "name": "GoF Dnipro / Tavria AOR",
+      "faction_id": "ru",
+      "polygon": [
+        [
+          [
+            32.5,
+            47.6
+          ],
+          [
+            36.5,
+            47.6
+          ],
+          [
+            36.5,
+            46.0
+          ],
+          [
+            32.5,
+            46.0
+          ],
+          [
+            32.5,
+            47.6
+          ]
+        ]
+      ],
+      "available_actions": [
+        "re-task",
+        "split",
+        "merge"
+      ]
+    }
+  ],
+  "frontlines": [
+    {
+      "id": "front.main",
+      "name": "Line of Contact",
+      "path": [
+        [
+          37.45,
+          50.3
+        ],
+        [
+          37.85,
+          49.55
+        ],
+        [
+          38.05,
+          49.05
+        ],
+        [
+          38.05,
+          48.59
+        ],
+        [
+          37.92,
+          48.42
+        ],
+        [
+          37.74,
+          48.13
+        ],
+        [
+          37.3,
+          47.8
+        ],
+        [
+          36.85,
+          47.85
+        ],
+        [
+          35.85,
+          47.43
+        ],
+        [
+          35.42,
+          47.27
+        ],
+        [
+          33.2,
+          46.5
+        ],
+        [
+          31.85,
+          46.2
+        ]
+      ],
+      "buffer_km": 8.0,
+      "notes": "Open-source synthesis. Non-authoritative. Buffered 8 km either side.",
+      "available_actions": [
+        "counter-attack",
+        "consolidate",
+        "withdraw"
+      ],
+      "updated_at": "2026-04-25T06:00:00+00:00"
+    }
+  ],
+  "actions": [
+    {
+      "id": "deploy_troops",
+      "name": "Deploy Troops",
+      "description": "Move kinetic forces into the region.",
+      "base_rate": 0.65,
+      "morale_weight": 0.3,
+      "trend_weight": 0.1,
+      "severity_weight": 0.15,
+      "category_sensitivities": {
+        "protest": -0.15,
+        "military_loss": -0.2,
+        "economic_stress": -0.05,
+        "political_instability": -0.1,
+        "nationalist_sentiment": 0.1
+      }
+    },
+    {
+      "id": "escalate_conflict",
+      "name": "Escalate Conflict",
+      "description": "Authorise kinetic strikes and raise the alert posture.",
+      "base_rate": 0.5,
+      "morale_weight": 0.25,
+      "trend_weight": 0.1,
+      "severity_weight": 0.2,
+      "category_sensitivities": {
+        "protest": -0.2,
+        "military_loss": -0.25,
+        "economic_stress": -0.05,
+        "political_instability": -0.05,
+        "nationalist_sentiment": 0.2
+      }
+    },
+    {
+      "id": "impose_sanctions",
+      "name": "Impose Sanctions",
+      "description": "Apply targeted economic pressure on the region.",
+      "base_rate": 0.6,
+      "morale_weight": -0.3,
+      "trend_weight": -0.1,
+      "severity_weight": -0.2,
+      "category_sensitivities": {
+        "protest": 0.15,
+        "military_loss": 0.05,
+        "economic_stress": 0.2,
+        "political_instability": 0.15,
+        "nationalist_sentiment": -0.1
+      }
+    },
+    {
+      "id": "conduct_surveillance",
+      "name": "Conduct Surveillance",
+      "description": "Increase ISR coverage; non-kinetic, hard to refuse.",
+      "base_rate": 0.8,
+      "morale_weight": 0.05,
+      "trend_weight": 0.05,
+      "severity_weight": 0.05,
+      "category_sensitivities": {
+        "protest": 0.05,
+        "military_loss": 0.05,
+        "economic_stress": 0.0,
+        "political_instability": 0.05,
+        "nationalist_sentiment": -0.05
+      }
+    }
+  ]
+}

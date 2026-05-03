@@ -1,0 +1,636 @@
+{
+  "morale_factors_schema_version": "0.1.0",
+  "generated_at": "2026-04-26T04:49:24.718776+00:00",
+  "source": "gdelt_live",
+  "lookback_hours": 72,
+  "regions": [
+    {
+      "region_id": "terr.lithuania",
+      "label": "Lithuania",
+      "article_count": 0,
+      "factors": [
+        {
+          "factor": "casualty_reports",
+          "label": "Casualty reports",
+          "description": "High losses usually reduce morale, especially if repeated or unexplained.",
+          "score": 50.0,
+          "summary": "No public news matched 'Casualty reports' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "supply_logistics",
+          "label": "Supply / logistics indicators",
+          "description": "Food, fuel, ammo, medical shortages are huge morale killers.",
+          "score": 50.0,
+          "summary": "No public news matched 'Supply / logistics indicators' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "pay_benefits",
+          "label": "Pay / benefits issues",
+          "description": "Unpaid soldiers, delayed compensation, family support problems.",
+          "score": 50.0,
+          "summary": "No public news matched 'Pay / benefits issues' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "desertion_surrender",
+          "label": "Desertion / surrender / refusal reports",
+          "description": "Direct behavioral evidence of low morale.",
+          "score": 50.0,
+          "summary": "No public news matched 'Desertion / surrender / refusal reports' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "recruitment_mobilization",
+          "label": "Recruitment + mobilization rates",
+          "description": "Whether people are willing to join or are avoiding service.",
+          "score": 50.0,
+          "summary": "No public news matched 'Recruitment + mobilization rates' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "social_media_soldiers",
+          "label": "Social media from soldiers / families",
+          "description": "Complaints, fear, pride, grief, rumors, anger from the ranks.",
+          "score": null,
+          "summary": "'Social media from soldiers / families' is not derivable from public news headlines for Lithuania. Not derivable from public news headlines alone. Requires direct ingestion of platform feeds (Telegram, VK, TikTok, Instagram) with a per-platform scraper and an opinion classifier. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires direct ingestion of platform feeds (Telegram, VK, TikTok, Instagram) with a per-platform scraper and an opinion classifier.",
+          "article_count": 0
+        },
+        {
+          "factor": "local_protest_unrest",
+          "label": "Local protest / unrest near home regions",
+          "description": "Soldiers may be less willing to fight if their home region is unstable.",
+          "score": 50.0,
+          "summary": "No public news matched 'Local protest / unrest near home regions' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "leadership_trust",
+          "label": "Leadership trust signals",
+          "description": "Corruption, poor commanders, contradictory orders, perceived abandonment.",
+          "score": 50.0,
+          "summary": "No public news matched 'Leadership trust signals' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "battlefield_momentum",
+          "label": "Battlefield momentum",
+          "description": "Repeated defeats lower morale; visible wins raise it.",
+          "score": 50.0,
+          "summary": "No public news matched 'Battlefield momentum' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "unit_cohesion",
+          "label": "Unit cohesion indicators",
+          "description": "Shared identity, elite status, long-standing units, ideological motivation.",
+          "score": null,
+          "summary": "'Unit cohesion indicators' is not derivable from public news headlines for Lithuania. Not derivable from public news headlines alone. Requires unit rosters, deployment histories, and per-unit interviews / anthropology. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires unit rosters, deployment histories, and per-unit interviews / anthropology.",
+          "article_count": 0
+        },
+        {
+          "factor": "propaganda_messaging",
+          "label": "Propaganda + official messaging",
+          "description": "What the state is trying to convince troops/citizens of.",
+          "score": 50.0,
+          "summary": "No public news matched 'Propaganda + official messaging' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "media_censorship",
+          "label": "Media censorship intensity",
+          "description": "Heavy censorship may indicate morale or legitimacy anxiety.",
+          "score": 50.0,
+          "summary": "No public news matched 'Media censorship intensity' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "economic_stress",
+          "label": "Economic stress at home",
+          "description": "Family hardship can reduce willingness to continue fighting.",
+          "score": 50.0,
+          "summary": "No public news matched 'Economic stress at home' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "ethnic_regional_composition",
+          "label": "Ethnic / regional composition of units",
+          "description": "Morale may differ if certain groups are disproportionately deployed.",
+          "score": null,
+          "summary": "'Ethnic / regional composition of units' is not derivable from public news headlines for Lithuania. Not derivable from public news headlines alone. Requires per-unit demographic data (often classified) cross-referenced against deployment orders. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires per-unit demographic data (often classified) cross-referenced against deployment orders.",
+          "article_count": 0
+        },
+        {
+          "factor": "veteran_family_complaints",
+          "label": "Veteran / family complaints",
+          "description": "Often an early-warning signal for deeper military dissatisfaction.",
+          "score": 50.0,
+          "summary": "No public news matched 'Veteran / family complaints' for Lithuania in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        }
+      ]
+    },
+    {
+      "region_id": "terr.poland_ne",
+      "label": "Northeast Poland",
+      "article_count": 0,
+      "factors": [
+        {
+          "factor": "casualty_reports",
+          "label": "Casualty reports",
+          "description": "High losses usually reduce morale, especially if repeated or unexplained.",
+          "score": 50.0,
+          "summary": "No public news matched 'Casualty reports' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "supply_logistics",
+          "label": "Supply / logistics indicators",
+          "description": "Food, fuel, ammo, medical shortages are huge morale killers.",
+          "score": 50.0,
+          "summary": "No public news matched 'Supply / logistics indicators' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "pay_benefits",
+          "label": "Pay / benefits issues",
+          "description": "Unpaid soldiers, delayed compensation, family support problems.",
+          "score": 50.0,
+          "summary": "No public news matched 'Pay / benefits issues' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "desertion_surrender",
+          "label": "Desertion / surrender / refusal reports",
+          "description": "Direct behavioral evidence of low morale.",
+          "score": 50.0,
+          "summary": "No public news matched 'Desertion / surrender / refusal reports' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "recruitment_mobilization",
+          "label": "Recruitment + mobilization rates",
+          "description": "Whether people are willing to join or are avoiding service.",
+          "score": 50.0,
+          "summary": "No public news matched 'Recruitment + mobilization rates' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "social_media_soldiers",
+          "label": "Social media from soldiers / families",
+          "description": "Complaints, fear, pride, grief, rumors, anger from the ranks.",
+          "score": null,
+          "summary": "'Social media from soldiers / families' is not derivable from public news headlines for Northeast Poland. Not derivable from public news headlines alone. Requires direct ingestion of platform feeds (Telegram, VK, TikTok, Instagram) with a per-platform scraper and an opinion classifier. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires direct ingestion of platform feeds (Telegram, VK, TikTok, Instagram) with a per-platform scraper and an opinion classifier.",
+          "article_count": 0
+        },
+        {
+          "factor": "local_protest_unrest",
+          "label": "Local protest / unrest near home regions",
+          "description": "Soldiers may be less willing to fight if their home region is unstable.",
+          "score": 50.0,
+          "summary": "No public news matched 'Local protest / unrest near home regions' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "leadership_trust",
+          "label": "Leadership trust signals",
+          "description": "Corruption, poor commanders, contradictory orders, perceived abandonment.",
+          "score": 50.0,
+          "summary": "No public news matched 'Leadership trust signals' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "battlefield_momentum",
+          "label": "Battlefield momentum",
+          "description": "Repeated defeats lower morale; visible wins raise it.",
+          "score": 50.0,
+          "summary": "No public news matched 'Battlefield momentum' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "unit_cohesion",
+          "label": "Unit cohesion indicators",
+          "description": "Shared identity, elite status, long-standing units, ideological motivation.",
+          "score": null,
+          "summary": "'Unit cohesion indicators' is not derivable from public news headlines for Northeast Poland. Not derivable from public news headlines alone. Requires unit rosters, deployment histories, and per-unit interviews / anthropology. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires unit rosters, deployment histories, and per-unit interviews / anthropology.",
+          "article_count": 0
+        },
+        {
+          "factor": "propaganda_messaging",
+          "label": "Propaganda + official messaging",
+          "description": "What the state is trying to convince troops/citizens of.",
+          "score": 50.0,
+          "summary": "No public news matched 'Propaganda + official messaging' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "media_censorship",
+          "label": "Media censorship intensity",
+          "description": "Heavy censorship may indicate morale or legitimacy anxiety.",
+          "score": 50.0,
+          "summary": "No public news matched 'Media censorship intensity' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "economic_stress",
+          "label": "Economic stress at home",
+          "description": "Family hardship can reduce willingness to continue fighting.",
+          "score": 50.0,
+          "summary": "No public news matched 'Economic stress at home' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "ethnic_regional_composition",
+          "label": "Ethnic / regional composition of units",
+          "description": "Morale may differ if certain groups are disproportionately deployed.",
+          "score": null,
+          "summary": "'Ethnic / regional composition of units' is not derivable from public news headlines for Northeast Poland. Not derivable from public news headlines alone. Requires per-unit demographic data (often classified) cross-referenced against deployment orders. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires per-unit demographic data (often classified) cross-referenced against deployment orders.",
+          "article_count": 0
+        },
+        {
+          "factor": "veteran_family_complaints",
+          "label": "Veteran / family complaints",
+          "description": "Often an early-warning signal for deeper military dissatisfaction.",
+          "score": 50.0,
+          "summary": "No public news matched 'Veteran / family complaints' for Northeast Poland in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        }
+      ]
+    },
+    {
+      "region_id": "terr.kaliningrad",
+      "label": "Kaliningrad",
+      "article_count": 0,
+      "factors": [
+        {
+          "factor": "casualty_reports",
+          "label": "Casualty reports",
+          "description": "High losses usually reduce morale, especially if repeated or unexplained.",
+          "score": 50.0,
+          "summary": "No public news matched 'Casualty reports' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "supply_logistics",
+          "label": "Supply / logistics indicators",
+          "description": "Food, fuel, ammo, medical shortages are huge morale killers.",
+          "score": 50.0,
+          "summary": "No public news matched 'Supply / logistics indicators' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "pay_benefits",
+          "label": "Pay / benefits issues",
+          "description": "Unpaid soldiers, delayed compensation, family support problems.",
+          "score": 50.0,
+          "summary": "No public news matched 'Pay / benefits issues' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "desertion_surrender",
+          "label": "Desertion / surrender / refusal reports",
+          "description": "Direct behavioral evidence of low morale.",
+          "score": 50.0,
+          "summary": "No public news matched 'Desertion / surrender / refusal reports' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "recruitment_mobilization",
+          "label": "Recruitment + mobilization rates",
+          "description": "Whether people are willing to join or are avoiding service.",
+          "score": 50.0,
+          "summary": "No public news matched 'Recruitment + mobilization rates' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "social_media_soldiers",
+          "label": "Social media from soldiers / families",
+          "description": "Complaints, fear, pride, grief, rumors, anger from the ranks.",
+          "score": null,
+          "summary": "'Social media from soldiers / families' is not derivable from public news headlines for Kaliningrad. Not derivable from public news headlines alone. Requires direct ingestion of platform feeds (Telegram, VK, TikTok, Instagram) with a per-platform scraper and an opinion classifier. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires direct ingestion of platform feeds (Telegram, VK, TikTok, Instagram) with a per-platform scraper and an opinion classifier.",
+          "article_count": 0
+        },
+        {
+          "factor": "local_protest_unrest",
+          "label": "Local protest / unrest near home regions",
+          "description": "Soldiers may be less willing to fight if their home region is unstable.",
+          "score": 50.0,
+          "summary": "No public news matched 'Local protest / unrest near home regions' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "leadership_trust",
+          "label": "Leadership trust signals",
+          "description": "Corruption, poor commanders, contradictory orders, perceived abandonment.",
+          "score": 50.0,
+          "summary": "No public news matched 'Leadership trust signals' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "battlefield_momentum",
+          "label": "Battlefield momentum",
+          "description": "Repeated defeats lower morale; visible wins raise it.",
+          "score": 50.0,
+          "summary": "No public news matched 'Battlefield momentum' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "unit_cohesion",
+          "label": "Unit cohesion indicators",
+          "description": "Shared identity, elite status, long-standing units, ideological motivation.",
+          "score": null,
+          "summary": "'Unit cohesion indicators' is not derivable from public news headlines for Kaliningrad. Not derivable from public news headlines alone. Requires unit rosters, deployment histories, and per-unit interviews / anthropology. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires unit rosters, deployment histories, and per-unit interviews / anthropology.",
+          "article_count": 0
+        },
+        {
+          "factor": "propaganda_messaging",
+          "label": "Propaganda + official messaging",
+          "description": "What the state is trying to convince troops/citizens of.",
+          "score": 50.0,
+          "summary": "No public news matched 'Propaganda + official messaging' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "media_censorship",
+          "label": "Media censorship intensity",
+          "description": "Heavy censorship may indicate morale or legitimacy anxiety.",
+          "score": 50.0,
+          "summary": "No public news matched 'Media censorship intensity' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "economic_stress",
+          "label": "Economic stress at home",
+          "description": "Family hardship can reduce willingness to continue fighting.",
+          "score": 50.0,
+          "summary": "No public news matched 'Economic stress at home' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "ethnic_regional_composition",
+          "label": "Ethnic / regional composition of units",
+          "description": "Morale may differ if certain groups are disproportionately deployed.",
+          "score": null,
+          "summary": "'Ethnic / regional composition of units' is not derivable from public news headlines for Kaliningrad. Not derivable from public news headlines alone. Requires per-unit demographic data (often classified) cross-referenced against deployment orders. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires per-unit demographic data (often classified) cross-referenced against deployment orders.",
+          "article_count": 0
+        },
+        {
+          "factor": "veteran_family_complaints",
+          "label": "Veteran / family complaints",
+          "description": "Often an early-warning signal for deeper military dissatisfaction.",
+          "score": 50.0,
+          "summary": "No public news matched 'Veteran / family complaints' for Kaliningrad in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        }
+      ]
+    },
+    {
+      "region_id": "terr.belarus_w",
+      "label": "Western Belarus",
+      "article_count": 0,
+      "factors": [
+        {
+          "factor": "casualty_reports",
+          "label": "Casualty reports",
+          "description": "High losses usually reduce morale, especially if repeated or unexplained.",
+          "score": 50.0,
+          "summary": "No public news matched 'Casualty reports' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "supply_logistics",
+          "label": "Supply / logistics indicators",
+          "description": "Food, fuel, ammo, medical shortages are huge morale killers.",
+          "score": 50.0,
+          "summary": "No public news matched 'Supply / logistics indicators' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "pay_benefits",
+          "label": "Pay / benefits issues",
+          "description": "Unpaid soldiers, delayed compensation, family support problems.",
+          "score": 50.0,
+          "summary": "No public news matched 'Pay / benefits issues' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "desertion_surrender",
+          "label": "Desertion / surrender / refusal reports",
+          "description": "Direct behavioral evidence of low morale.",
+          "score": 50.0,
+          "summary": "No public news matched 'Desertion / surrender / refusal reports' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "recruitment_mobilization",
+          "label": "Recruitment + mobilization rates",
+          "description": "Whether people are willing to join or are avoiding service.",
+          "score": 50.0,
+          "summary": "No public news matched 'Recruitment + mobilization rates' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "social_media_soldiers",
+          "label": "Social media from soldiers / families",
+          "description": "Complaints, fear, pride, grief, rumors, anger from the ranks.",
+          "score": null,
+          "summary": "'Social media from soldiers / families' is not derivable from public news headlines for Western Belarus. Not derivable from public news headlines alone. Requires direct ingestion of platform feeds (Telegram, VK, TikTok, Instagram) with a per-platform scraper and an opinion classifier. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires direct ingestion of platform feeds (Telegram, VK, TikTok, Instagram) with a per-platform scraper and an opinion classifier.",
+          "article_count": 0
+        },
+        {
+          "factor": "local_protest_unrest",
+          "label": "Local protest / unrest near home regions",
+          "description": "Soldiers may be less willing to fight if their home region is unstable.",
+          "score": 50.0,
+          "summary": "No public news matched 'Local protest / unrest near home regions' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "leadership_trust",
+          "label": "Leadership trust signals",
+          "description": "Corruption, poor commanders, contradictory orders, perceived abandonment.",
+          "score": 50.0,
+          "summary": "No public news matched 'Leadership trust signals' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "battlefield_momentum",
+          "label": "Battlefield momentum",
+          "description": "Repeated defeats lower morale; visible wins raise it.",
+          "score": 50.0,
+          "summary": "No public news matched 'Battlefield momentum' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "unit_cohesion",
+          "label": "Unit cohesion indicators",
+          "description": "Shared identity, elite status, long-standing units, ideological motivation.",
+          "score": null,
+          "summary": "'Unit cohesion indicators' is not derivable from public news headlines for Western Belarus. Not derivable from public news headlines alone. Requires unit rosters, deployment histories, and per-unit interviews / anthropology. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires unit rosters, deployment histories, and per-unit interviews / anthropology.",
+          "article_count": 0
+        },
+        {
+          "factor": "propaganda_messaging",
+          "label": "Propaganda + official messaging",
+          "description": "What the state is trying to convince troops/citizens of.",
+          "score": 50.0,
+          "summary": "No public news matched 'Propaganda + official messaging' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "media_censorship",
+          "label": "Media censorship intensity",
+          "description": "Heavy censorship may indicate morale or legitimacy anxiety.",
+          "score": 50.0,
+          "summary": "No public news matched 'Media censorship intensity' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "economic_stress",
+          "label": "Economic stress at home",
+          "description": "Family hardship can reduce willingness to continue fighting.",
+          "score": 50.0,
+          "summary": "No public news matched 'Economic stress at home' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        },
+        {
+          "factor": "ethnic_regional_composition",
+          "label": "Ethnic / regional composition of units",
+          "description": "Morale may differ if certain groups are disproportionately deployed.",
+          "score": null,
+          "summary": "'Ethnic / regional composition of units' is not derivable from public news headlines for Western Belarus. Not derivable from public news headlines alone. Requires per-unit demographic data (often classified) cross-referenced against deployment orders. The cell is intentionally null rather than zero-scored to avoid implying a measurement we did not make.",
+          "sources": [],
+          "note": "Not derivable from public news headlines alone. Requires per-unit demographic data (often classified) cross-referenced against deployment orders.",
+          "article_count": 0
+        },
+        {
+          "factor": "veteran_family_complaints",
+          "label": "Veteran / family complaints",
+          "description": "Often an early-warning signal for deeper military dissatisfaction.",
+          "score": 50.0,
+          "summary": "No public news matched 'Veteran / family complaints' for Western Belarus in the current lookback window. The score sits at the neutral baseline. Treat as 'no signal' rather than 'all clear'.",
+          "sources": [],
+          "note": null,
+          "article_count": 0
+        }
+      ]
+    }
+  ]
+}

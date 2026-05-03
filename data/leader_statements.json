@@ -1,0 +1,65 @@
+{
+  "_doc": "Stub leader statements for the Axis demo. Severity is signed [-1, +1] aligned to GDELT Goldstein/10. CAMEO codes are best-effort.",
+  "signals": [
+    {
+      "id": "sig.stub.001",
+      "timestamp": "2026-04-24T09:00:00Z",
+      "speaker_faction_id": "ru",
+      "type": "ultimatum",
+      "severity": -0.85,
+      "text": "Demands negotiated halt within 30 days or further mobilisation will be authorised.",
+      "target_faction_id": "ua",
+      "cameo_code": "172",
+      "goldstein": -8.5,
+      "source": "stub"
+    },
+    {
+      "id": "sig.stub.002",
+      "timestamp": "2026-04-24T10:00:00Z",
+      "speaker_faction_id": "ua",
+      "type": "commitment",
+      "severity": 0.55,
+      "text": "Public commitment to defend Kharkiv salient at all costs.",
+      "region_id": "obl.63",
+      "cameo_code": "057",
+      "goldstein": 5.5,
+      "source": "stub"
+    },
+    {
+      "id": "sig.stub.003",
+      "timestamp": "2026-04-24T11:00:00Z",
+      "speaker_faction_id": "nato",
+      "type": "reassurance",
+      "severity": 0.65,
+      "text": "Reaffirms multi-year materiel support for Ukraine.",
+      "target_faction_id": "ua",
+      "cameo_code": "050",
+      "goldstein": 6.5,
+      "source": "stub"
+    },
+    {
+      "id": "sig.stub.004",
+      "timestamp": "2026-04-24T12:00:00Z",
+      "speaker_faction_id": "ru",
+      "type": "threat",
+      "severity": -0.70,
+      "text": "Warns of asymmetric response if NATO strike packages cross red line.",
+      "target_faction_id": "nato",
+      "cameo_code": "138",
+      "goldstein": -7.0,
+      "source": "stub"
+    },
+    {
+      "id": "sig.stub.005",
+      "timestamp": "2026-04-24T13:00:00Z",
+      "speaker_faction_id": "ua",
+      "type": "demand",
+      "severity": -0.30,
+      "text": "Demands accelerated air defence deliveries from allies.",
+      "target_faction_id": "nato",
+      "cameo_code": "112",
+      "goldstein": -3.0,
+      "source": "stub"
+    }
+  ]
+}

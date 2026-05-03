@@ -1,0 +1,7 @@
+{
+  "live_news_enabled": true,
+  "gdelt_lookback_hours": 48,
+  "gdelt_max_records_per_region": 75,
+  "gdelt_min_abs_tone": 1.0,
+  "live_fallback_source": "curated"
+}

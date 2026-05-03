@@ -21,6 +21,7 @@ build/
 # Node / Vite
 node_modules/
 dist/
+axis/tsconfig.tsbuildinfo
 .vite/
 *.log
 npm-debug.log*

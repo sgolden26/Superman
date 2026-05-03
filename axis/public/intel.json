@@ -1,0 +1,962 @@
+{
+  "intel_schema_version": "0.1.0",
+  "generated_at": "2026-04-26T23:17:39.132190+00:00",
+  "source": "gdelt_live",
+  "tick_seq": 0,
+  "regions": [
+    {
+      "region_id": "obl.30",
+      "morale_score": 0.0,
+      "morale_trend": "steady",
+      "trend_delta": 0.0,
+      "history": [
+        50.0,
+        50.0,
+        12.9,
+        2.7,
+        0.0,
+        0.0
+      ],
+      "drivers": [
+        {
+          "category": "protest",
+          "contribution": -59.735,
+          "headline": "At least 16 dead in strikes across Ukraine and Russia on Chernobyl anniversary",
+          "event_id": "gdelt.live.4a342eae4043"
+        },
+        {
+          "category": "military_loss",
+          "contribution": -32.535,
+          "headline": "5 killed in Russian strikes on Ukrainian city | The Arkansas Democrat - Gazette",
+          "event_id": "gdelt.live.9ac6326deb48"
+        },
+        {
+          "category": "economic_stress",
+          "contribution": -14.218,
+          "headline": "IAEA signs deal with Ukraine on energy reconstruction on Chornobyl anniversary",
+          "event_id": "gdelt.live.7a41a004db3b"
+        }
+      ],
+      "recent_events": [
+        {
+          "id": "gdelt.live.4a342eae4043",
+          "region_id": "obl.30",
+          "ts": "2026-04-26T20:45:00+00:00",
+          "category": "protest",
+          "headline": "At least 16 dead in strikes across Ukraine and Russia on Chernobyl anniversary",
+          "snippet": "cbsnews.com",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.cbsnews.com/news/ukraine-russian-attacks-chernobyl-anniversary/"
+        },
+        {
+          "id": "gdelt.live.91f8a5889e74",
+          "region_id": "obl.30",
+          "ts": "2026-04-26T18:15:00+00:00",
+          "category": "protest",
+          "headline": "Sixteen dead in strikes as Ukraine marks 40 years since Chernobyl",
+          "snippet": "abc.net.au",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.abc.net.au/news/2026-04-27/ukraine-chernobyl-40-years-russia-war-invasion/106609718"
+        },
+        {
+          "id": "gdelt.live.72af73e29222",
+          "region_id": "obl.30",
+          "ts": "2026-04-26T16:45:00+00:00",
+          "category": "protest",
+          "headline": "At Least 16 Dead in Ukraine Strikes Amid Chernobyl Disaster Anniversary",
+          "snippet": "breitbart.com",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.breitbart.com/europe/2026/04/26/at-least-16-dead-in-strikes-in-ukraine-amid-chernobyl-disaster-anniversary/"
+        },
+        {
+          "id": "gdelt.live.6bcdbe754e3e",
+          "region_id": "obl.30",
+          "ts": "2026-04-26T13:45:00+00:00",
+          "category": "protest",
+          "headline": "16 dead as Russia , Ukraine trade strikes on Chernobyl anniversary",
+          "snippet": "dailysabah.com",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.dailysabah.com/world/europe/16-dead-as-russia-ukraine-trade-strikes-on-chernobyl-anniversary"
+        },
+        {
+          "id": "gdelt.live.6fc7fe0a88f0",
+          "region_id": "obl.30",
+          "ts": "2026-04-26T12:45:00+00:00",
+          "category": "protest",
+          "headline": "At least 16 dead in strikes as Chernobyl anniversary highlights nuclear risks of Russia - Ukraine war",
+          "snippet": "ksat.com",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.ksat.com/news/2026/04/26/at-least-16-dead-in-strikes-as-chernobyl-anniversary-highlights-nuclear-risks-of-russia-ukraine-war/"
+        },
+        {
+          "id": "gdelt.live.9ac6326deb48",
+          "region_id": "obl.30",
+          "ts": "2026-04-26T10:15:00+00:00",
+          "category": "military_loss",
+          "headline": "5 killed in Russian strikes on Ukrainian city | The Arkansas Democrat - Gazette",
+          "snippet": "arkansasonline.com",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.arkansasonline.com/news/2026/apr/26/5-killed-in-russian-strikes-on-ukrainian-city/"
+        }
+      ]
+    },
+    {
+      "region_id": "obl.63",
+      "morale_score": 0.0,
+      "morale_trend": "steady",
+      "trend_delta": 0.0,
+      "history": [
+        50.0,
+        50.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drivers": [
+        {
+          "category": "military_loss",
+          "contribution": -45.18,
+          "headline": "Mammoth 20 hour Russian attack on Ukraine devastates residential areas in Dnipro - London Business News",
+          "event_id": "gdelt.live.8979fedc6cd3"
+        },
+        {
+          "category": "protest",
+          "contribution": -7.503,
+          "headline": "Russian strikes kill at least seven and injure dozens across Ukraine",
+          "event_id": "gdelt.live.6dc73f479c21"
+        },
+        {
+          "category": "nationalist_sentiment",
+          "contribution": 1.143,
+          "headline": "RAF jets  engage  Russian drones in NATO operation as WW3 tensions soar",
+          "event_id": "gdelt.live.e499d3c749b8"
+        }
+      ],
+      "recent_events": [
+        {
+          "id": "gdelt.live.8979fedc6cd3",
+          "region_id": "obl.63",
+          "ts": "2026-04-26T16:00:00+00:00",
+          "category": "military_loss",
+          "headline": "Mammoth 20 hour Russian attack on Ukraine devastates residential areas in Dnipro - London Business News",
+          "snippet": "londonlovesbusiness.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://londonlovesbusiness.com/mammoth-20-hour-russian-attack-on-ukraine-devastates-residential-areas-in-dnipro/"
+        },
+        {
+          "id": "gdelt.live.94a0099b6194",
+          "region_id": "obl.63",
+          "ts": "2026-04-26T04:45:00+00:00",
+          "category": "military_loss",
+          "headline": "Ukrainian action thriller billed as Saving Private Ryan for the drone age",
+          "snippet": "theguardian.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://www.theguardian.com/world/2026/apr/26/ukrainian-action-thriller-billed-as-saving-private-ryan-for-the-drone-age"
+        },
+        {
+          "id": "gdelt.live.421fc7cdeaa4",
+          "region_id": "obl.63",
+          "ts": "2026-04-25T19:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Zelensky : Five killed in Ukraine Dnipro amid heavy Russian attacks",
+          "snippet": "yahoo.com",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.yahoo.com/news/articles/zelensky-five-killed-ukraines-dnipro-175322489.html"
+        },
+        {
+          "id": "gdelt.live.092d74698a98",
+          "region_id": "obl.63",
+          "ts": "2026-04-25T18:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Seven killed with many more  trapped under the rubble  across Ukraine following Russian drone attacks",
+          "snippet": "lbc.co.uk",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.lbc.co.uk/article/seven-killed-dozens-injured-ukraine-russian-drone-attack-5HjdYGp_2/"
+        },
+        {
+          "id": "gdelt.live.231021ee80ac",
+          "region_id": "obl.63",
+          "ts": "2026-04-25T11:30:00+00:00",
+          "category": "military_loss",
+          "headline": "Seven dead in major Russian attack on Ukraine",
+          "snippet": "the-star.co.ke",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.the-star.co.ke/news/world/2026-04-25-seven-dead-in-major-russian-attack-on-ukraine"
+        },
+        {
+          "id": "gdelt.live.26f72507fc02",
+          "region_id": "obl.63",
+          "ts": "2026-04-25T10:45:00+00:00",
+          "category": "military_loss",
+          "headline": "Russians strike Ukrainian city of Dnipro again : 1 killed , 7 injured",
+          "snippet": "en.interfax.com.ua",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://en.interfax.com.ua/news/general/1162270.html"
+        }
+      ]
+    },
+    {
+      "region_id": "obl.14",
+      "morale_score": 39.9,
+      "morale_trend": "steady",
+      "trend_delta": 0.92,
+      "history": [
+        50.0,
+        50.0,
+        20.0,
+        31.8,
+        39.0,
+        39.9
+      ],
+      "drivers": [
+        {
+          "category": "military_loss",
+          "contribution": -13.914,
+          "headline": "Two Dead in Kramatorsk as Russian Shelling Hits Residential Area",
+          "event_id": "gdelt.live.b4cfc91d79a9"
+        },
+        {
+          "category": "nationalist_sentiment",
+          "contribution": 5.51,
+          "headline": "Russia  losing thousand of troops for each mile in Ukraine , NATO commander says",
+          "event_id": "gdelt.live.41164048a143"
+        },
+        {
+          "category": "protest",
+          "contribution": -1.709,
+          "headline": "Deadly Russian Strikes Pound Ukraine Dnipro For More Than 12 Hours",
+          "event_id": "gdelt.live.40981fa0b145"
+        }
+      ],
+      "recent_events": [
+        {
+          "id": "gdelt.live.41164048a143",
+          "region_id": "obl.14",
+          "ts": "2026-04-26T21:15:00+00:00",
+          "category": "nationalist_sentiment",
+          "headline": "Russia  losing thousand of troops for each mile in Ukraine , NATO commander says",
+          "snippet": "kxel.com",
+          "weight": 0.3,
+          "source": "gdelt",
+          "url": "https://kxel.com/2026/02/26/russia-losing-thousands-of-troops-for-each-mile-in-ukraine-nato-commander-says/"
+        },
+        {
+          "id": "gdelt.live.b4cfc91d79a9",
+          "region_id": "obl.14",
+          "ts": "2026-04-26T12:30:00+00:00",
+          "category": "military_loss",
+          "headline": "Two Dead in Kramatorsk as Russian Shelling Hits Residential Area",
+          "snippet": "kyivpost.com",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.kyivpost.com/post/74801"
+        },
+        {
+          "id": "gdelt.live.40981fa0b145",
+          "region_id": "obl.14",
+          "ts": "2026-04-25T10:15:00+00:00",
+          "category": "protest",
+          "headline": "Deadly Russian Strikes Pound Ukraine Dnipro For More Than 12 Hours",
+          "snippet": "bignewsnetwork.com",
+          "weight": -0.4,
+          "source": "gdelt",
+          "url": "http://www.bignewsnetwork.com/news/279011051/deadly-russian-strikes-pound-ukraine-dnipro-for-more-than-12-hours"
+        },
+        {
+          "id": "gdelt.live.98fc37545fd2",
+          "region_id": "obl.14",
+          "ts": "2026-04-25T06:15:00+00:00",
+          "category": "military_loss",
+          "headline": "RIGHT SPEAK : 204 C - Clashes in F - Line : 54 in Pokrovsk Dir , 23 in Kostiantynivka Dir , 13 in Lyman Dir ; Syrskyi : UKR Strikes Have Wiped $25 . 5B Off RU War Machine ; NATO : RU Not Planning New ",
+          "snippet": "rightspeak.net",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "http://www.rightspeak.net/2026/04/204-c-clashes-in-f-line-54-in-pokrovsk.html"
+        },
+        {
+          "id": "gdelt.live.e4fa1cc23a11",
+          "region_id": "obl.14",
+          "ts": "2026-04-25T05:30:00+00:00",
+          "category": "military_loss",
+          "headline": "Ukraine says it killed 12 Russian officers in drone swarm ? attack on FSB headquarters",
+          "snippet": "independent.ie",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.independent.ie/world-news/europe/ukraine-says-it-killed-12-russian-officers-in-drone-swarmattack-on-fsb-headquarters/a377750535.html"
+        }
+      ]
+    },
+    {
+      "region_id": "obl.09",
+      "morale_score": 0.0,
+      "morale_trend": "declining",
+      "trend_delta": -24.84,
+      "history": [
+        50.0,
+        50.0,
+        38.7,
+        30.6,
+        24.8,
+        0.0
+      ],
+      "drivers": [
+        {
+          "category": "protest",
+          "contribution": -71.318,
+          "headline": "At least 16 dead in strikes across Ukraine and Russia on Chernobyl anniversary",
+          "event_id": "gdelt.live.4a342eae4043"
+        },
+        {
+          "category": "military_loss",
+          "contribution": -22.427,
+          "headline": "Russian - controlled Luhansk region claims 3 killed in Ukraine drone attack",
+          "event_id": "gdelt.live.083a2d2035de"
+        }
+      ],
+      "recent_events": [
+        {
+          "id": "gdelt.live.4a342eae4043",
+          "region_id": "obl.09",
+          "ts": "2026-04-26T20:45:00+00:00",
+          "category": "protest",
+          "headline": "At least 16 dead in strikes across Ukraine and Russia on Chernobyl anniversary",
+          "snippet": "cbsnews.com",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.cbsnews.com/news/ukraine-russian-attacks-chernobyl-anniversary/"
+        },
+        {
+          "id": "gdelt.live.d9a6a6d32663",
+          "region_id": "obl.09",
+          "ts": "2026-04-26T18:15:00+00:00",
+          "category": "protest",
+          "headline": "16 dead in strikes as Chernobyl anniversary highlights nuclear risks of Russia - Ukraine war",
+          "snippet": "scmp.com",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.scmp.com/news/world/russia-central-asia/article/3351499/16-dead-strikes-chernobyl-anniversary-highlights-nuclear-risks-russia-ukraine-war"
+        },
+        {
+          "id": "gdelt.live.91f8a5889e74",
+          "region_id": "obl.09",
+          "ts": "2026-04-26T18:15:00+00:00",
+          "category": "protest",
+          "headline": "Sixteen dead in strikes as Ukraine marks 40 years since Chernobyl",
+          "snippet": "abc.net.au",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.abc.net.au/news/2026-04-27/ukraine-chernobyl-40-years-russia-war-invasion/106609718"
+        },
+        {
+          "id": "gdelt.live.72af73e29222",
+          "region_id": "obl.09",
+          "ts": "2026-04-26T16:45:00+00:00",
+          "category": "protest",
+          "headline": "At Least 16 Dead in Ukraine Strikes Amid Chernobyl Disaster Anniversary",
+          "snippet": "breitbart.com",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.breitbart.com/europe/2026/04/26/at-least-16-dead-in-strikes-in-ukraine-amid-chernobyl-disaster-anniversary/"
+        },
+        {
+          "id": "gdelt.live.083a2d2035de",
+          "region_id": "obl.09",
+          "ts": "2026-04-26T12:45:00+00:00",
+          "category": "military_loss",
+          "headline": "Russian - controlled Luhansk region claims 3 killed in Ukraine drone attack",
+          "snippet": "aa.com.tr",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://aa.com.tr/en/eurasia/russian-controlled-luhansk-region-claims-3-killed-in-ukraines-drone-attack/3918497"
+        },
+        {
+          "id": "gdelt.live.9ac6326deb48",
+          "region_id": "obl.09",
+          "ts": "2026-04-26T10:15:00+00:00",
+          "category": "military_loss",
+          "headline": "5 killed in Russian strikes on Ukrainian city | The Arkansas Democrat - Gazette",
+          "snippet": "arkansasonline.com",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.arkansasonline.com/news/2026/apr/26/5-killed-in-russian-strikes-on-ukrainian-city/"
+        }
+      ]
+    },
+    {
+      "region_id": "obl.23",
+      "morale_score": 33.7,
+      "morale_trend": "declining",
+      "trend_delta": -2.25,
+      "history": [
+        50.0,
+        50.0,
+        43.0,
+        40.8,
+        36.0,
+        33.7
+      ],
+      "drivers": [
+        {
+          "category": "military_loss",
+          "contribution": -12.898,
+          "headline": "Russian stuff blowing up : Yaroslavl refinery attacked ; Russians routed in Mali",
+          "event_id": "gdelt.live.ea2d1f53acf2"
+        },
+        {
+          "category": "protest",
+          "contribution": -3.394,
+          "headline": "Russian strikes kill six across Ukraine",
+          "event_id": "gdelt.live.aaa110224f94"
+        }
+      ],
+      "recent_events": [
+        {
+          "id": "gdelt.live.ea2d1f53acf2",
+          "region_id": "obl.23",
+          "ts": "2026-04-26T17:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Russian stuff blowing up : Yaroslavl refinery attacked ; Russians routed in Mali",
+          "snippet": "dailykos.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://www.dailykos.com/stories/2026/4/26/800028062/community/russian-stuff-blowing-up/"
+        },
+        {
+          "id": "gdelt.live.39bb3db3532d",
+          "region_id": "obl.23",
+          "ts": "2026-04-26T07:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Zelensky : Russian drone strike damages Chernobyl power plant",
+          "snippet": "upi.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://www.upi.com/Top_News/World-News/2025/02/14/Zelensky-Russian-drone-strike-damages-Chernobyl-power-plant/6471739521649/"
+        },
+        {
+          "id": "gdelt.live.aaa110224f94",
+          "region_id": "obl.23",
+          "ts": "2026-04-25T12:00:00+00:00",
+          "category": "protest",
+          "headline": "Russian strikes kill six across Ukraine",
+          "snippet": "hazard-herald.com",
+          "weight": -0.4,
+          "source": "gdelt",
+          "url": "https://www.hazard-herald.com/news/national/russian-strikes-kill-six-across-ukraine/article_0ce7e471-1ab8-5f8f-93d4-74cf2e16e432.html"
+        },
+        {
+          "id": "gdelt.live.449a35ee3cda",
+          "region_id": "obl.23",
+          "ts": "2026-04-25T08:00:00+00:00",
+          "category": "protest",
+          "headline": "Putin could cause the next Chernobyl through reckless strikes on nuclear plants , experts warn",
+          "snippet": "aol.co.uk",
+          "weight": -0.4,
+          "source": "gdelt",
+          "url": "https://www.aol.co.uk/articles/putin-could-cause-next-chernobyl-072153113.html"
+        }
+      ]
+    },
+    {
+      "region_id": "obl.65",
+      "morale_score": 50.0,
+      "morale_trend": "steady",
+      "trend_delta": 0.0,
+      "history": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "drivers": [],
+      "recent_events": []
+    },
+    {
+      "region_id": "obl.51",
+      "morale_score": 0.0,
+      "morale_trend": "steady",
+      "trend_delta": 0.0,
+      "history": [
+        50.0,
+        50.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drivers": [
+        {
+          "category": "military_loss",
+          "contribution": -55.721,
+          "headline": "5 killed in Russian strikes on Ukrainian city | The Arkansas Democrat - Gazette",
+          "event_id": "gdelt.live.9ac6326deb48"
+        },
+        {
+          "category": "protest",
+          "contribution": -5.646,
+          "headline": "Russian strikes kill at least seven and injure dozens across Ukraine",
+          "event_id": "gdelt.live.6dc73f479c21"
+        }
+      ],
+      "recent_events": [
+        {
+          "id": "gdelt.live.ea2d1f53acf2",
+          "region_id": "obl.51",
+          "ts": "2026-04-26T17:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Russian stuff blowing up : Yaroslavl refinery attacked ; Russians routed in Mali",
+          "snippet": "dailykos.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://www.dailykos.com/stories/2026/4/26/800028062/community/russian-stuff-blowing-up/"
+        },
+        {
+          "id": "gdelt.live.9ac6326deb48",
+          "region_id": "obl.51",
+          "ts": "2026-04-26T10:15:00+00:00",
+          "category": "military_loss",
+          "headline": "5 killed in Russian strikes on Ukrainian city | The Arkansas Democrat - Gazette",
+          "snippet": "arkansasonline.com",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.arkansasonline.com/news/2026/apr/26/5-killed-in-russian-strikes-on-ukrainian-city/"
+        },
+        {
+          "id": "gdelt.live.b0026e2ba2ee",
+          "region_id": "obl.51",
+          "ts": "2026-04-26T01:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Russian drone , missile attacks kill five , wound 46 in Ukraine",
+          "snippet": "theshillongtimes.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://theshillongtimes.com/2026/04/26/russian-drone-missile-attacks-kill-five-wound-46-in-ukraine/"
+        },
+        {
+          "id": "gdelt.live.092d74698a98",
+          "region_id": "obl.51",
+          "ts": "2026-04-25T18:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Seven killed with many more  trapped under the rubble  across Ukraine following Russian drone attacks",
+          "snippet": "lbc.co.uk",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.lbc.co.uk/article/seven-killed-dozens-injured-ukraine-russian-drone-attack-5HjdYGp_2/"
+        },
+        {
+          "id": "gdelt.live.57c7f464b997",
+          "region_id": "obl.51",
+          "ts": "2026-04-25T15:30:00+00:00",
+          "category": "military_loss",
+          "headline": "Russian attacks kill 4 and wound more than 20 in Ukraine Dnipro ; 1 killed in Russia | World",
+          "snippet": "somdnews.com",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.somdnews.com/ap/world/russian-attacks-kill-4-and-wound-more-than-20-in-ukraine-s-dnipro-1-killed/article_aa916c1b-8b6f-53ea-b8bd-1175e4c95552.html"
+        },
+        {
+          "id": "gdelt.live.68451276dd75",
+          "region_id": "obl.51",
+          "ts": "2026-04-25T11:30:00+00:00",
+          "category": "military_loss",
+          "headline": "Russian attacks kill 5 and wound more than 30 in Ukraine Dnipro ; 1 killed in Russia",
+          "snippet": "clickondetroit.com",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.clickondetroit.com/news/world/2026/04/25/russian-attacks-kill-4-and-wound-more-than-20-in-ukraines-dnipro-1-killed-in-russia/"
+        }
+      ]
+    },
+    {
+      "region_id": "obl.43",
+      "morale_score": 0.0,
+      "morale_trend": "declining",
+      "trend_delta": -26.83,
+      "history": [
+        50.0,
+        55.7,
+        63.5,
+        43.9,
+        26.8,
+        0.0
+      ],
+      "drivers": [
+        {
+          "category": "protest",
+          "contribution": -74.106,
+          "headline": "At least 16 dead in strikes across Ukraine and Russia on Chernobyl anniversary",
+          "event_id": "gdelt.live.4a342eae4043"
+        },
+        {
+          "category": "military_loss",
+          "contribution": -20.575,
+          "headline": "Russian stuff blowing up : Yaroslavl refinery attacked ; Russians routed in Mali",
+          "event_id": "gdelt.live.ea2d1f53acf2"
+        },
+        {
+          "category": "nationalist_sentiment",
+          "contribution": 6.027,
+          "headline": "Putin May Attend Miami G - 20 Summit at Trump Invitation",
+          "event_id": "gdelt.live.0cb194e65408"
+        }
+      ],
+      "recent_events": [
+        {
+          "id": "gdelt.live.4a342eae4043",
+          "region_id": "obl.43",
+          "ts": "2026-04-26T20:45:00+00:00",
+          "category": "protest",
+          "headline": "At least 16 dead in strikes across Ukraine and Russia on Chernobyl anniversary",
+          "snippet": "cbsnews.com",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.cbsnews.com/news/ukraine-russian-attacks-chernobyl-anniversary/"
+        },
+        {
+          "id": "gdelt.live.d9a6a6d32663",
+          "region_id": "obl.43",
+          "ts": "2026-04-26T18:15:00+00:00",
+          "category": "protest",
+          "headline": "16 dead in strikes as Chernobyl anniversary highlights nuclear risks of Russia - Ukraine war",
+          "snippet": "scmp.com",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.scmp.com/news/world/russia-central-asia/article/3351499/16-dead-strikes-chernobyl-anniversary-highlights-nuclear-risks-russia-ukraine-war"
+        },
+        {
+          "id": "gdelt.live.91f8a5889e74",
+          "region_id": "obl.43",
+          "ts": "2026-04-26T18:15:00+00:00",
+          "category": "protest",
+          "headline": "Sixteen dead in strikes as Ukraine marks 40 years since Chernobyl",
+          "snippet": "abc.net.au",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.abc.net.au/news/2026-04-27/ukraine-chernobyl-40-years-russia-war-invasion/106609718"
+        },
+        {
+          "id": "gdelt.live.ea2d1f53acf2",
+          "region_id": "obl.43",
+          "ts": "2026-04-26T17:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Russian stuff blowing up : Yaroslavl refinery attacked ; Russians routed in Mali",
+          "snippet": "dailykos.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://www.dailykos.com/stories/2026/4/26/800028062/community/russian-stuff-blowing-up/"
+        },
+        {
+          "id": "gdelt.live.72af73e29222",
+          "region_id": "obl.43",
+          "ts": "2026-04-26T16:45:00+00:00",
+          "category": "protest",
+          "headline": "At Least 16 Dead in Ukraine Strikes Amid Chernobyl Disaster Anniversary",
+          "snippet": "breitbart.com",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.breitbart.com/europe/2026/04/26/at-least-16-dead-in-strikes-in-ukraine-amid-chernobyl-disaster-anniversary/"
+        },
+        {
+          "id": "gdelt.live.6bcdbe754e3e",
+          "region_id": "obl.43",
+          "ts": "2026-04-26T13:45:00+00:00",
+          "category": "protest",
+          "headline": "16 dead as Russia , Ukraine trade strikes on Chernobyl anniversary",
+          "snippet": "dailysabah.com",
+          "weight": -0.6,
+          "source": "gdelt",
+          "url": "https://www.dailysabah.com/world/europe/16-dead-as-russia-ukraine-trade-strikes-on-chernobyl-anniversary"
+        }
+      ]
+    },
+    {
+      "region_id": "obl.59",
+      "morale_score": 10.1,
+      "morale_trend": "steady",
+      "trend_delta": -0.99,
+      "history": [
+        50.0,
+        50.0,
+        26.5,
+        11.2,
+        11.1,
+        10.1
+      ],
+      "drivers": [
+        {
+          "category": "military_loss",
+          "contribution": -33.241,
+          "headline": "Two Dead in Kramatorsk as Russian Shelling Hits Residential Area",
+          "event_id": "gdelt.live.b4cfc91d79a9"
+        },
+        {
+          "category": "protest",
+          "contribution": -6.686,
+          "headline": "Russian Strikes Kill Three , Wound Four in Ukraine",
+          "event_id": "gdelt.live.5f04696de5aa"
+        }
+      ],
+      "recent_events": [
+        {
+          "id": "gdelt.live.8979fedc6cd3",
+          "region_id": "obl.59",
+          "ts": "2026-04-26T16:00:00+00:00",
+          "category": "military_loss",
+          "headline": "Mammoth 20 hour Russian attack on Ukraine devastates residential areas in Dnipro - London Business News",
+          "snippet": "londonlovesbusiness.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://londonlovesbusiness.com/mammoth-20-hour-russian-attack-on-ukraine-devastates-residential-areas-in-dnipro/"
+        },
+        {
+          "id": "gdelt.live.b4cfc91d79a9",
+          "region_id": "obl.59",
+          "ts": "2026-04-26T12:30:00+00:00",
+          "category": "military_loss",
+          "headline": "Two Dead in Kramatorsk as Russian Shelling Hits Residential Area",
+          "snippet": "kyivpost.com",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.kyivpost.com/post/74801"
+        },
+        {
+          "id": "gdelt.live.5f04696de5aa",
+          "region_id": "obl.59",
+          "ts": "2026-04-26T10:15:00+00:00",
+          "category": "protest",
+          "headline": "Russian Strikes Kill Three , Wound Four in Ukraine",
+          "snippet": "themoscowtimes.com",
+          "weight": -0.4,
+          "source": "gdelt",
+          "url": "https://www.themoscowtimes.com/2026/04/26/russian-strikes-kill-three-wound-four-in-ukraine-2-a92606"
+        },
+        {
+          "id": "gdelt.live.289c4304e203",
+          "region_id": "obl.59",
+          "ts": "2026-04-26T05:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Russian drone attack kills two in northeastern Ukraine",
+          "snippet": "bssnews.net",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://www.bssnews.net/international/381447"
+        },
+        {
+          "id": "gdelt.live.b8aee50476a3",
+          "region_id": "obl.59",
+          "ts": "2026-04-25T19:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Cat and dog miracle drone rescue in war - torn Ukraine",
+          "snippet": "nypost.com",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://nypost.com/2026/04/25/world-news/cat-and-dog-miracle-drone-rescue-in-war-torn-ukraine/"
+        },
+        {
+          "id": "gdelt.live.26f72507fc02",
+          "region_id": "obl.59",
+          "ts": "2026-04-25T10:45:00+00:00",
+          "category": "military_loss",
+          "headline": "Russians strike Ukrainian city of Dnipro again : 1 killed , 7 injured",
+          "snippet": "en.interfax.com.ua",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://en.interfax.com.ua/news/general/1162270.html"
+        }
+      ]
+    },
+    {
+      "region_id": "obl.74",
+      "morale_score": 0.0,
+      "morale_trend": "steady",
+      "trend_delta": 0.0,
+      "history": [
+        50.0,
+        50.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drivers": [
+        {
+          "category": "military_loss",
+          "contribution": -58.835,
+          "headline": "Mammoth 20 hour Russian attack on Ukraine devastates residential areas in Dnipro - London Business News",
+          "event_id": "gdelt.live.8979fedc6cd3"
+        },
+        {
+          "category": "protest",
+          "contribution": -5.646,
+          "headline": "Russian strikes kill at least seven and injure dozens across Ukraine",
+          "event_id": "gdelt.live.6dc73f479c21"
+        }
+      ],
+      "recent_events": [
+        {
+          "id": "gdelt.live.8979fedc6cd3",
+          "region_id": "obl.74",
+          "ts": "2026-04-26T16:00:00+00:00",
+          "category": "military_loss",
+          "headline": "Mammoth 20 hour Russian attack on Ukraine devastates residential areas in Dnipro - London Business News",
+          "snippet": "londonlovesbusiness.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://londonlovesbusiness.com/mammoth-20-hour-russian-attack-on-ukraine-devastates-residential-areas-in-dnipro/"
+        },
+        {
+          "id": "gdelt.live.f96787e1dc0f",
+          "region_id": "obl.74",
+          "ts": "2026-04-26T15:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Russian Strikes Kill Seven in Ukraine as Drone Attacks Intensify",
+          "snippet": "khaama.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://www.khaama.com/russian-strikes-kill-seven-in-ukraine-as-drone-attacks-intensify/"
+        },
+        {
+          "id": "gdelt.live.529a853c0fdd",
+          "region_id": "obl.74",
+          "ts": "2026-04-26T04:00:00+00:00",
+          "category": "military_loss",
+          "headline": "Russian Drone and Missile Strikes Devastate Dnipro , Killing 10 and Injuring Dozens",
+          "snippet": "econotimes.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "http://www.econotimes.com/Russian-Drone-and-Missile-Strikes-Devastate-Dnipro-Killing-10-and-Injuring-Dozens-1740008"
+        },
+        {
+          "id": "gdelt.live.78db5e3641c1",
+          "region_id": "obl.74",
+          "ts": "2026-04-26T00:00:00+00:00",
+          "category": "military_loss",
+          "headline": "World News : Russian drone and missile strikes kill 10 in Ukraine",
+          "snippet": "gdnonline.com",
+          "weight": -0.5,
+          "source": "gdelt",
+          "url": "https://www.gdnonline.com:443/Details/1392716"
+        },
+        {
+          "id": "gdelt.live.d41a20b605f8",
+          "region_id": "obl.74",
+          "ts": "2026-04-25T22:15:00+00:00",
+          "category": "military_loss",
+          "headline": "Ten people are killed and dozens injured in Ukraine after Russian drone attacks : RAF deploys Typhoon jets over Romania",
+          "snippet": "dailymail.com",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.dailymail.com/news/article-15765525/Ten-people-killed-dozens-injured-Ukraine-Russian-drone-attacks.html"
+        },
+        {
+          "id": "gdelt.live.d387568accb1",
+          "region_id": "obl.74",
+          "ts": "2026-04-25T12:30:00+00:00",
+          "category": "military_loss",
+          "headline": "Major Russian attack on Ukraine kills seven , wounds dozens",
+          "snippet": "internazionale.it",
+          "weight": -0.7,
+          "source": "gdelt",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/04/25/major-russian-attack-on-ukraine-kills-seven-wounds-dozens"
+        }
+      ]
+    },
+    {
+      "region_id": "terr.donbas-occ",
+      "morale_score": 50.0,
+      "morale_trend": "steady",
+      "trend_delta": 0.0,
+      "history": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "drivers": [],
+      "recent_events": []
+    },
+    {
+      "region_id": "terr.crimea-occ",
+      "morale_score": 50.0,
+      "morale_trend": "steady",
+      "trend_delta": 0.0,
+      "history": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "drivers": [],
+      "recent_events": []
+    },
+    {
+      "region_id": "terr.south-occ",
+      "morale_score": 48.4,
+      "morale_trend": "steady",
+      "trend_delta": 1.01,
+      "history": [
+        50.0,
+        50.0,
+        43.0,
+        45.8,
+        47.4,
+        48.4
+      ],
+      "drivers": [
+        {
+          "category": "protest",
+          "contribution": -1.556,
+          "headline": "Putin could cause the next Chernobyl through reckless strikes on nuclear plants , experts warn",
+          "event_id": "gdelt.live.449a35ee3cda"
+        }
+      ],
+      "recent_events": [
+        {
+          "id": "gdelt.live.449a35ee3cda",
+          "region_id": "terr.south-occ",
+          "ts": "2026-04-25T08:00:00+00:00",
+          "category": "protest",
+          "headline": "Putin could cause the next Chernobyl through reckless strikes on nuclear plants , experts warn",
+          "snippet": "aol.co.uk",
+          "weight": -0.4,
+          "source": "gdelt",
+          "url": "https://www.aol.co.uk/articles/putin-could-cause-next-chernobyl-072153113.html"
+        }
+      ]
+    },
+    {
+      "region_id": "terr.ukraine-free",
+      "morale_score": 50.0,
+      "morale_trend": "steady",
+      "trend_delta": 0.0,
+      "history": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "drivers": [],
+      "recent_events": []
+    }
+  ]
+}
