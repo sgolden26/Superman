@@ -26,5 +26,5 @@ export default function FieldLayout() {
 }
 
 function FieldTabs() {
-  return <nav className="border-t border-slate-800" data-component="FieldTabs" />;
+  return <nav className="border-t border-zinc-800" data-component="FieldTabs" />;
 }

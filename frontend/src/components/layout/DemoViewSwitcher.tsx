@@ -11,7 +11,7 @@ export default function DemoViewSwitcher() {
 
   return (
     <div
-      className="flex border border-slate-700 bg-slate-900 text-[11px] font-medium uppercase tracking-wider"
+      className="flex border border-zinc-700 bg-zinc-900 text-[11px] font-medium uppercase tracking-wider"
       role="group"
       aria-label="Switch demo view"
     >
@@ -41,8 +41,8 @@ function SwitchButton({
       className={cn(
         'px-3 py-1.5 transition-colors',
         active
-          ? 'bg-slate-100 text-slate-900'
-          : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200',
+          ? 'bg-zinc-100 text-zinc-900'
+          : 'text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200',
       )}
     >
       {children}

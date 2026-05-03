@@ -8,14 +8,14 @@ export interface TopBarProps {
 
 export default function TopBar({ title, eyebrow, right }: TopBarProps) {
   return (
-    <header className="flex h-12 shrink-0 items-center justify-between border-b border-slate-800 bg-slate-950 pl-4 pr-3">
+    <header className="flex h-12 shrink-0 items-center justify-between border-b border-zinc-800 bg-zinc-950 pl-4 pr-3">
       <div className="flex items-baseline gap-3">
         {eyebrow ? (
-          <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+          <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-500">
             {eyebrow}
           </span>
         ) : null}
-        <h1 className="text-sm font-semibold tracking-tight text-slate-100">{title}</h1>
+        <h1 className="text-sm font-semibold tracking-tight text-zinc-100">{title}</h1>
       </div>
       {right ? <div className="flex shrink-0 items-center gap-2">{right}</div> : null}
     </header>

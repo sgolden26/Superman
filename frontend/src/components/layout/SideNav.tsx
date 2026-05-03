@@ -13,9 +13,9 @@ export interface SideNavProps {
 
 export default function SideNav({ items, sectionLabel }: SideNavProps) {
   return (
-    <nav className="h-full border-r border-slate-800 bg-slate-950">
+    <nav className="h-full border-r border-zinc-800 bg-zinc-950">
       {sectionLabel ? (
-        <div className="border-b border-slate-800 px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+        <div className="border-b border-zinc-800 px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-500">
           {sectionLabel}
         </div>
       ) : null}
@@ -29,8 +29,8 @@ export default function SideNav({ items, sectionLabel }: SideNavProps) {
                 cn(
                   'relative block px-4 py-2 text-sm transition-colors',
                   isActive
-                    ? 'bg-slate-900 text-slate-100'
-                    : 'text-slate-400 hover:bg-slate-900/50 hover:text-slate-200',
+                    ? 'bg-zinc-900 text-zinc-100'
+                    : 'text-zinc-400 hover:bg-zinc-900/50 hover:text-zinc-200',
                 )
               }
             >
@@ -39,7 +39,7 @@ export default function SideNav({ items, sectionLabel }: SideNavProps) {
                   {isActive ? (
                     <span
                       aria-hidden
-                      className="absolute inset-y-0 left-0 w-0.5 bg-sky-400"
+                      className="absolute inset-y-0 left-0 w-0.5 bg-zinc-100"
                     />
                   ) : null}
                   {item.label}

@@ -9,7 +9,7 @@ export default function SensorsPage() {
   const count = data?.length ?? 0;
 
   return (
-    <div className="flex h-full flex-col bg-slate-950">
+    <div className="flex h-full flex-col bg-zinc-950">
       <PageHeader
         title="Sensors"
         description="Heartbeat sensors deployed across the operational area."
@@ -45,8 +45,8 @@ function SensorsTable({ rows }: { rows: Sensor[] }) {
       </thead>
       <tbody>
         {rows.map((s) => (
-          <tr key={s.id} className="hover:bg-slate-900/50">
-            <Td align="right" mono className="text-slate-500">
+          <tr key={s.id} className="hover:bg-zinc-900/50">
+            <Td align="right" mono className="text-zinc-500">
               {s.id}
             </Td>
             <Td>{s.name}</Td>
@@ -65,7 +65,7 @@ function SensorsTable({ rows }: { rows: Sensor[] }) {
 
 function ErrorBanner({ message }: { message: string }) {
   return (
-    <div className="border-l-2 border-rose-500 bg-rose-950/30 px-6 py-3 text-sm text-rose-200">
+    <div className="border-l-2 border-red-500 bg-red-950/30 px-6 py-3 text-sm text-red-200">
       {message}
     </div>
   );
@@ -73,6 +73,6 @@ function ErrorBanner({ message }: { message: string }) {
 
 function EmptyState({ children }: { children: ReactNode }) {
   return (
-    <div className="px-6 py-12 text-center text-sm text-slate-500">{children}</div>
+    <div className="px-6 py-12 text-center text-sm text-zinc-500">{children}</div>
   );
 }
