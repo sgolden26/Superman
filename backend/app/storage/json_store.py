@@ -12,14 +12,8 @@ from typing import Any
 
 def _empty_document() -> dict[str, Any]:
     return {
-        "detections": [],
-        "tracks": [],
-        "subjects": [],
-        "alerts": [],
         "sensors": [],
-        "missions": [],
-        "imagery_frames": [],
-        "classification_results": [],
+        "subjects": [],
     }
 
 

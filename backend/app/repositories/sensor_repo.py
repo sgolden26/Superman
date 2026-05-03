@@ -1,28 +1,12 @@
 """SensorRepository."""
 from __future__ import annotations
 
-from uuid import UUID
-
-from app.domain.enums import SensorStatus, SensorType
 from app.domain.models.sensor import Sensor
 
 
 class SensorRepository:
-    async def get(self, id_: UUID) -> Sensor | None:
-        raise NotImplementedError
+    """Read sensors. Backed by an empty fixture until a data source is wired."""
 
-    async def add(self, sensor: Sensor) -> Sensor:
-        raise NotImplementedError
-
-    async def update(self, sensor: Sensor) -> Sensor:
-        raise NotImplementedError
-
-    async def list(
-        self,
-        *,
-        type_: SensorType | None = None,
-        status: SensorStatus | None = None,
-        limit: int = 100,
-        offset: int = 0,
-    ) -> list[Sensor]:
-        raise NotImplementedError
+    async def list(self) -> list[Sensor]:
+        # TODO(team): replace with a real source (JSON store, upstream feed).
+        return []

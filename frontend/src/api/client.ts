@@ -2,7 +2,7 @@ import { env } from '@/config/env';
 import type { ApiError } from '@/types/common';
 
 /**
- * Thin fetch wrapper: JSON encoding and uniform error shape. Endpoint modules
+ * Thin fetch wrapper: JSON encoding and uniform error shape. Endpoint classes
  * call `apiClient.get`/`apiClient.post`; views never touch `fetch` directly.
  */
 export interface RequestOptions {
@@ -16,35 +16,70 @@ export class ApiHttpError extends Error {
     public readonly body: ApiError | null,
   ) {
     super(body?.message ?? `HTTP ${status}`);
+    this.name = 'ApiHttpError';
   }
 }
 
 export class ApiClient {
   constructor(private readonly baseUrl: string) {}
 
-  async get<T>(path: string, opts?: RequestOptions): Promise<T> {
+  get<T>(path: string, opts?: RequestOptions): Promise<T> {
     return this.request<T>('GET', path, undefined, opts);
   }
 
-  async post<T>(path: string, body?: unknown, opts?: RequestOptions): Promise<T> {
+  post<T>(path: string, body?: unknown, opts?: RequestOptions): Promise<T> {
     return this.request<T>('POST', path, body, opts);
   }
 
-  async patch<T>(path: string, body?: unknown, opts?: RequestOptions): Promise<T> {
+  patch<T>(path: string, body?: unknown, opts?: RequestOptions): Promise<T> {
     return this.request<T>('PATCH', path, body, opts);
   }
 
-  async delete<T>(path: string, opts?: RequestOptions): Promise<T> {
+  delete<T>(path: string, opts?: RequestOptions): Promise<T> {
     return this.request<T>('DELETE', path, undefined, opts);
   }
 
   private async request<T>(
-    _method: string,
-    _path: string,
-    _body: unknown,
-    _opts?: RequestOptions,
+    method: string,
+    path: string,
+    body: unknown,
+    opts?: RequestOptions,
   ): Promise<T> {
-    throw new Error('Not implemented');
+    const url = this.buildUrl(path, opts?.query);
+    const init: RequestInit = { method };
+    if (body !== undefined) {
+      init.headers = { 'content-type': 'application/json' };
+      init.body = JSON.stringify(body);
+    }
+    if (opts?.signal) init.signal = opts.signal;
+
+    const response = await fetch(url, init);
+    if (!response.ok) {
+      throw new ApiHttpError(response.status, await this.tryReadError(response));
+    }
+    if (response.status === 204) return undefined as T;
+    return (await response.json()) as T;
+  }
+
+  private buildUrl(path: string, query?: RequestOptions['query']): string {
+    const base = this.baseUrl.endsWith('/') ? this.baseUrl.slice(0, -1) : this.baseUrl;
+    const suffix = path.startsWith('/') ? path : `/${path}`;
+    if (!query) return `${base}${suffix}`;
+    const params = new URLSearchParams();
+    for (const [k, v] of Object.entries(query)) {
+      if (v === undefined || v === null) continue;
+      params.append(k, String(v));
+    }
+    const qs = params.toString();
+    return qs ? `${base}${suffix}?${qs}` : `${base}${suffix}`;
+  }
+
+  private async tryReadError(response: Response): Promise<ApiError | null> {
+    try {
+      return (await response.json()) as ApiError;
+    } catch {
+      return null;
+    }
   }
 }
 

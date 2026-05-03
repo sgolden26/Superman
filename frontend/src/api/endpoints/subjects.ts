@@ -1,16 +1,12 @@
-import type { ApiClient } from '../client';
-import type { Subject } from '@/types/subject';
-import type { Uuid } from '@/types/common';
+import type { ApiClient, RequestOptions } from '../client';
+import { Subject, type SubjectDTO } from '@/types/subject';
 
-export interface AnnotateRequest {
-  alias?: string | null;
-  add_tags?: string[];
-  remove_tags?: string[];
+/** Object-oriented binding for the `/subjects` resource. */
+export class SubjectsApi {
+  constructor(private readonly client: ApiClient) {}
+
+  async list(opts?: RequestOptions): Promise<Subject[]> {
+    const raw = await this.client.get<SubjectDTO[]>('/subjects', opts);
+    return raw.map(Subject.fromJson);
+  }
 }
-
-export const bind = (client: ApiClient) => ({
-  list: (): Promise<Subject[]> => client.get('/subjects'),
-  get: (id: Uuid): Promise<Subject> => client.get(`/subjects/${id}`),
-  annotate: (id: Uuid, payload: AnnotateRequest): Promise<Subject> =>
-    client.patch(`/subjects/${id}`, payload),
-});

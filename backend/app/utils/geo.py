@@ -1,7 +1,7 @@
 """Geographic helpers (haversine, bbox checks, polygon membership)."""
 from __future__ import annotations
 
-from app.domain.models.detection import GeoPoint
+from app.domain.models.geo import GeoPoint
 
 
 def haversine_metres(a: GeoPoint, b: GeoPoint) -> float:

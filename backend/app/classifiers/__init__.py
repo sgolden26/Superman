@@ -1,5 +1,5 @@
-"""Classifiers: pluggable strategies for civilian-vs-combatant decisions."""
-from app.classifiers.base import ClassifierBase, ClassifierContext
+"""Classifiers: pluggable strategies for downstream decisions."""
+from app.classifiers.base import ClassifierBase
 from app.classifiers.factory import ClassifierFactory
 
-__all__ = ["ClassifierBase", "ClassifierContext", "ClassifierFactory"]
+__all__ = ["ClassifierBase", "ClassifierFactory"]

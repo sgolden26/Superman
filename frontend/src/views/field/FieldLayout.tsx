@@ -3,20 +3,11 @@ import AppShell from '@/components/layout/AppShell';
 import DemoViewSwitcher from '@/components/layout/DemoViewSwitcher';
 import TopBar from '@/components/layout/TopBar';
 
-/**
- * Frontline shell. High contrast, large hit targets, mobile-first.
- * Tabbed navigation lives at the bottom of the screen for thumb reach,
- * not in a side rail.
- */
+/** Frontline shell. Reduced to a single subjects view for now. */
 export default function FieldLayout() {
   return (
     <AppShell topBar={<TopBar title="Field" right={<DemoViewSwitcher />} />}>
       <Outlet />
-      <FieldTabs />
     </AppShell>
   );
-}
-
-function FieldTabs() {
-  return <nav className="border-t border-slate-800" data-component="FieldTabs" />;
 }

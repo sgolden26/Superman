@@ -1,28 +1,20 @@
-"""Subject: an identified (or pseudonymous) human signature."""
+"""Subject: an observed entity with a known geographic location."""
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from datetime import datetime
+from dataclasses import dataclass
 from uuid import UUID
 
-from app.domain.enums import Classification
+from app.domain.models.geo import GeoPoint
 
 
 @dataclass(frozen=True, slots=True)
 class Subject:
-    """A persistent identity for a human signature across encounters.
+    """A persistent identity for an observed entity.
 
-    A subject may aggregate multiple historical tracks. Identity may be
-    pseudonymous (signature-only) or asserted with higher-confidence
-    biometrics if available.
+    Reduced to the demo essentials. Classification, signatures, aliases and
+    history will return when those features are reintroduced.
     """
 
     id: UUID
-    primary_signature_id: UUID
-    alias: str | None
-    current_classification: Classification
-    classification_confidence: float
-    first_seen_at: datetime
-    last_seen_at: datetime
-    aliases: tuple[str, ...] = field(default_factory=tuple)
-    tags: tuple[str, ...] = field(default_factory=tuple)
+    name: str
+    location: GeoPoint

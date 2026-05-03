@@ -1,26 +1,21 @@
-"""Sensor: a deployed source of detections (ghost murmur unit, sat, drone)."""
+"""Sensor: a deployed source with a known geographic location."""
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime
 from uuid import UUID
 
-from app.domain.enums import SensorStatus, SensorType
-from app.domain.models.detection import GeoPoint
+from app.domain.models.geo import GeoPoint
 
 
 @dataclass(frozen=True, slots=True)
 class Sensor:
     """A single deployed sensor.
 
-    `range_metres` is the nominal detection radius for the device. Ghost murmur
-    units are spec'd at 40_000 m.
+    The minimal demo surface is identity, a human-readable name, and a
+    location. Type, status, range and heartbeat will return as the product
+    expands.
     """
 
     id: UUID
     name: str
-    type: SensorType
-    status: SensorStatus
     location: GeoPoint
-    range_metres: float
-    last_heartbeat_at: datetime | None

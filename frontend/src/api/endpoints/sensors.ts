@@ -1,23 +1,12 @@
-import type { ApiClient } from '../client';
-import type { Sensor, SensorStatus, SensorType } from '@/types/sensor';
-import type { GeoPoint, Uuid } from '@/types/common';
+import type { ApiClient, RequestOptions } from '../client';
+import { Sensor, type SensorDTO } from '@/types/sensor';
 
-export interface SensorCreate {
-  name: string;
-  type: SensorType;
-  location: GeoPoint;
-  range_metres: number;
+/** Object-oriented binding for the `/sensors` resource. */
+export class SensorsApi {
+  constructor(private readonly client: ApiClient) {}
+
+  async list(opts?: RequestOptions): Promise<Sensor[]> {
+    const raw = await this.client.get<SensorDTO[]>('/sensors', opts);
+    return raw.map(Sensor.fromJson);
+  }
 }
-
-export interface SensorUpdate {
-  name?: string;
-  status?: SensorStatus;
-  location?: GeoPoint;
-}
-
-export const bind = (client: ApiClient) => ({
-  list: (): Promise<Sensor[]> => client.get('/sensors'),
-  create: (payload: SensorCreate): Promise<Sensor> => client.post('/sensors', payload),
-  update: (id: Uuid, payload: SensorUpdate): Promise<Sensor> =>
-    client.patch(`/sensors/${id}`, payload),
-});

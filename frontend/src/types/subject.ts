@@ -1,15 +1,20 @@
-import type { Iso8601, Uuid } from './common';
+import { GeoPoint, type GeoPointDTO, type Uuid } from './common';
 
-export type Classification = 'unknown' | 'civilian' | 'combatant';
-
-export interface Subject {
+export interface SubjectDTO {
   id: Uuid;
-  primary_signature_id: Uuid;
-  alias: string | null;
-  current_classification: Classification;
-  classification_confidence: number;
-  first_seen_at: Iso8601;
-  last_seen_at: Iso8601;
-  aliases: string[];
-  tags: string[];
+  name: string;
+  location: GeoPointDTO;
+}
+
+/** Wire-compatible mirror of `app.domain.models.subject.Subject`. */
+export class Subject {
+  constructor(
+    public readonly id: Uuid,
+    public readonly name: string,
+    public readonly location: GeoPoint,
+  ) {}
+
+  static fromJson(raw: SubjectDTO): Subject {
+    return new Subject(raw.id, raw.name, GeoPoint.fromJson(raw.location));
+  }
 }

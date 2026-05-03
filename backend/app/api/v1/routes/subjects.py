@@ -1,36 +1,30 @@
 """Subject endpoints."""
 from __future__ import annotations
 
-from uuid import UUID
-
 from fastapi import APIRouter, Depends
 
-from app.api.deps import get_subject_repo
-from app.repositories.subject_repo import SubjectRepository
-from app.schemas.subject import SubjectAnnotateRequest, SubjectRead
+from app.api.deps import get_subject_service
+from app.schemas.common import GeoPointDTO
+from app.schemas.subject import SubjectRead
+from app.services.subject_service import SubjectService
 
 router = APIRouter()
 
 
 @router.get("", response_model=list[SubjectRead])
 async def list_subjects(
-    repo: SubjectRepository = Depends(get_subject_repo),
+    service: SubjectService = Depends(get_subject_service),
 ) -> list[SubjectRead]:
-    raise NotImplementedError
-
-
-@router.get("/{subject_id}", response_model=SubjectRead)
-async def get_subject(
-    subject_id: UUID,
-    repo: SubjectRepository = Depends(get_subject_repo),
-) -> SubjectRead:
-    raise NotImplementedError
-
-
-@router.patch("/{subject_id}", response_model=SubjectRead)
-async def annotate_subject(
-    subject_id: UUID,
-    payload: SubjectAnnotateRequest,
-    repo: SubjectRepository = Depends(get_subject_repo),
-) -> SubjectRead:
-    raise NotImplementedError
+    subjects = await service.list_subjects()
+    return [
+        SubjectRead(
+            id=s.id,
+            name=s.name,
+            location=GeoPointDTO(
+                lat=s.location.lat,
+                lon=s.location.lon,
+                elevation_m=s.location.elevation_m,
+            ),
+        )
+        for s in subjects
+    ]

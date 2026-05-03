@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 /**
  * Polls `fetcher` at `intervalMs` until the component unmounts. Cancels
@@ -12,19 +12,52 @@ export interface PollingState<T> {
 }
 
 export function usePolling<T>(
-  _fetcher: (signal: AbortSignal) => Promise<T>,
-  _intervalMs: number,
+  fetcher: (signal: AbortSignal) => Promise<T>,
+  intervalMs: number,
 ): PollingState<T> {
-  const [data] = useState<T | null>(null);
-  const [error] = useState<Error | null>(null);
-  const [isLoading] = useState<boolean>(true);
-  const ref = useRef<number | null>(null);
+  const [data, setData] = useState<T | null>(null);
+  const [error, setError] = useState<Error | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    return () => {
-      if (ref.current !== null) window.clearInterval(ref.current);
-    };
+  const fetcherRef = useRef(fetcher);
+  fetcherRef.current = fetcher;
+
+  const inflightRef = useRef<AbortController | null>(null);
+  const timerRef = useRef<number | null>(null);
+  const mountedRef = useRef<boolean>(true);
+
+  const run = useCallback(async () => {
+    inflightRef.current?.abort();
+    const controller = new AbortController();
+    inflightRef.current = controller;
+    setIsLoading(true);
+    try {
+      const next = await fetcherRef.current(controller.signal);
+      if (!mountedRef.current || controller.signal.aborted) return;
+      setData(next);
+      setError(null);
+    } catch (err) {
+      if (!mountedRef.current || controller.signal.aborted) return;
+      setError(err instanceof Error ? err : new Error(String(err)));
+    } finally {
+      if (mountedRef.current && !controller.signal.aborted) {
+        setIsLoading(false);
+      }
+    }
   }, []);
 
-  return { data, error, isLoading, refresh: () => undefined };
+  useEffect(() => {
+    mountedRef.current = true;
+    void run();
+    timerRef.current = window.setInterval(() => {
+      void run();
+    }, intervalMs);
+    return () => {
+      mountedRef.current = false;
+      if (timerRef.current !== null) window.clearInterval(timerRef.current);
+      inflightRef.current?.abort();
+    };
+  }, [intervalMs, run]);
+
+  return { data, error, isLoading, refresh: () => void run() };
 }
