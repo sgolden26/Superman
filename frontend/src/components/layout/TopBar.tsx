@@ -1,16 +1,23 @@
 import type { ReactNode } from 'react';
-import { cn } from '@/lib/classnames';
 
 export interface TopBarProps {
   title: string;
+  eyebrow?: string;
   right?: ReactNode;
 }
 
-export default function TopBar({ title, right }: TopBarProps) {
+export default function TopBar({ title, eyebrow, right }: TopBarProps) {
   return (
-    <header className="flex items-center justify-between gap-4 border-b border-slate-800 bg-slate-950/80 px-4 py-2 backdrop-blur">
-      <h1 className="text-sm font-semibold tracking-tight text-slate-100">{title}</h1>
-      {right ? <div className={cn('flex shrink-0 items-center gap-2')}>{right}</div> : null}
+    <header className="flex h-12 shrink-0 items-center justify-between border-b border-slate-800 bg-slate-950 pl-4 pr-3">
+      <div className="flex items-baseline gap-3">
+        {eyebrow ? (
+          <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+            {eyebrow}
+          </span>
+        ) : null}
+        <h1 className="text-sm font-semibold tracking-tight text-slate-100">{title}</h1>
+      </div>
+      {right ? <div className="flex shrink-0 items-center gap-2">{right}</div> : null}
     </header>
   );
 }

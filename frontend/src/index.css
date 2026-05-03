@@ -7,5 +7,9 @@
   body,
   #root {
     height: 100%;
+    overscroll-behavior: none;
+  }
+  body {
+    font-feature-settings: 'cv11', 'ss01';
   }
 }

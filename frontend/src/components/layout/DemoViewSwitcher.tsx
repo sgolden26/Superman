@@ -11,34 +11,41 @@ export default function DemoViewSwitcher() {
 
   return (
     <div
-      className="flex rounded-lg border border-slate-700 bg-slate-900/60 p-0.5 text-xs font-medium"
+      className="flex border border-slate-700 bg-slate-900 text-[11px] font-medium uppercase tracking-wider"
       role="group"
       aria-label="Switch demo view"
     >
-      <button
-        type="button"
-        onClick={() => {
-          navigate('/c2');
-        }}
-        className={cn(
-          'rounded-md px-3 py-1.5 transition',
-          onC2 ? 'bg-slate-600 text-white shadow' : 'text-slate-400 hover:text-slate-200',
-        )}
-      >
+      <SwitchButton active={onC2} onClick={() => navigate('/c2')}>
         Command
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          navigate('/field');
-        }}
-        className={cn(
-          'rounded-md px-3 py-1.5 transition',
-          !onC2 ? 'bg-slate-600 text-white shadow' : 'text-slate-400 hover:text-slate-200',
-        )}
-      >
+      </SwitchButton>
+      <SwitchButton active={!onC2} onClick={() => navigate('/field')}>
         Field
-      </button>
+      </SwitchButton>
     </div>
+  );
+}
+
+function SwitchButton({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean;
+  onClick: () => void;
+  children: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={cn(
+        'px-3 py-1.5 transition-colors',
+        active
+          ? 'bg-slate-100 text-slate-900'
+          : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200',
+      )}
+    >
+      {children}
+    </button>
   );
 }
