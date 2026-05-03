@@ -7,12 +7,14 @@ from __future__ import annotations
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from sqlmodel import Session
 
 from app.api.v1.router import api_router
 from app.config import Settings, get_settings
 from app.core.exceptions import register_exception_handlers
 from app.core.logging import configure_logging
-from app.db import init_db
+from app.db import get_engine, init_db
+from app.seed import seed_demo_data
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -20,6 +22,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     settings = settings or get_settings()
     configure_logging(settings.log_level)
     init_db()
+    with Session(get_engine()) as session:
+        seed_demo_data(session)
 
     app = FastAPI(
         title="Superman API",
