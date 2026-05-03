@@ -42,6 +42,12 @@ Thumbs.db
 *.swp
 *.swo
 
+# SQLite
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
 # Misc
 coverage/
 .tmp/

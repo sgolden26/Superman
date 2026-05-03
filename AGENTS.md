@@ -11,9 +11,9 @@ Code must be **trivially readable**, **predictable to extend** and
 **mergeable without conflict**. Bias to small files, explicit names and
 dependency injection. No clever tricks.
 
-This repo is a **demo**: no real authentication and no SQL database. Data
-lives in a JSON file under `backend/data/` (see `JsonDocumentStore`). The UI
-switches between C2 and Field with `DemoViewSwitcher`, not a login flow.
+This repo is a **demo**: no real authentication. The backend persists to a
+local **SQLite** file (`backend/data/superman.db` by default) via SQLModel.
+The UI switches between C2 and Field with `DemoViewSwitcher`, not a login flow.
 
 ## Hard rules
 
@@ -42,21 +42,18 @@ switches between C2 and Field with `DemoViewSwitcher`, not a login flow.
 ### Backend (`backend/app`)
 
 ```
-api/v1/routes        thin HTTP handlers, validate + delegate
-schemas              Pydantic I/O DTOs (request/response only)
-domain/models        plain dataclasses, no I/O
-services             orchestration, one class per use-case area
-sensors              SensorBase + SensorFactory (ghost_murmur, satellite, drone)
-classifiers          ClassifierBase + ClassifierFactory (rule_based, ml)
-repositories         data access, one class per aggregate (backed by JSON for demo)
-storage              JsonDocumentStore: single-file JSON persistence
-core                 cross-cutting: logging, exceptions
-utils                pure helpers (geo, time)
+main.py              FastAPI factory, wires startup
+config.py            Settings (env-driven)
+db.py                SQLite engine, session, init_db
+models/              One SQLModel table per file (sensor, person, reading)
+core/                Logging, AppError + handlers
+utils/               Pure helpers (time)
 ```
 
-Dependency direction (no cycles): `api -> services -> {sensors, classifiers,
-repositories} -> domain`. `schemas` are leaf types referenced by `api` and
-`services`. `domain` depends on nothing.
+Routes, services and request/response schemas will be added as features land.
+When they do: routes call services, services use `Session` from `app.db`, and
+request/response Pydantic models live next to their route module. Keep one
+table per file under `models/` so parallel work does not collide.
 
 ### Frontend (`frontend/src`)
 
@@ -88,19 +85,21 @@ reverse.
 
 ## Adding things (recipes)
 
-### A new sensor type
-1. Subclass `SensorBase` in `backend/app/sensors/<name>.py`.
-2. Register it in `SensorFactory` (do not modify call sites).
-3. Add Pydantic config schema in `backend/app/schemas/sensor.py`.
-4. Add a row to the sensors table in `frontend/src/views/c2/components/SensorStatusPanel.tsx` if user-visible.
+### A new database table
+1. Add a SQLModel class in `backend/app/models/<name>.py` (one table per file).
+2. Re-export it from `backend/app/models/__init__.py` so `init_db` registers it.
+3. Tables are created via `SQLModel.metadata.create_all` at startup; for
+   schema changes during the hackathon, delete the local `superman.db` and
+   restart. No migrations.
 
 ### A new API endpoint
-1. Add Pydantic request/response schemas in `backend/app/schemas/<area>.py`.
-2. Add a service method in `backend/app/services/<area>_service.py`.
-3. Add a route in `backend/app/api/v1/routes/<area>.py` that just validates,
-   calls the service and returns the response model.
-4. Add a TS endpoint module in `frontend/src/api/endpoints/<area>.ts`.
-5. Add a hook in `frontend/src/hooks/use<Area>.ts` if components need it.
+1. Add the route under `backend/app/api/v1/routes/<area>.py` (create the
+   `api/` tree on first use). The handler validates, calls a service, returns
+   a Pydantic response model.
+2. Service lives in `backend/app/services/<area>_service.py` and receives a
+   `Session` via `Depends(get_session)`.
+3. Add a TS endpoint module in `frontend/src/api/endpoints/<area>.ts`.
+4. Add a hook in `frontend/src/hooks/use<Area>.ts` if components need it.
 
 ### A new view-local component
 - Lives under `views/<view>/components/`. Not shared.
