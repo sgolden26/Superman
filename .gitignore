@@ -33,6 +33,9 @@ pnpm-debug.log*
 .env.*
 !.env.example
 
+# TS incremental build info
+*.tsbuildinfo
+
 # Editor / OS
 .DS_Store
 Thumbs.db

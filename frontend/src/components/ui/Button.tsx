@@ -16,7 +16,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={cn('rounded-md font-medium transition', variant, size, className)}
+      className={cn('font-medium transition-colors', variant, size, className)}
       {...rest}
     >
       {children}

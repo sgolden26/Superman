@@ -1,8 +1,10 @@
 """Demo seed data. Idempotent: skipped when any person already exists.
 
 Re-seeding is a delete-and-restart: remove `data/superman.db` and start the
-app. Locations cluster around Brussels city centre so the C2 map has
-something to render.
+app. The scene is set inside NTC Fort Irwin's training "box" (Mojave
+Desert) so the C2 map renders a plausible US military training environment
+with friendly squads, partner force, OPFOR / HVTs, and unidentified
+contacts.
 """
 from __future__ import annotations
 
@@ -17,38 +19,45 @@ from app.utils.time import utcnow
 
 _log = logging.getLogger(__name__)
 
-# (name, lat, lon)
+# (name, lat, lon) — sensors spread across NTC Fort Irwin's training box
 _SENSORS: list[tuple[str, float, float]] = [
-    ("grand-place-rooftop", 50.8467, 4.3525),
-    ("manneken-pis-corner", 50.8451, 4.3499),
-    ("central-station",     50.8456, 4.3568),
-    ("mont-des-arts",       50.8431, 4.3573),
-    ("place-poelaert",      50.8369, 4.3550),
-    ("porte-de-namur",      50.8392, 4.3641),
-    ("parc-de-bruxelles",   50.8456, 4.3636),
-    ("bourse",              50.8489, 4.3493),
+    ("razish-mout",          35.332, -116.742),
+    ("razish-south-op",      35.305, -116.738),
+    ("razish-north-op",      35.355, -116.745),
+    ("wadi-overwatch",       35.318, -116.760),
+    ("wadi-east-checkpoint", 35.325, -116.705),
+    ("ridge-tiefort",        35.350, -116.715),
+    ("lz-eagle",             35.310, -116.720),
+    ("ecp-bravo",            35.298, -116.732),
 ]
 
 # (name, fingerprint (32 hex chars), alignment, attributes, reading count)
 _PEOPLE: list[tuple[str, str, Alignment, dict[str, object], int]] = [
-    # blue — friendly operators
-    ("Operator Alpha",   "a1" * 16, Alignment.BLUE,  {"role": "operator", "team": "alpha"}, 22),
-    ("Operator Bravo",   "a2" * 16, Alignment.BLUE,  {"role": "operator", "team": "alpha"}, 20),
-    ("Operator Charlie", "a3" * 16, Alignment.BLUE,  {"role": "operator", "team": "bravo"}, 18),
-    # green — neutral civilians
-    ("Civilian Marie",   "b1" * 16, Alignment.GREEN, {"role": "civilian"}, 14),
-    ("Civilian Pieter",  "b2" * 16, Alignment.GREEN, {"role": "civilian"}, 12),
-    ("Civilian Sophie",  "b3" * 16, Alignment.GREEN, {"role": "civilian"}, 10),
-    # red — hostiles
-    ("Suspect K1", "c1" * 16, Alignment.RED, {"role": "suspect", "threat": "high"},   16),
-    ("Suspect K2", "c2" * 16, Alignment.RED, {"role": "suspect", "threat": "medium"}, 14),
-    ("Suspect K3", "c3" * 16, Alignment.RED, {"role": "suspect", "threat": "high"},   11),
-    # grey — unidentified (names match the resolver's auto-naming)
+    # blue — friendly squads
+    ("Reaper 1-1", "a1" * 16, Alignment.BLUE,
+     {"role": "squad_leader", "squad": "Reaper 1", "rank": "SSG"}, 22),
+    ("Reaper 1-2", "a2" * 16, Alignment.BLUE,
+     {"role": "rifleman", "squad": "Reaper 1", "rank": "SGT"}, 20),
+    ("Reaper 2-1", "a3" * 16, Alignment.BLUE,
+     {"role": "squad_leader", "squad": "Reaper 2", "rank": "SSG"}, 18),
+    # green — partner force / non-combatants
+    ("Partner Force Lead", "b1" * 16, Alignment.GREEN, {"role": "partner_force"}, 14),
+    ("Interpreter Tango",  "b2" * 16, Alignment.GREEN, {"role": "interpreter"},   12),
+    ("Local Liaison",      "b3" * 16, Alignment.GREEN, {"role": "civilian_lead"}, 10),
+    # red — opfor / hvt
+    ("OPFOR-1", "c1" * 16, Alignment.RED, {"role": "opfor", "threat": "high"},   16),
+    ("HVT-1",   "c2" * 16, Alignment.RED, {"role": "hvt",   "threat": "high"},   14),
+    ("HVT-2",   "c3" * 16, Alignment.RED, {"role": "hvt",   "threat": "medium"}, 11),
+    # grey — unidentified contacts (names match the resolver's auto-naming)
     ("unknown-d1d1d1d1", "d1" * 16, Alignment.GREY, {}, 7),
     ("unknown-d2d2d2d2", "d2" * 16, Alignment.GREY, {}, 5),
     ("unknown-d3d3d3d3", "d3" * 16, Alignment.GREY, {}, 9),
     ("unknown-d4d4d4d4", "d4" * 16, Alignment.GREY, {}, 4),
 ]
+
+
+def _dist_sq(sensor: Sensor, lat: float, lon: float) -> float:
+    return (sensor.lat - lat) ** 2 + (sensor.lon - lon) ** 2
 
 
 def seed_demo_data(session: Session) -> bool:
@@ -86,10 +95,7 @@ def seed_demo_data(session: Session) -> bool:
             lat += rng.uniform(-8e-4, 8e-4)
             lon += rng.uniform(-8e-4, 8e-4)
             height = round(rng.uniform(1.55, 1.92), 2)
-            closest = min(
-                sensors,
-                key=lambda s, _lat=lat, _lon=lon: (s.lat - _lat) ** 2 + (s.lon - _lon) ** 2,
-            )
+            closest = min(sensors, key=lambda s: _dist_sq(s, lat, lon))
             assert closest.id is not None
             minutes_ago = (n_readings - i) * 2 + rng.uniform(0, 1.5)
             session.add(

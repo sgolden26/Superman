@@ -5,7 +5,7 @@ from datetime import datetime
 
 from fastapi import APIRouter, Depends, Query, status
 from pydantic import BaseModel
-from sqlmodel import Session, select
+from sqlmodel import Session, col, select
 
 from app.db import get_session
 from app.models import HeartbeatReading
@@ -50,7 +50,7 @@ def list_readings(
     session: Session = Depends(get_session),
 ) -> list[HeartbeatReading]:
     """Most-recent-first readings, optionally filtered."""
-    stmt = select(HeartbeatReading).order_by(HeartbeatReading.captured_at.desc()).limit(limit)
+    stmt = select(HeartbeatReading).order_by(col(HeartbeatReading.captured_at).desc()).limit(limit)
     if person_id is not None:
         stmt = stmt.where(HeartbeatReading.person_id == person_id)
     if sensor_id is not None:

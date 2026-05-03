@@ -4,17 +4,22 @@ import { cn } from '@/lib/classnames';
 export interface NavItem {
   label: string;
   to: string;
-  icon?: string;
 }
 
 export interface SideNavProps {
   items: NavItem[];
+  sectionLabel?: string;
 }
 
-export default function SideNav({ items }: SideNavProps) {
+export default function SideNav({ items, sectionLabel }: SideNavProps) {
   return (
-    <nav className="h-full border-r border-slate-800 bg-slate-950/40 p-2">
-      <ul className="space-y-1">
+    <nav className="h-full border-r border-zinc-800 bg-zinc-950">
+      {sectionLabel ? (
+        <div className="border-b border-zinc-800 px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-500">
+          {sectionLabel}
+        </div>
+      ) : null}
+      <ul>
         {items.map((item) => (
           <li key={item.to}>
             <NavLink
@@ -22,14 +27,24 @@ export default function SideNav({ items }: SideNavProps) {
               end
               className={({ isActive }) =>
                 cn(
-                  'block rounded-md px-3 py-1.5 text-sm transition',
+                  'relative block px-4 py-2 text-sm transition-colors',
                   isActive
-                    ? 'bg-slate-800 text-slate-100'
-                    : 'text-slate-400 hover:bg-slate-900 hover:text-slate-200',
+                    ? 'bg-zinc-900 text-zinc-100'
+                    : 'text-zinc-400 hover:bg-zinc-900/50 hover:text-zinc-200',
                 )
               }
             >
-              {item.label}
+              {({ isActive }) => (
+                <>
+                  {isActive ? (
+                    <span
+                      aria-hidden
+                      className="absolute inset-y-0 left-0 w-0.5 bg-zinc-100"
+                    />
+                  ) : null}
+                  {item.label}
+                </>
+              )}
             </NavLink>
           </li>
         ))}

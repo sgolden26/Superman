@@ -32,8 +32,8 @@ cd backend && uv sync
 uv run uvicorn app.main:app --reload
 
 # frontend
-cd frontend && npm install
-npm run dev
+cd frontend && pnpm install
+pnpm dev
 ```
 
 ## Conventions

@@ -13,8 +13,14 @@ const NAV: NavItem[] = [
 export default function C2Layout() {
   return (
     <AppShell
-      topBar={<TopBar title="Command and Control" right={<DemoViewSwitcher />} />}
-      sideNav={<SideNav items={NAV} />}
+      topBar={
+        <TopBar
+          eyebrow="Superman"
+          title="Command & Control"
+          right={<DemoViewSwitcher />}
+        />
+      }
+      sideNav={<SideNav items={NAV} sectionLabel="Inventory" />}
     >
       <Outlet />
     </AppShell>
