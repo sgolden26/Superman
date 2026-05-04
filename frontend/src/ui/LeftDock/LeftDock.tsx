@@ -24,10 +24,8 @@ export function LeftDock() {
     <aside className="hairline-r panel-surface flex h-full w-[280px] shrink-0 flex-col">
       <div className="hairline-b panel-section-bg flex items-center justify-between px-3 py-2">
         <div className="flex items-center gap-2">
-          <span className="font-mono text-[9px] text-ink-300">▾</span>
-          <span className="font-mono text-[10px] uppercase tracking-wider2 text-ink-100">
-            theatre
-          </span>
+          <img src="/logo.svg" alt="" width={18} height={18} className="shrink-0" />
+          <span className="font-semibold tracking-[0.12em] text-ink-50">SUPERMAN</span>
         </div>
         <button
           onClick={() => setOpen(false)}

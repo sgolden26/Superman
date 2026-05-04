@@ -2,7 +2,7 @@ import { useAppStore } from "@/state/store";
 import type { Faction, FactionPressure } from "@/types/scenario";
 
 /**
- * Always-visible strip beneath the HUD showing:
+ * Always-visible strip at the top of the workspace showing:
  * - the global deadline countdown (turns remaining),
  * - one pip per faction with seeded pressure: faction colour, intensity bar,
  *   and per-faction T-N if that faction has its own deadline.

@@ -119,13 +119,7 @@ export function UnitDetail({ unit, faction }: Props) {
   return (
     <div className="flex h-full flex-col">
       <div className="hairline-b px-4 pb-3 pt-4">
-        <div className="font-mono text-[9px] uppercase tracking-wider2 text-ink-300">
-          unit
-          <span className="px-1 text-ink-400">/</span>
-          {unit.domain}
-          <span className="px-1 text-ink-400">/</span>
-          {unit.echelon}
-        </div>
+        <div className="font-mono text-[9px] uppercase tracking-wider2 text-ink-300">{unit.domain}</div>
         <div className="mt-1 flex items-baseline gap-2">
           <span className="text-[18px] font-semibold leading-tight tracking-tight text-ink-50">
             {unit.name}
@@ -145,7 +139,6 @@ export function UnitDetail({ unit, faction }: Props) {
       <SectionHeader label="classification" />
       <KeyValueRow label="kind" value={KIND_LABEL[unit.kind]} mono={false} />
       <KeyValueRow label="domain" value={unit.domain.toUpperCase()} />
-      <KeyValueRow label="echelon" value={unit.echelon.toUpperCase()} />
       <div className="flex items-center justify-between px-4 py-1.5">
         <span className="font-mono text-[10px] uppercase tracking-wider2 text-ink-200">
           country

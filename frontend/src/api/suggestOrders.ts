@@ -70,7 +70,7 @@ export async function suggestOrders(
   const parsed = suggestionResponseSchema.safeParse(json);
   if (!parsed.success) {
     console.error("[assistant] suggest schema mismatch", parsed.error.issues);
-    throw new Error("Assistant response failed schema validation.");
+    throw new Error("Advisory response failed validation.");
   }
   return parsed.data;
 }

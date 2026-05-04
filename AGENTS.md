@@ -11,8 +11,11 @@ Code must be **trivially readable**, **predictable to extend** and
 **mergeable without conflict**. Bias to small files, explicit names and
 dependency injection. No clever tricks.
 
-This repo is the **Superman** fork: a C2 wargame console (not the old
-heartbeat-sensor demo). The active product paths are `frontend/` and `backend/`.
+This repo is the **Superman** fork: a Mission Command and Control console.
+The headline capability is an AI assistant that reads the live operating
+picture, drafts orders, and forecasts the social / political knock-on of
+an action before it ships. The active product paths are `frontend/` and
+`backend/`.
 
 ## Hard rules
 

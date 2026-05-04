@@ -67,6 +67,7 @@ from axis.ai import OpenAIScenarioDesigner, ScenarioDesignerError  # noqa: E402
 from axis.decision.actions import DEFAULT_ACTIONS  # noqa: E402
 from axis.decision.explain import build_explanation, region_from_dict  # noqa: E402
 from axis.server.assistant import AssistantUnavailable, suggest_orders  # noqa: E402
+from axis.server.assistant_tools import run_assistant_chat  # noqa: E402
 from axis.server.state import TheaterStore, get_store  # noqa: E402
 from axis.sim.orders import OrderBatch, OrderRegistry  # noqa: E402
 
@@ -170,6 +171,51 @@ def create_app(*, store: TheaterStore | None = None) -> FastAPI:
         except ValueError as exc:
             raise HTTPException(status_code=400, detail=str(exc)) from exc
         return result
+
+    @app.post("/api/assistant/chat")
+    def assistant_chat(payload: dict[str, Any]) -> dict[str, Any]:
+        """Run the C2 tool-calling assistant.
+
+        Body shape:
+            {
+              "prompt":      "<operator intent>",
+              "issuer_team": "blue" | "red",
+              "history":     [<optional prior chat turns in OpenAI shape>]
+            }
+
+        Returns the full transcript, server tool results, and a `directives`
+        list of client-side actions the FE should dispatch (set view,
+        annotate map, stage orders).
+        """
+        prompt = payload.get("prompt")
+        issuer_team = payload.get("issuer_team")
+        history = payload.get("history")
+        if not isinstance(prompt, str) or not prompt.strip():
+            raise HTTPException(
+                status_code=400, detail="prompt must be a non-empty string"
+            )
+        if issuer_team not in ("red", "blue"):
+            raise HTTPException(
+                status_code=400, detail="issuer_team must be 'red' or 'blue'"
+            )
+        if history is not None and not isinstance(history, list):
+            raise HTTPException(
+                status_code=400, detail="history must be a list when provided"
+            )
+        try:
+            result = _store().with_theater(
+                lambda theater: run_assistant_chat(
+                    prompt=prompt,
+                    issuer_team=issuer_team,
+                    theater=theater,
+                    history=history,
+                )
+            )
+        except AssistantUnavailable as exc:
+            raise HTTPException(status_code=503, detail=str(exc)) from exc
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+        return result.to_dict()
 
     @app.post("/api/reset")
     def reset() -> dict[str, Any]:

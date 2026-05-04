@@ -238,9 +238,9 @@ function OrderRow({ order, unitsById, factionsById, onSelect, onRemove, disabled
           {isLlm && (
             <span
               className="hairline border border-accent-ok bg-accent-ok/10 px-1 py-px font-mono text-[8px] uppercase tracking-wider2 text-accent-ok"
-              title="Suggested by the assistant"
+                title="Staff advisory lineage (natural-language tasking)"
             >
-              AI
+              ADV
             </span>
           )}
           <span className="text-[12px] font-semibold text-ink-50 truncate">{title}</span>

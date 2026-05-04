@@ -1,4 +1,6 @@
 import { create } from "zustand";
+import { z } from "zod";
+import { orderSchema } from "@/types/orders";
 import type {
   ScenarioSnapshot,
   Selection,
@@ -28,6 +30,13 @@ import {
 } from "@/state/orders";
 import type { OrderDTO } from "@/types/orders";
 import { suggestOrders } from "@/api/suggestOrders";
+import {
+  assistantChat,
+  forecastFromChat,
+  type ChatResultDTO,
+  type DirectiveDTO,
+  type ImplicationsForecastDTO,
+} from "@/api/assistantChat";
 import { loadScenario } from "@/api/loadScenario";
 import type {
   SortieMissionDTO,
@@ -191,6 +200,14 @@ interface AppState {
    *  animation expires (~2.5s after `at`). */
   assistantSpawnPulses: SpawnPulse[];
 
+  /** C2 chat transcript: user prompts, assistant prose, and tool-call chips.
+   *  Drives the upgraded AssistantBar. Persists across submits until
+   *  `dismissAssistantChat` is called. */
+  assistantChatLog: AssistantChatEntry[];
+  /** Latest implications forecast surfaced by the assistant, if any.
+   *  The AssistantBar renders an Implications Card while this is set. */
+  assistantForecast: ImplicationsForecastDTO | null;
+
   setScenario: (s: ScenarioSnapshot) => void;
   setLoadError: (e: string | null) => void;
   setIntel: (snapshot: IntelSnapshot) => void;
@@ -287,6 +304,25 @@ interface AppState {
   dismissAssistant: () => void;
   /** Drop the spawn pulse for `id` once its animation has finished playing. */
   dismissSpawnPulse: (id: string) => void;
+
+  /** AssistantBar (chat mode): submit an operator intent to the C2
+   *  tool-calling assistant. Dispatches client directives (layer toggles,
+   *  staged orders) into the store as they arrive. */
+  submitAssistantChat: (prompt: string) => Promise<void>;
+  /** Clear the chat transcript and any active forecast. */
+  dismissAssistantChat: () => void;
+}
+
+export type AssistantChatRole = "user" | "assistant" | "tool";
+
+export interface AssistantChatEntry {
+  id: string;
+  role: AssistantChatRole;
+  content: string;
+  /** Tool entries only: which tool ran. */
+  toolName?: string;
+  /** Tool entries only: how the call was handled. */
+  toolStatus?: "ok" | "directive" | "error";
 }
 
 export interface SpawnPulse {
@@ -365,6 +401,8 @@ export const useAppStore = create<AppState>((set, get) => ({
   assistantStagedCount: 0,
   assistantSpawnedCount: 0,
   assistantSpawnPulses: [],
+  assistantChatLog: [],
+  assistantForecast: null,
 
   setScenario: (s) =>
     set((state) => ({
@@ -897,7 +935,7 @@ export const useAppStore = create<AppState>((set, get) => ({
     if (state.assistantBusy) return;
     if (!state.scenario) return;
     if (state.roundReady[state.playerTeam]) {
-      set({ assistantError: "Team is ready. Unready to plan more orders." });
+      set({ assistantError: "Force postured ready. Clear ready state before further tasking." });
       return;
     }
     set({
@@ -960,6 +998,83 @@ export const useAppStore = create<AppState>((set, get) => ({
     set((s) => ({
       assistantSpawnPulses: s.assistantSpawnPulses.filter((p) => p.id !== id),
     })),
+
+  submitAssistantChat: async (prompt) => {
+    const text = prompt.trim();
+    if (!text) return;
+    const state = get();
+    if (state.assistantBusy) return;
+    if (!state.scenario) return;
+    if (state.roundReady[state.playerTeam]) {
+      set({ assistantError: "Team is ready. Unready to plan more orders." });
+      return;
+    }
+    const team = state.playerTeam;
+    const userEntry: AssistantChatEntry = {
+      id: `chat.user.${Date.now()}`,
+      role: "user",
+      content: text,
+    };
+    set((s) => ({
+      assistantBusy: true,
+      assistantError: null,
+      assistantChatLog: [...s.assistantChatLog, userEntry],
+    }));
+
+    let result: ChatResultDTO;
+    try {
+      result = await assistantChat({ prompt: text, issuer_team: team });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      set({ assistantBusy: false, assistantError: message });
+      return;
+    }
+
+    const toolEntries = result.tool_calls.map<AssistantChatEntry>((tc) => ({
+      id: `chat.tool.${tc.id}`,
+      role: "tool",
+      toolName: tc.name,
+      toolStatus: tc.is_directive
+        ? "directive"
+        : (tc.result as { error?: unknown }).error
+        ? "error"
+        : "ok",
+      content: summariseToolResult(tc.name, tc.result, tc.arguments),
+    }));
+
+    const final: AssistantChatEntry | null = result.final_text
+      ? {
+          id: `chat.assistant.${Date.now()}`,
+          role: "assistant",
+          content: result.final_text,
+        }
+      : null;
+
+    const forecast = forecastFromChat(result);
+    const directiveStaged = applyAssistantDirectives(
+      result.directives,
+      team,
+      set,
+      get,
+    );
+
+    set((s) => ({
+      assistantBusy: false,
+      assistantChatLog: [
+        ...s.assistantChatLog,
+        ...toolEntries,
+        ...(final ? [final] : []),
+      ],
+      assistantForecast: forecast,
+      cartOpen: directiveStaged > 0 || s.cartOpen,
+    }));
+  },
+  dismissAssistantChat: () =>
+    set({
+      assistantChatLog: [],
+      assistantForecast: null,
+      assistantError: null,
+    }),
 
   intelByRegion: () => {
     const intel = get().intel;
@@ -1423,3 +1538,116 @@ function rej(into: string[], dto: OrderDTO, reason: string): null {
   into.push(`${dto.order_id || dto.kind}: ${reason}`);
   return null;
 }
+
+// ---------------------------------------------------------------------------
+// Assistant chat: tool result summary + directive dispatcher
+// ---------------------------------------------------------------------------
+
+/** Render a one-line summary of a tool's JSON result for the chat chip. */
+function summariseToolResult(
+  name: string,
+  result: Record<string, unknown>,
+  args: Record<string, unknown>,
+): string {
+  if ("error" in result && typeof result.error === "string") {
+    return `error: ${result.error}`;
+  }
+  switch (name) {
+    case "query_cop": {
+      const own = (result.your_units as unknown[] | undefined)?.length ?? 0;
+      const enemy =
+        (result.enemy_units_visible as unknown[] | undefined)?.length ?? 0;
+      return `read COP: ${own} own, ${enemy} enemy visible`;
+    }
+    case "summarise_intel": {
+      const sigs =
+        (result.leader_signals as unknown[] | undefined)?.length ?? 0;
+      return `intel slice: ${sigs} signals`;
+    }
+    case "propose_orders": {
+      const n = (result.orders as unknown[] | undefined)?.length ?? 0;
+      const e = (result.edits as unknown[] | undefined)?.length ?? 0;
+      return `${n} order${n === 1 ? "" : "s"} drafted${e > 0 ? `, ${e} spawn${e === 1 ? "" : "s"}` : ""}`;
+    }
+    case "forecast_implications": {
+      const fc = result.forecast as
+        | { gap?: number; factors?: unknown[] }
+        | undefined;
+      if (!fc) return "forecast (no orders)";
+      const factors = fc.factors?.length ?? 0;
+      return `forecast: gap ${fc.gap?.toFixed(2) ?? "?"}, ${factors} factor${factors === 1 ? "" : "s"}`;
+    }
+    case "explain_region":
+      return `explain ${(args.action_id as string | undefined) ?? "?"} @ ${(args.region_id as string | undefined) ?? "?"}`;
+    case "set_view":
+      return `set view: ${Object.keys((args.layers as object | undefined) ?? {}).join(", ") || "focus"}`;
+    case "annotate_map":
+      return `pin: ${(args.label as string | undefined) ?? "?"}`;
+    case "stage_orders": {
+      const orders = args.orders as unknown[] | undefined;
+      return `stage ${orders?.length ?? 0} order${orders?.length === 1 ? "" : "s"}`;
+    }
+    default:
+      return name;
+  }
+}
+
+/** Apply each client-side directive returned by the assistant.
+ *
+ *  Today: layer toggles + choropleth swap from `set_view`, and staged
+ *  orders from `stage_orders`. `annotate_map` is logged-only until the
+ *  annotations layer ships.
+ *
+ *  Returns the count of orders staged so the caller can keep the cart open.
+ */
+function applyAssistantDirectives(
+  directives: DirectiveDTO[],
+  team: PlayerTeam,
+  set: SetFn,
+  get: () => AppState,
+): number {
+  let stagedTotal = 0;
+  for (const d of directives) {
+    if (d.name === "set_view") {
+      const args = d.arguments as {
+        layers?: Record<string, boolean>;
+        choropleth?: string;
+      };
+      if (args.layers) {
+        const known = ALL_LAYERS as readonly string[];
+        for (const [key, on] of Object.entries(args.layers)) {
+          if (known.includes(key)) {
+            get().setLayer(key as LayerKey, !!on);
+          }
+        }
+      }
+      if (typeof args.choropleth === "string") {
+        const allowed: ChoroplethMetric[] = [
+          "war_support",
+          "alert_level",
+          "stability_index",
+          "approval_rating",
+          "protest_intensity",
+          "censorship_index",
+          "institutional_trust",
+        ];
+        if ((allowed as readonly string[]).includes(args.choropleth)) {
+          get().setChoroplethMetric(args.choropleth as ChoroplethMetric);
+        }
+      }
+      continue;
+    }
+    if (d.name === "stage_orders") {
+      const args = d.arguments as { orders?: unknown };
+      if (!Array.isArray(args.orders)) continue;
+      const parsed = z.array(orderSchema).safeParse(args.orders);
+      if (!parsed.success) continue;
+      const { staged } = applyLlmSuggestionsToCart(parsed.data, team, set, get);
+      stagedTotal += staged;
+      continue;
+    }
+    // annotate_map: logged via summariseToolResult; no map render yet.
+  }
+  return stagedTotal;
+}
+

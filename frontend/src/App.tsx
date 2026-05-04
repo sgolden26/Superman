@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useAppStore } from "@/state/store";
 import { loadScenario } from "@/api/loadScenario";
 import { loadIntel } from "@/api/loadIntel";
-import { HUD } from "@/ui/HUD";
 import { PoliticalStrip } from "@/ui/PoliticalStrip";
 import { LeftDock } from "@/ui/LeftDock/LeftDock";
 import { RightPanel } from "@/ui/RightPanel/RightPanel";
@@ -60,7 +59,6 @@ export function App() {
 
   return (
     <div className="flex h-screen w-screen flex-col overflow-hidden bg-ink-900 text-ink-50">
-      <HUD />
       <PoliticalStrip />
       <div className="relative flex flex-1 overflow-hidden">
         <LeftDock />
@@ -92,7 +90,7 @@ function LoadingOverlay() {
   return (
     <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
       <div className="hairline border bg-ink-800/80 px-4 py-2 font-mono text-[10px] uppercase tracking-wider2 text-ink-100">
-        loading theatre...
+        loading…
       </div>
     </div>
   );

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <title>Superman</title>
+  <rect width="32" height="32" rx="5" fill="#0b0f14"/>
+  <path
+    d="M16 4 7 8.5v8.5c0 5.5 4 10.5 9 11.5 5-1 9-6 9-11.5V8.5L16 4Z"
+    fill="#152028"
+    stroke="#7a9aad"
+    stroke-width="1.2"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M19.75 11.25h-7.25c-.9 0-1.85.72-1.85 2.02 0 1.5 1.15 2.08 4.85 3.73 4.2 1.85 6.15 3.42 6.15 6.52 0 3.52-3.52 6.73-10.03 6.73"
+    stroke="#e8eef4"
+    stroke-width="1.85"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
